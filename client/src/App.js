@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import './App.css';
-import EquationForm from './Components/EquationForm';
-import GraphDisplay from './Components/GraphDisplay';
-import FunctionPage from './Components/FormulaPage'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import FormulaPage from './Components/FormulaPage';
+import Homepage from './Components/Homepage';
+import MyNavbar from './Components/MyNavbar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (<>
-      <FormulaPage></FormulaPage>
+    <BrowserRouter>
+      <MyNavbar></MyNavbar>
+      <Routes>
+        <Route path='/' element={<Homepage></Homepage>}></Route>
+        <Route path='/formula/:formulaName' element={<FormulaPage></FormulaPage>}></Route>
+      </Routes>
+    </BrowserRouter>
   </>)
 }
 

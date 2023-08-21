@@ -6,8 +6,7 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 // Register the 'linear' scale, 'PointElement', and 'LineElement'
 Chart.register(LinearScale, PointElement, LineElement);
 
-function GraphDisplay({ variables }) {
-  const { equation } = variables;
+function GraphDisplay({ variables, equation }) {
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
@@ -63,14 +62,14 @@ function GraphDisplay({ variables }) {
         },
         title: {
           display: true,
-          text: 'Plasma Concentration (mg/L)', // Y-axis label
+          text: 'Plasma Concentration (mg/L)',
         },
       },
     },
   };
 
   return (
-    <div>
+    <div className='col-8'>
       <h2>Plasma Concentration Over Time</h2>
       {chartData && <Line data={chartData} options={chartOptions} />}
     </div>

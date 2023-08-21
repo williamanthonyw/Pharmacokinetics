@@ -1,0 +1,32 @@
+import React from 'react'
+import { Link } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+
+function MyNavbar() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <div className='container'>
+        <Navbar.Brand as={Link} to="/">pk_calcs</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+
+
+            <Nav.Link as={Link} to="/contact">Flashcards</Nav.Link>
+            <NavDropdown title="Formula" id="basic-nav-dropdown">
+               {/* Modify to a for loop to all formula pages */}
+              <NavDropdown.Item as={Link} to="/formula/option1">Option 1</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/formula/option2">Option 2</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/formula/option3">Option 3</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </div>
+    </Navbar>
+  );
+}
+
+export default MyNavbar;

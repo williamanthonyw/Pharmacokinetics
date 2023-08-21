@@ -20,21 +20,24 @@ function EquationForm({variables, setVariables }) {
   };
 
   return (
-    <form>
-      {Object.keys(variables).map((variableName) => (
-        variableName != 'equation' ?
-        (<div key={variableName}>
-          <label>{variableLabels[variableName]}</label>
-          <input
-            type='number'
-            name={variableName}
-            value={variables[variableName]}
-            onChange={handleChange}
-            required
-          />
-        </div>) : <></>
-      )) }
-    </form>
+    <form className="col-md-4">
+  {Object.keys(variables).map((variableName) => (
+    <div key={variableName} className="mb-3">
+      <label htmlFor={variableName} className="form-label">
+        {variableLabels[variableName]}
+      </label>
+      <input
+        type="number"
+        className="form-control"
+        id={variableName}
+        name={variableName}
+        value={variables[variableName]}
+        onChange={handleChange}
+        required
+      />
+    </div>
+  ))}
+</form>
   );
 }
 
