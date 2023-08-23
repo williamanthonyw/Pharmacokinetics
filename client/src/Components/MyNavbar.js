@@ -1,10 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import './MyNavbar.css'
+import { useLocation } from 'react-router-dom';
 
 function MyNavbar() {
+  const location = useLocation();
+  const isIndexPage = location.pathname === '/';
+
+  if (isIndexPage){
+    return <></>
+  }
   return (
-    <Navbar bg="light" expand="lg">
+    // If route == default don't render 
+    <Navbar bg="light" expand="lg" className='bg-blue'>
       <div className='container'>
         <Navbar.Brand as={Link} to="/">pk_calcs</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
