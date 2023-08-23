@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <MyNavbar></MyNavbar>
       <Routes>
-        <Route path='/' element={<Homepage></Homepage>}></Route>
+        <Route path='/pharmakinetics' element={<Homepage></Homepage>}></Route>
         <Route path='/formula/:formulaName' element={<FormulaPage></FormulaPage>}></Route>
       </Routes>
     </BrowserRouter>

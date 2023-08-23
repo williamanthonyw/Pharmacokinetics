@@ -10,16 +10,17 @@ const Homepage = () => {
       <header className="header">
         <Navbar bg="light" expand="lg" className='bg-blue'>
           <div className='container whitesmoke'>
-            <Navbar.Brand as={Link} to="/"><img src={logo} alt="Description of your image" /></Navbar.Brand>
+            <Navbar.Brand as={Link} to="/pharmakinetics"><img src={logo} alt="Description of your image" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
-                <Nav.Link as={Link} to="/" style={{ color: 'whitesmoke' }}>Home</Nav.Link>
+                <Nav.Link as={Link} to="/pharmakinetics" style={{ color: 'whitesmoke' }}>Home</Nav.Link>
                 <Nav.Link as={Link} to="/about" style={{ color: 'whitesmoke' }}>About</Nav.Link>
                 <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Contact</Nav.Link>
                 {/* Add similar style attributes for other Nav.Link items */}
                 <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Flashcards</Nav.Link>
-                <NavDropdown title="Formula" id="basic-nav-dropdown1" >
+                <NavDropdown title="Formula" id="basic-nav-dropdown">
+                  {/* Modify to a for loop to all formula pages */}
                   <NavDropdown.Item as={Link} to="/formula/option1">Option 1</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/formula/option2">Option 2</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/formula/option3">Option 3</NavDropdown.Item>
