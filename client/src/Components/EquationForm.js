@@ -1,43 +1,40 @@
 import React, { useState } from 'react';
 
-function EquationForm({variables, setVariables }) {
-
-  
-  const variableLabels = {
-    dose: 'Dose (mg):',
-    Cl: 'Clearance (L/h):',
-    Vd: 'Volume of Distribution (L):',
-  };
-
-
+function EquationForm({ data, setData }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setVariables({
-      ...variables,
-      [name]: value,
-    });
-   
+    setData((prevData) => ({
+      ...prevData,
+      data: {
+        ...prevData.data,
+        variables: {
+          ...prevData.data.variables,
+          [name]: value,
+        },
+      },
+    }));
   };
+  
 
   return (
     <form className="col-md-4">
-  {Object.keys(variables).map((variableName) => (
-    <div key={variableName} className="mb-3">
-      <label htmlFor={variableName} className="form-label">
-        {variableLabels[variableName]}
-      </label>
-      <input
-        type="number"
-        className="form-control"
-        id={variableName}
-        name={variableName}
-        value={variables[variableName]}
-        onChange={handleChange}
-        required
-      />
-    </div>
-  ))}
-</form>
+      {Object.keys(data.variables).map((variableName) => (
+        <div key={variableName} className="mb-3">
+          <label htmlFor={variableName} className="form-label">
+            {data.variableLabels[variableName]}
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id={variableName}
+            name={variableName}
+            value={data.variables[variableName]}
+            onChange={handleChange}
+            required
+          />
+        </div>
+      ))}
+    </form>
   );
 }
 
