@@ -29,7 +29,7 @@ const FormulaPage = () => {
           Cl: 'Clearance (L/h):',
           Vd: 'Volume of Distribution (L):',
         },
-        data_types : {
+        data_types: {
           dose: 'number',
           Cl: 'number',
           Vd: 'number',
@@ -41,6 +41,34 @@ const FormulaPage = () => {
       'url': 'oral_dosing_plasma_time_curve',
       'formula_name': 'Oral Dosing Plasma-time Curve',
       'id': 2,
+      'top_paragraph': "<p>HTML ELEMENT</p>",
+      'bottom_paragraph': "<p>HTML ELEMENT</p>",
+      'x_label': "",
+      'y_label': "",
+      'data': {
+        variables: {
+          dose: 200,
+          Cl: 20,
+          Vd: 200,
+          F: 0.8,
+          ka: 0.009 * 60,
+        },
+        variableLabels: {
+          dose: 'Dose (mg):',
+          Cl: 'Clearance (L/h):',
+          Vd: 'Volume of Distribution (L):',
+          F: 'Bioavailability:',
+          ka: 'Absorption Rate Constant:',
+        },
+        data_types: {
+          dose: 'number',
+          Cl: 'number',
+          Vd: 'number',
+          F: 'number',
+          ka: 'constant',
+        },
+        equation: "((F * dose * ka) / (Vd * (ka - (Cl/Vd)))) * (exp(-(Cl/Vd) * t) - exp(-ka * t))",
+      },
     },
     {
       'url': 'intravenous_infusion_and_effect_of_clearance',
@@ -57,10 +85,10 @@ const FormulaPage = () => {
       'url': 'multiple_oral_dosing',
       'formula_name': 'Multiple Oral Dosing',
       'id': 5,
-      
+
     },
   ]);
-  
+
 
   const [data, setData] = useState({});
 
@@ -85,7 +113,7 @@ const FormulaPage = () => {
             <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
           </>
         ) : (
-          // Handle the case where data.data is undefined or null
+          // If data is null or undefined
           <p>Loading...</p>
         )}
       </div>
