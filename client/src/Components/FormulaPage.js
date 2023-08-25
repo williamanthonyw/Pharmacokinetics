@@ -74,6 +74,29 @@ const FormulaPage = () => {
       'url': 'intravenous_infusion_and_effect_of_clearance',
       'formula_name': 'Intravenous Infusion and Effect of Clearance',
       'id': 3,
+      'top_paragraph': "<p>HTML ELEMENT</p>",
+      'bottom_paragraph': "<p>HTML ELEMENT</p>",
+      'x_label': "",
+      'y_label': "",
+      'data': {
+        variables: {
+          K0: 10,
+          Cl: 40,
+          Vd: 200,
+        },
+        variableLabels: {
+          K0: 'Infusion rate (mg/h)',
+          Cl: 'Clearance (L/h)',
+          Vd: 'Volume of distribution (L)',
+        },
+        data_types: {
+          K0: 'number',
+          Cl: 'number',
+          Vd: 'number',
+        },
+        equation: "K0/Cl * (1-exp(-(Cl/Vd)*t))",
+      },
+      
 
     },
     {
