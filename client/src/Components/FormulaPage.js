@@ -1,35 +1,125 @@
-import React from 'react'
+import React from 'react';
 import EquationForm from './EquationForm';
 import GraphDisplay from './GraphDisplay';
-import HtmlRender from './HtmlRender'
-import { useState } from 'react';
+import HtmlRender from './HtmlRender';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const FormulaPage = () => {
-  //data expected from backend : index 0 - variables index 1 - equation index 2 - (xlabel, ylabel) index3 - TopParagraph (html string) Index 4 - bottomParagraph
-  const [variables, setVariables] = useState({
-    dose: 100,
-    Cl: 20,
-    Vd: 200,
-  });
-  const [equation, setEquation] = useState("dose / Vd * exp(-Cl / Vd * t)")
-  const [title, setTitle] = useState("")
+  const location = useLocation();
+  const currentURL = location.pathname;
 
-  const [topParagraph, settopParagraph] = useState("<p>This is a HTML element (from the client).</p>")
+  const [allData, setAllData] = useState([
+    {
+      'url': 'single_iv_dosing',
+      'formula_name': 'Single IV Dosing',
+      'id': 1,
+      'top_paragraph': "<p>HTML ELEMENT</p>",
+      'bottom_paragraph': "<p>HTML ELEMENT</p>",
+      'x_label': "",
+      'y_label': "",
+      'data': {
+        variables: {
+          dose: 100,
+          Cl: 20,
+          Vd: 200,
+        },
+        variableLabels: {
+          dose: 'Dose (mg):',
+          Cl: 'Clearance (L/h):',
+          Vd: 'Volume of Distribution (L):',
+        },
+        data_types: {
+          dose: 'number',
+          Cl: 'number',
+          Vd: 'number',
+        },
+        equation: "dose / Vd * exp(-Cl / Vd * t)",
+      },
+    },
+    {
+      'url': 'oral_dosing_plasma_time_curve',
+      'formula_name': 'Oral Dosing Plasma-time Curve',
+      'id': 2,
+      'top_paragraph': "<p>HTML ELEMENT</p>",
+      'bottom_paragraph': "<p>HTML ELEMENT</p>",
+      'x_label': "",
+      'y_label': "",
+      'data': {
+        variables: {
+          dose: 200,
+          Cl: 20,
+          Vd: 200,
+          F: 0.8,
+          ka: 0.009 * 60,
+        },
+        variableLabels: {
+          dose: 'Dose (mg):',
+          Cl: 'Clearance (L/h):',
+          Vd: 'Volume of Distribution (L):',
+          F: 'Bioavailability:',
+          ka: 'Absorption Rate Constant:',
+        },
+        data_types: {
+          dose: 'number',
+          Cl: 'number',
+          Vd: 'number',
+          F: 'number',
+          ka: 'constant',
+        },
+        equation: "((F * dose * ka) / (Vd * (ka - (Cl/Vd)))) * (exp(-(Cl/Vd) * t) - exp(-ka * t))",
+      },
+    },
+    {
+      'url': 'intravenous_infusion_and_effect_of_clearance',
+      'formula_name': 'Intravenous Infusion and Effect of Clearance',
+      'id': 3,
 
+    },
+    {
+      'url': 'non_linear_parhamkinetics',
+      'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
+      'id': 4,
+    },
+    {
+      'url': 'multiple_oral_dosing',
+      'formula_name': 'Multiple Oral Dosing',
+      'id': 5,
+
+    },
+  ]);
+
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    for (let i = 0; i < allData.length; i++) {
+      if (currentURL.includes(allData[i].url)) {
+        setData(allData[i]);
+      }
+    }
+  }, [location]);
 
   return (
     <div className="container">
-      <h1>Forula name</h1>
+      <h1>{data.formula_name}</h1>
 
-      <HtmlRender html={topParagraph}></HtmlRender>
+      <HtmlRender html={data.top_paragraph}></HtmlRender>
 
       <div className='row mt-5 mb-5'>
-        <EquationForm variables={variables} setVariables={setVariables} />
-        <GraphDisplay variables={variables} equation={equation} />
+        {data.data ? (
+          <>
+            <EquationForm data={data.data} setData={setData} />
+            <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+          </>
+        ) : (
+          // If data is null or undefined
+          <p>Loading...</p>
+        )}
       </div>
-      <HtmlRender html={topParagraph}></HtmlRender>
-
+      <HtmlRender html={data.bottom_paragraph}></HtmlRender>
     </div>
   );
-}
+};
 
-export default FormulaPage
+export default FormulaPage;

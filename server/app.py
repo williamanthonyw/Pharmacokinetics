@@ -1,10 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
+import json
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates/HTML")
+DATABASE = "/path/to/database.json"
 
 @app.route('/', methods=['GET', 'POST']) 
 def index():
-    return "Hello, World!"
+    return render_template("index.html")
 
 '''
 TODO 
@@ -17,7 +19,7 @@ TODO
 @app.route('/api/formulas')
 def formulas():
     '''
-        Returns a list of all formula json object, each json object  in the following format
+        Returns a list of all formula json object, each json object in the following format
         Make sure the json object is sorted, based on date inserted. (add to end)
         {
         'formula_id' : "",
@@ -25,17 +27,33 @@ def formulas():
         'display_name': "",
         }
     '''
-    return "Hello, World!"
+    json_file = open(DATABASE)
+
+    formula_list = json.loads(json_file)
+    
+    json_file.close()
+    return json.dumps(formula_list)
 
 
 @app.route('/api/<formula_id>')
-def get_formula():
+def get_formula(formula_id):
     '''
        Returns all data needed for displaying a specific formula page.
 
 
     '''
-    return "Hello, World!"
+    formula_x = None
+
+    json_file = open(DATABASE)
+
+    formula_list = json.loads(formula_list)
+    for formula in formula_list:
+        if formula['formula_id'] == formula_id:
+            formula_x = formula
+            break
+    
+    json_file.close()
+    return formula_x
 
 @app.route('/api/create/')
 def create_formula():
@@ -45,6 +63,7 @@ def create_formula():
 
 
     '''
+
     return "Hello, World!"
 
 if __name__ == "__main__":

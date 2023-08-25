@@ -1,0 +1,56 @@
+# week 04 out class meeting
+
+# **Subject: Week 4 outclass meeting**
+
+**Project Name:** P22- PK cals
+
+**Facilitator:** Matthew Slate
+
+**Prepared by:** Yan Gunawan Teguh
+
+**Mode:** Online
+
+**Date:** August 24, 2023
+
+**Time:** 7:00 - 7:30
+
+**Location:** Zoom
+
+**Attendees:**
+
+- Andrew Adisaputra
+- Bennedict Natakusumah
+- Du Huynh
+- Nashita Islam
+- Raphael Lam
+- William Widyadharma
+- Yan Gunawan Teguh
+
+**Absent:**
+
+- All are present
+
+## **Agenda**
+
+| # | Agenda Item | Description | Comments | Decision/Action | Who? | Items for Escalation |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | What has been completed? |  | [Comments] | [Decision/Action] | [Who?] | [Items for Escalation] |
+| 2 | What is in progress? |  | [Comments] | [Decision/Action] | [Who?] | [Items for Escalation] |
+| 3 | What is working well? |  | [Comments] | [Decision/Action] | [Who?] | [Items for Escalation] |
+| 4 | What needs improvement? | [Descriptions] | [Comments] | [Decision/Action] | [Who?] | [Items for Escalation] |
+| 5 | Reminders |  | [Comments] | [Decision/Action] | [Who?] | [Items for Escalation] |
+
+## What is in progress
+
+1. The rest of the formula pages
+2. Splitting the group into 2 teams to do 2 different functionalities for the website
+
+## What has been completed
+
+1. Admin page website layout 
+2. 2 Formula pages
+
+## Reminders
+
+1. Client meeting tomorrow
+2. Finish the rest of the formula pages before the end of next week
