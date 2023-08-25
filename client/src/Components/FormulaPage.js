@@ -96,7 +96,7 @@ const FormulaPage = () => {
         },
         equation: "K0/Cl * (1-exp(-(Cl/Vd)*t))",
       },
-      
+
 
     },
     {
@@ -127,9 +127,11 @@ const FormulaPage = () => {
     <div className="container">
       <h1>{data.formula_name}</h1>
 
-      <HtmlRender html={data.top_paragraph}></HtmlRender>
+      <div className='mt-5'>
+        <HtmlRender html={data.top_paragraph}></HtmlRender>
+      </div>
 
-      <div className='row mt-5 mb-5'>
+      <div className='row'>
         {data.data ? (
           <>
             <EquationForm data={data.data} setData={setData} />
