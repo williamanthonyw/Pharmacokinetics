@@ -31,14 +31,18 @@ All are present
 Agenda
 #	Agenda Item	Description	Comments	Decision/Action	Who?	Items for Escalation
 1	What has been completed?		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
-2	What is in progress?		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
-3	What is working well?		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
-4	What needs improvement?	[Descriptions]	[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
-5	Reminders		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
-What is in progress
-Formula pages
-Splitting the group into 2 teams to do 2 different functionalities for the website
-What has been completed
 Admin page website layout
 2 Formula pages
+
+2	What is in progress?		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
+Formula pages
+Splitting the group into 2 teams to do 2 different functionalities for the website
+
+3	What is working well?		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
+The progress of the website is doing well
+
+4	What needs improvement?	[Descriptions]	[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
+
+
+5	Reminders		[Comments]	[Decision/Action]	[Who?]	[Items for Escalation]
 Client meeting tomorrow
