@@ -100,15 +100,48 @@ const FormulaPage = () => {
 
     },
     {
-      'url': 'non_linear_parhamkinetics',
+      'url': 'non_linear_pharmacokinetics',
       'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
       'id': 4,
+      'top_paragraph': "<p>HTML ELEMENT</p>",
+      'bottom_paragraph': "<p>HTML ELEMENT</p>",
+      'x_label': "",
+      'y_label': "",
+      'data': {
+        variables: {
+          C0: 10.0,
+          k1: 1.0,
+          k2: 0.5,
+          C_thresh: 2.0,
+        },
+        variableLabels: {
+          C0: 'initial concentration',
+          k1: 'linear decay constant',
+          k2: 'exponential decay constant',
+          C_thresh: 'concentration threshold'
+        },
+        data_types: {
+          C0: 'number',
+          k1: 'constant',
+          k2: 'constant',
+          C_thresh: 'number'
+        },
+        equation: {
+          linear: 'C0 - k1*t',
+          exponential: 'C_thresh*exp(-k2*(t-((C0-C_thresh)/k1)'
+        }
+      },
+
     },
+
     {
       'url': 'multiple_oral_dosing',
       'formula_name': 'Multiple Oral Dosing',
       'id': 5,
-
+      'top_paragraph': "<p>HTML ELEMENT</p>",
+      'bottom_paragraph': "<p>HTML ELEMENT</p>",
+      'x_label': "",
+      'y_label': "",
     },
   ]);
 

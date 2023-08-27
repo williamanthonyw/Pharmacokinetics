@@ -4,6 +4,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './MyNavbar.css'
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
+
 function MyNavbar() {
   const location = useLocation();
   const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
