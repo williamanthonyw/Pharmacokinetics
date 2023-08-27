@@ -33,7 +33,7 @@ function MyNavbar() {
       'id': 3,
     },
     {
-      'url': 'non_linear_parhamkinetics',
+      'url': 'non_linear_pharmacokinetics',
       'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
       'id': 4,
     },

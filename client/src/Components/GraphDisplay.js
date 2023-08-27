@@ -9,14 +9,16 @@ Chart.register(LinearScale, PointElement, LineElement);
 function GraphDisplay({ variables, equation }) {
   const [chartData, setChartData] = useState(null);
 
+
+
   useEffect(() => {
-    const evaluateEquation = (t) => {
+    const evaluateEquation = (eq, t) => {
       try {
         const scope = {
-          ...variables, 
+          ...variables,
           t: parseFloat(t),
         };
-        const compiledExpression = math.compile(equation);
+        const compiledExpression = math.compile(eq);
         return compiledExpression.evaluate(scope);
       } catch (error) {
         console.error('Error evaluating equation:', error);
@@ -25,20 +27,44 @@ function GraphDisplay({ variables, equation }) {
     };
 
     const tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
-    const yValues = tValues.map((time) => evaluateEquation(time));
+
+    let datasets = [];  // Initialize an empty datasets array
+
+    if (typeof equation === 'string') {
+      const yValues = tValues.map((time) => evaluateEquation(equation, time));
+
+      datasets.push({
+        label: 'Plasma Concentration (mg/L)',
+        data: yValues,
+        fill: false,
+        borderColor: 'rgba(75, 192, 192, 1)',
+      });
+
+    } else if (Array.isArray(equation)) {
+      // Loop through each equation in the array
+      console.log("hello")
+      equation.forEach((eq) => {
+        console.log(eq)
+        const yValues = tValues.map((time) => evaluateEquation(eq.expression, time));
+
+        //Color the variables with its coresponding color
+        const randomColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
+
+        datasets.push({
+          label: eq.label,
+          data: yValues,
+          fill: false,
+          borderColor: randomColor,
+        });
+      });
+    }
 
     setChartData({
       labels: tValues,
-      datasets: [
-        {
-          label: 'Plasma Concentration (mg/L)',
-          data: yValues,
-          fill: false,
-          borderColor: 'rgba(75, 192, 192, 1)',
-        },
-      ],
+      datasets: datasets,
     });
-  }, [variables]);
+  }, [variables, equation]);
+
 
   const chartOptions = {
     scales: {
@@ -53,7 +79,7 @@ function GraphDisplay({ variables, equation }) {
           text: 'Time (h)', // X-axis label
         },
       },
-      
+
       y: {
         type: 'linear',
         position: 'left',

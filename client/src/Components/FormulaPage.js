@@ -81,7 +81,6 @@ const FormulaPage = () => {
       'data': {
         variables: {
           K0: 10,
-          Cl: 40,
           Vd: 200,
         },
         variableLabels: {
@@ -94,7 +93,21 @@ const FormulaPage = () => {
           Cl: 'number',
           Vd: 'number',
         },
-        equation: "K0/Cl * (1-exp(-(Cl/Vd)*t))",
+        equation: [
+          {
+            expression: "K0/40 * (1-exp(-(40/Vd)*t))",
+            label: 'Clearance (Cl) = 40 L/h',
+          },
+          {
+            expression: "K0/60 * (1-exp(-(60/Vd)*t))",
+            label: 'Clearance (Cl) = 60 L/h',
+          },
+          {
+            expression: "K0/80 * (1-exp(-(80/Vd)*t))",
+            label: 'Clearance (Cl) = 80 L/h',
+          }
+        ]
+
       },
 
 
@@ -126,58 +139,62 @@ const FormulaPage = () => {
           k2: 'constant',
           C_thresh: 'number'
         },
-        equation: {
-          linear: 'C0 - k1*t',
-          exponential: 'C_thresh*exp(-k2*(t-((C0-C_thresh)/k1)'
-        }
-      },
+        equation: [{
+          expression: "C0 - k1*t",
+          label: 'Clearance (Cl) = 40 L/h',
+        },
+        {
+          expression: 'C_thresh*exp(-k2*(t-((C0-C_thresh)/k1))',
+          label: 'Clearance (Cl) = 40 L/h',
+        },]
+    },
 
     },
 
-    {
-      'url': 'multiple_oral_dosing',
-      'formula_name': 'Multiple Oral Dosing',
-      'id': 5,
-      'top_paragraph': "<p>HTML ELEMENT</p>",
-      'bottom_paragraph': "<p>HTML ELEMENT</p>",
-      'x_label': "",
-      'y_label': "",
-    },
+  {
+    'url': 'multiple_oral_dosing',
+    'formula_name': 'Multiple Oral Dosing',
+    'id': 5,
+    'top_paragraph': "<p>HTML ELEMENT</p>",
+    'bottom_paragraph': "<p>HTML ELEMENT</p>",
+    'x_label': "",
+    'y_label': "",
+  },
   ]);
 
 
-  const [data, setData] = useState({});
+const [data, setData] = useState({});
 
-  useEffect(() => {
-    for (let i = 0; i < allData.length; i++) {
-      if (currentURL.includes(allData[i].url)) {
-        setData(allData[i]);
-      }
+useEffect(() => {
+  for (let i = 0; i < allData.length; i++) {
+    if (currentURL.includes(allData[i].url)) {
+      setData(allData[i]);
     }
-  }, [location]);
+  }
+}, [location]);
 
-  return (
-    <div className="container">
-      <h1>{data.formula_name}</h1>
+return (
+  <div className="container">
+    <h1>{data.formula_name}</h1>
 
-      <div className='mt-5'>
-        <HtmlRender html={data.top_paragraph}></HtmlRender>
-      </div>
-
-      <div className='row'>
-        {data.data ? (
-          <>
-            <EquationForm data={data.data} setData={setData} />
-            <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
-          </>
-        ) : (
-          // If data is null or undefined
-          <p>Loading...</p>
-        )}
-      </div>
-      <HtmlRender html={data.bottom_paragraph}></HtmlRender>
+    <div className='mt-5'>
+      <HtmlRender html={data.top_paragraph}></HtmlRender>
     </div>
-  );
+
+    <div className='row'>
+      {data.data ? (
+        <>
+          <EquationForm data={data.data} setData={setData} />
+          <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+        </>
+      ) : (
+        // If data is null or undefined
+        <p>Loading...</p>
+      )}
+    </div>
+    <HtmlRender html={data.bottom_paragraph}></HtmlRender>
+  </div>
+);
 };
 
 export default FormulaPage;
