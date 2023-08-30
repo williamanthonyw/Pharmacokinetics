@@ -20,8 +20,6 @@ const Homepage = () => {
                 <Nav.Link as={Link} to="/pharmakinetics" style={{ color: 'whitesmoke' }}>Home</Nav.Link>
                 <Nav.Link as={Link} to="/about" style={{ color: 'whitesmoke' }}>About</Nav.Link>
                 <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Contact</Nav.Link>
-                {/* Add similar style attributes for other Nav.Link items */}
-                <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Flashcards</Nav.Link>
                 <NavDropdown title="Formula" id="basic-nav-dropdown">
                   {links.map(link => (
                     <NavDropdown.Item as={Link} to={`/formula/${link.url}`} key={link.id}>
@@ -33,15 +31,16 @@ const Homepage = () => {
             </Navbar.Collapse>
           </div>
         </Navbar>
+        <div className='mycontainer'>
+          <div className="text-box">
+            <h1>Pharmacokinetic Calculations</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            </p>
+            <a href="" className="learnNow">Learn more</a>
 
-        <div className="text-box">
-          <h1>Pharmacokinetic Calculations</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-          </p>
-          <a href="" className="learnNow">Learn more</a>
 
-
+          </div>
         </div>
 
 

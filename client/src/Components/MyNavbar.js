@@ -28,9 +28,6 @@ function MyNavbar() {
             <Nav.Link as={Link} to="/pharmakinetics">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-
-
-            <Nav.Link as={Link} to="/contact">Flashcards</Nav.Link>
             <NavDropdown title="Formula" id="basic-nav-dropdown">
               {links.map(link => (
                 <NavDropdown.Item as={Link} to={`/formula/${link.url}`} key={link.id}>

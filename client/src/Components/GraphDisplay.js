@@ -28,7 +28,7 @@ function GraphDisplay({ variables, equation }) {
 
     const tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
 
-    let datasets = [];  // Initialize an empty datasets array
+    let datasets = []; 
 
     if (typeof equation === 'string') {
       const yValues = tValues.map((time) => evaluateEquation(equation, time));
