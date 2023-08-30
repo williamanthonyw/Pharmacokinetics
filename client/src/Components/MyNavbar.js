@@ -4,46 +4,13 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './MyNavbar.css'
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
-
+import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
   const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
   console.log(location)
   // TODO - Modify links to get data from server instead of hard coding
-  const [links, setLinks] = useState([
-    {
-      'url': 'single_iv_dosing',
-      'formula_name': 'Single IV Dosing',
-      'id': 1,
-      'top_paragraph' : "<p>HTML ELEMENT</p>",
-      'bottom_paragraph' : "<p>HTML ELEMENT</p>",
-      'x_label' : "",
-      'y_label' : "",
-      'variable_elements' : [{Dose : {'label' : "Dose(mg)", 'type' : "number", 'value' : 100 }, Cl: {'label' : 'Clearance (L/h):', 'type' : "number", 'value' : 20}, Vd: {'label' : 'Volume of Distribution (L):', 'type' : "number", 'value' : 200} }],
-      'equation' : "dose / Vd * exp(-Cl / Vd * t)",
-    },
-    {
-      'url': 'oral_dosing_plasma_time_curve',
-      'formula_name': 'Oral Dosing Plasma-time Curve',
-      'id': 2
-    },
-    {
-      'url': 'intravenous_infusion_and_effect_of_clearance',
-      'formula_name': 'Intravenous Infusion and Effect of Clearance',
-      'id': 3,
-    },
-    {
-      'url': 'non_linear_pharmacokinetics',
-      'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
-      'id': 4,
-    },
-    {
-      'url': 'multiple_oral_dosing',
-      'formula_name': 'Multiple Oral Dosing',
-      'id': 4,
-    },
-
-  ])
+  const [links, setLinks] = useState(mydata)
 
 
 
