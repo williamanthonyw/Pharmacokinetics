@@ -14,7 +14,19 @@ function App() {
         <Route path='/formula/:formulaName' element={<FormulaPage></FormulaPage>}></Route>
       </Routes>
     </BrowserRouter>
-  </>)
+    </>
+
+
+
+
+
+
+
+
+
+
+
+  )
 }
 
 export default App;

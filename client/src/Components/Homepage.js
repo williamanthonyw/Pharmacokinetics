@@ -1,10 +1,14 @@
 import React from 'react'
 import './Homepage.css'
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import './MyNavbar.css'
+// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+// import './MyNavbar.css'
 import logo from '../assets/images/USYD_LOGO_WHITE.png'
 import { useState } from 'react';
+import { Component } from 'react';
+
+
+
 const Homepage = () => {
   const [links, setLinks] = useState([
     {
@@ -34,38 +38,52 @@ const Homepage = () => {
     },
 
   ])
+
+
+  const [nav_links, setNav_links] = useState("nav_links");
+
+  const showMenu = () => {
+    setNav_links("nav_links2");
+  }
+
+  const hideMenu = () => {
+    setNav_links("nav_links");
+  }
+
   return (
     <div>
       <header className="header">
-        <Navbar bg="light" expand="lg" className='bg-blue'>
-          <div className='container whitesmoke'>
-            <Navbar.Brand as={Link} to="/pharmakinetics"><img src={logo} alt="Description of your image" /></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ml-auto">
-                <Nav.Link as={Link} to="/pharmakinetics" style={{ color: 'whitesmoke' }}>Home</Nav.Link>
-                <Nav.Link as={Link} to="/about" style={{ color: 'whitesmoke' }}>About</Nav.Link>
-                <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Contact</Nav.Link>
-                {/* Add similar style attributes for other Nav.Link items */}
-                <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Flashcards</Nav.Link>
-                <NavDropdown title="Formula" id="basic-nav-dropdown">
-                  {links.map(link => (
-                    <NavDropdown.Item as={Link} to={`/formula/${link.url}`} key={link.id}>
-                      {link.formula_name}
-                    </NavDropdown.Item>
-                  ))}
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </div>
-        </Navbar>
+      <nav>
+            <a href="index.html"><img src={logo} alt = "USYD LOGO"/></a>
+            <div className={nav_links} id="navLinks">
+                <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li className="formula" id="formula"><a href="">FORMULA</a>
+                        <div className="subFormula">
+                            <ul>
+                                <li><a href="">Option1</a></li>
+                                <li><a href="">Option2</a></li>
+                                <li><a href="">Option3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <i className="fa-solid fa-bars" onClick={showMenu}></i>
+
+        </nav>
+
 
         <div className="text-box">
           <h1>Pharmacokinetic Calculations</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
           </p>
-          <a href="" className="learnNow">Learn more</a>
+          <a href="" className = "learnNow">Learn more</a>
 
 
         </div>
@@ -90,7 +108,9 @@ const Homepage = () => {
         <h1>HAVE FUN.</h1>
         <h1>END</h1>
       </section>
+
     </div>
+
   )
 }
 
