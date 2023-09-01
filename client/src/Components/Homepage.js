@@ -58,7 +58,7 @@ const Homepage = () => {
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="Contact.js">CONTACT</a></li>
                     <li className="formula" id="formula"><a href="">FORMULA</a>
                         <div className="subFormula">
                             <ul>
