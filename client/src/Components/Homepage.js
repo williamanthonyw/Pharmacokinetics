@@ -7,8 +7,6 @@ import logo from '../assets/images/USYD_LOGO_WHITE.png'
 import { useState } from 'react';
 import { Component } from 'react';
 
-
-
 const Homepage = () => {
   const [links, setLinks] = useState([
     {
