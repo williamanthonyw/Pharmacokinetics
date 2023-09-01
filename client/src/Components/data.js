@@ -129,13 +129,13 @@ const mydata = [
         C_thresh: 'number'
       },
       equation: (variables) => {
-        let t = variables.t
-        let C0 = variables.C0
-        let k1 = variables.k1
-        let k2 = variables.k2
-        let C_thresh = variables.C_thresh
-        if (C0 - k1 * t > C_thresh) return "C0 - k1*t"
-        else return "C_thresh*np.exp(-k2*(t - t_thresh))"
+        let t = variables.t;
+        let C0 = variables.C0;
+        let k1 = variables.k1;
+        let k2 = variables.k2;
+        let C_thresh = variables.C_thresh;
+        if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
+        else return "C_thresh * (e **exp(-k2*(t - ((C0 - C_thresh) / k1))))";
       }
     },
 
