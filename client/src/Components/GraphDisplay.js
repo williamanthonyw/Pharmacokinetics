@@ -7,8 +7,20 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 Chart.register(LinearScale, PointElement, LineElement);
 
 function GraphDisplay({ variables, equation }) {
-  const [chartData, setChartData] = useState(null);
+  useEffect(() => {
+    if (typeof equation === 'function') {
+      console.log(equation)
+      equation = equation(variables)
+      console.log(equation)
+    }
 
+    return () => {
+
+    }
+  }, [variables])
+
+
+  const [chartData, setChartData] = useState(null);
 
 
   useEffect(() => {
@@ -28,9 +40,10 @@ function GraphDisplay({ variables, equation }) {
 
     const tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
 
-    let datasets = []; 
+    let datasets = [];
 
     if (typeof equation === 'string') {
+      console.log(equation)
       const yValues = tValues.map((time) => evaluateEquation(equation, time));
 
       datasets.push({
