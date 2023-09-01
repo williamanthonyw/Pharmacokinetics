@@ -128,14 +128,15 @@ const mydata = [
           k2: 'constant',
           C_thresh: 'number'
         },
-        equation: [{
-          expression: "C0 - k1*t",
-          label: 'Clearance (Cl) = 40 L/h',
-        },
-        {
-          expression: 'C_thresh*exp(-k2*(t-((C0-C_thresh)/k1))',
-          label: 'Clearance (Cl) = 40 L/h',
-        },]
+        equation: (variables) =>{
+          let t = vaiables.t
+          let C0 = variables.C0
+          let k1 = variables.k1
+          let k2 = variables.k2
+          let C_thresh = variables.C_thresh
+          if (C0 - k1*t > C_thresh) return "C0 - k1*t"
+          else return "C_thresh*np.exp(-k2*(t - t_thresh))"
+        }
     },
 
     },
