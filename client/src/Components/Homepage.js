@@ -1,11 +1,10 @@
-import React from 'react'
-import './Homepage.css'
+import React from 'react';
 import { Link } from 'react-router-dom';
+import './Homepage.css';
 // import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 // import './MyNavbar.css'
-import logo from '../assets/images/USYD_LOGO_WHITE.png'
 import { useState } from 'react';
-import { Component } from 'react';
+import logo from '../assets/images/USYD_LOGO_WHITE.png';
 
 const Homepage = () => {
   const [links, setLinks] = useState([
@@ -52,22 +51,25 @@ const Homepage = () => {
     <div>
       <header className="header">
       <nav>
+
             <a href="index.html"><img src={logo} alt = "USYD LOGO"/></a>
             <div className={nav_links} id="navLinks">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">CONTACT</a></li>
-                    <li className="formula" id="formula"><a href="">FORMULA</a>
-                        <div className="subFormula">
-                            <ul>
-                                <li><a href="">Option1</a></li>
-                                <li><a href="">Option2</a></li>
-                                <li><a href="">Option3</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    {/* <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li> */}
+                    <Link className="Link" to="/contact">HOME</Link>
+                    <Link className="Link" to="/about">ABOUT</Link>
+                    <Link className="Link" to="/contact">CONTACT</Link>
+                    <Link className="Link" to="/contact">FORMULA
+                      <div className="subFormula">
+                        <ul>
+                          <Link className="Link" to="/contact">Option1</Link>
+                          <Link className="Link" to="/about">Option2</Link>
+                          <Link className="Link" to="/contact">Option3</Link>
+                        </ul>
+                      </div>
+                    </Link>
 
                 </ul>
             </div>

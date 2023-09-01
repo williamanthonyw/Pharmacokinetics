@@ -55,20 +55,22 @@ nav.black{
     padding: 0 6%;
 } */
 
-.nav_links ul li{
+.nav_links ul .Link{
     list-style: none;
     display: inline-block;
     position: relative;
     padding: 8px 12px;
+    text-decoration: none;
+    color: white;
 }
 
-.nav_links ul li a {
+.nav_links ul .Link a {
     color:white;
     text-decoration: none;
     font-size: 15px;
 }
 
-.nav_links ul li::after{
+.nav_links ul .Link::after{
     content:'';
     width:0%;
     height:2px;
@@ -78,7 +80,7 @@ nav.black{
     transition: 0.5s;
 }
 
-.nav_links ul li:hover::after{
+.nav_links ul .Link:hover::after{
     width: 100%;
 }
 
@@ -131,26 +133,26 @@ nav .fa-solid{
     display: none;
 }
 
-.nav_links ul li:hover .subFormula {
+.nav_links ul .Link:hover .subFormula {
     display: block;
     position: absolute;
     background: rgb(65, 62, 62);
     margin-left: -15px;
 }
 
-.nav_links ul li:hover .subFormula ul {
+.nav_links ul .Link:hover .subFormula ul {
     display: block;
     margin: 10px;
 }
 
-.nav_links ul li:hover .subFormula ul li {
+.nav_links ul .Link:hover .subFormula ul .Link {
     background: transparent;
     border-bottom: 1px solid white;
     text-align: left;
     border-radius: 0;
 }
 
-.nav_links ul li:hover .subFormula ul li:last-child {
+.nav_links ul .Link:hover .subFormula ul .Link:last-child {
     border-bottom: none;
 }
 
@@ -180,7 +182,7 @@ nav .fa-solid{
         font-size: 20px;
     }
 
-    .nav_links ul li{
+    .nav_links ul .Link{
         display: block;
     }
 
@@ -197,7 +199,7 @@ nav .fa-solid{
         transition: 1s;
     }
 
-    .nav_links ul li::after{
+    .nav_links ul .Link::after{
         background:yellow;
     }
 
@@ -215,11 +217,11 @@ nav .fa-solid{
         display:block;
     }
 
-    .nav_links ul li:hover .subFormula {
+    .nav_links ul .Link:hover .subFormula {
         background: #ed2021;
     }
 
-    .nav_links ul li:hover .subFormula ul{
+    .nav_links ul .Link:hover .subFormula ul{
         padding:0;
         padding-left: 20px;
         padding-right: 10px;
@@ -231,20 +233,22 @@ nav .fa-solid{
         text-align: right;
     }
 
-    .nav_links2 ul li{
+    .nav_links2 ul .Link{
         list-style: none;
         display: inline-block;
         position: relative;
         padding: 8px 12px;
+        text-decoration: none;
+        color: white;
     }
 
-    .nav_links2 ul li a {
+    .nav_links2 ul .Link a {
         color:white;
         text-decoration: none;
         font-size: 15px;
     }
 
-    .nav_links2 ul li::after{
+    .nav_links2 ul .Link::after{
         content:'';
         width:0%;
         height:2px;
@@ -254,34 +258,34 @@ nav .fa-solid{
         transition: 0.5s;
     }
 
-    .nav_links2 ul li:hover::after{
+    .nav_links2 ul .Link:hover::after{
         width: 100%;
     }
 
-    .nav_links2 ul li:hover .subFormula {
+    .nav_links2 ul .Link:hover .subFormula {
         display: block;
         position: absolute;
         background: rgb(65, 62, 62);
         margin-left: -15px;
     }
 
-    .nav_links2 ul li:hover .subFormula ul {
+    .nav_links2 ul .Link:hover .subFormula ul {
         display: block;
         margin: 10px;
     }
 
-    .nav_links2 ul li:hover .subFormula ul li {
+    .nav_links2 ul .Link:hover .subFormula ul .Link {
         background: transparent;
         border-bottom: 1px solid white;
         text-align: left;
         border-radius: 0;
     }
 
-    .nav_links2 ul li:hover .subFormula ul li:last-child {
+    .nav_links2 ul .Link:hover .subFormula ul .Link:last-child {
         border-bottom: none;
     }
 
-    .nav_links2 ul li{
+    .nav_links2 ul .Link{
         display: block;
     }
 
@@ -297,7 +301,7 @@ nav .fa-solid{
         transition: 1s;
     }
 
-    .nav_links2 ul li::after{
+    .nav_links2 ul .Link::after{
         background:yellow;
     }
 
@@ -306,11 +310,11 @@ nav .fa-solid{
         display:block;
     }
 
-    .nav_links2 ul li:hover .subFormula {
+    .nav_links2 ul .Link:hover .subFormula {
         background: #ed2021;
     }
 
-    .nav_links2 ul li:hover .subFormula ul{
+    .nav_links2 ul .Link:hover .subFormula ul{
         padding:0;
         padding-left: 20px;
         padding-right: 10px;
