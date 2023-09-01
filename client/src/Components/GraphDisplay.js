@@ -7,18 +7,6 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 Chart.register(LinearScale, PointElement, LineElement);
 
 function GraphDisplay({ variables, equation }) {
-  useEffect(() => {
-    if (typeof equation === 'function') {
-      console.log(equation)
-      equation = equation(variables)
-      console.log(equation)
-    }
-
-    return () => {
-
-    }
-  }, [variables])
-
 
   const [chartData, setChartData] = useState(null);
 
@@ -53,7 +41,19 @@ function GraphDisplay({ variables, equation }) {
         borderColor: 'rgba(75, 192, 192, 1)',
       });
 
-    } else if (Array.isArray(equation)) {
+    } 
+    if (typeof equation === 'function') {
+      const yValues = tValues.map((time) => evaluateEquation(equation(variables, time), time));
+      
+      datasets.push({
+        label: 'Plasma Concentration (mg/L)',
+        data: yValues,
+        fill: false,
+        borderColor: 'rgba(75, 192, 192, 1)',
+      });
+
+    }
+    else if (Array.isArray(equation)) {
       // Loop through each equation in the array
       console.log("hello")
       equation.forEach((eq) => {
