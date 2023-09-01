@@ -128,14 +128,13 @@ const mydata = [
         k2: 'constant',
         C_thresh: 'number'
       },
-      equation: (variables) => {
-        let t = variables.t;
+      equation: (variables,t) => {
         let C0 = variables.C0;
         let k1 = variables.k1;
         let k2 = variables.k2;
         let C_thresh = variables.C_thresh;
         if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
-        else return "C_thresh * (e **exp(-k2*(t - ((C0 - C_thresh) / k1))))";
+        else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
       }
     },
 
@@ -149,6 +148,11 @@ const mydata = [
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
     'y_label': "",
+    'data': {
+      variables: {
+        
+      },
+    }
   },
 ]
 

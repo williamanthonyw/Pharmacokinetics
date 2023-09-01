@@ -56,7 +56,7 @@ const Homepage = () => {
             <div className={nav_links} id="navLinks">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>
-<<<<<<< HEAD
+
                     {/* <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li> */}
                     <Link className="Link" to="/contact">HOME</Link>
@@ -71,20 +71,7 @@ const Homepage = () => {
                         </ul>
                       </div>
                     </Link>
-=======
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <Link to="/contact">CONTACTS</Link>
-                    <li className="formula" id="formula"><a href="">FORMULA</a>
-                        <div className="subFormula">
-                            <ul>
-                                <li><a href="">Option1</a></li>
-                                <li><a href="">Option2</a></li>
-                                <li><a href="">Option3</a></li>
-                            </ul>
-                        </div>
-                    </li>
->>>>>>> e25e56fed82fad1f1c5d77142faab26a78ffa8ba
+
 
                 </ul>
             </div>
