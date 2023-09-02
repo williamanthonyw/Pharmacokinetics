@@ -128,7 +128,7 @@ const mydata = [
         k2: 'constant',
         C_thresh: 'number'
       },
-      equation: (variables,t) => {
+      equation: (variables, t) => {
         let C0 = variables.C0;
         let k1 = variables.k1;
         let k2 = variables.k2;
@@ -147,7 +147,61 @@ const mydata = [
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
     'y_label': "",
-    'data': []
+    'data': [{
+      variables: {
+        C0: 10.0,
+        k1: 1.0,
+        k2: 0.5,
+        C_thresh: 2.0,
+      },
+      variableLabels: {
+        C0: 'initial concentration',
+        k1: 'linear decay constant',
+        k2: 'exponential decay constant',
+        C_thresh: 'concentration threshold'
+      },
+      data_types: {
+        C0: 'number',
+        k1: 'constant',
+        k2: 'constant',
+        C_thresh: 'number'
+      },
+      equation: (variables, t) => {
+        let C0 = variables.C0;
+        let k1 = variables.k1;
+        let k2 = variables.k2;
+        let C_thresh = variables.C_thresh;
+        if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
+        else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
+      }
+    }, {
+      variables: {
+        C0: 10.0,
+        k1: 1.0,
+        k2: 0.5,
+        C_thresh: 2.0,
+      },
+      variableLabels: {
+        C0: 'initial concentration',
+        k1: 'linear decay constant',
+        k2: 'exponential decay constant',
+        C_thresh: 'concentration threshold'
+      },
+      data_types: {
+        C0: 'number',
+        k1: 'constant',
+        k2: 'constant',
+        C_thresh: 'number'
+      },
+      equation: (variables, t) => {
+        let C0 = variables.C0;
+        let k1 = variables.k1;
+        let k2 = variables.k2;
+        let C_thresh = variables.C_thresh;
+        if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
+        else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
+      }
+    }],
   },
 ]
 
