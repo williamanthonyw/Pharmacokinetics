@@ -137,7 +137,6 @@ const mydata = [
         else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
       }
     },
-
   },
 
   {
@@ -148,11 +147,7 @@ const mydata = [
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
     'y_label': "",
-    'data': {
-      variables: {
-        
-      },
-    }
+    'data': []
   },
 ]
 

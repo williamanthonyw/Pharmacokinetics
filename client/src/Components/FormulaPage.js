@@ -5,6 +5,7 @@ import HtmlRender from './HtmlRender';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import mydata from './data';
+import { Form } from 'react-bootstrap';
 const FormulaPage = () => {
   const location = useLocation();
   const currentURL = location.pathname;
@@ -18,28 +19,65 @@ const FormulaPage = () => {
       }
     }
   }, [location]);
-  return (
-    <div className="container">
-      <h1>{data.formula_name}</h1>
 
-      <div className='mt-5'>
-        <HtmlRender html={data.top_paragraph}></HtmlRender>
-      </div>
+  if (!currentURL.includes('multiple_oral_dosing'))
+    return (
+      <div className="container">
+        <h1>{data.formula_name}</h1>
 
-      <div className='row'>
-        {data.data ? (
-          <>
-            <EquationForm data={data.data} setData={setData} />
-            <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
-          </>
-        ) : (
-          // If data is null or undefined
-          <p>Loading...</p>
-        )}
+        <div className='mt-5'>
+          <HtmlRender html={data.top_paragraph}></HtmlRender>
+        </div>
+
+        <div className='row'>
+          {data.data ? (
+            <>
+              <EquationForm data={data.data} setData={setData} />
+              <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+            </>
+          ) : (
+            // If data is null or undefined
+            <p>Loading...</p>
+          )}
+        </div>
+        <HtmlRender html={data.bottom_paragraph}></HtmlRender>
       </div>
-      <HtmlRender html={data.bottom_paragraph}></HtmlRender>
-    </div>
-  );
+    );
+  else
+    return (<>
+      <div className="container">
+        <h1>{data.formula_name}</h1>
+
+        <div className='mt-5'>
+          <HtmlRender html={data.top_paragraph}></HtmlRender>
+        </div>
+
+        <div className='row'>
+          {data.data ? (
+            <>
+              <EquationForm data={data.data} setData={setData} />
+              <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+            </>
+          ) : (
+            // If data is null or undefined
+            <p>Loading...</p>
+          )}
+        </div>
+        <HtmlRender html={data.bottom_paragraph}></HtmlRender>
+
+        <div className='row'>
+          {data.data ? (
+            <>
+              <EquationForm data={data.data} setData={setData} />
+              <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+            </>
+          ) : (
+            // If data is null or undefined
+            <p>Loading...</p>
+          )}
+        </div>
+      </div>
+    </>)
 };
 
 export default FormulaPage;

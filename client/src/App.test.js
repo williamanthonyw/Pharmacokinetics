@@ -44,6 +44,6 @@ test('HTML REnder page', () => {
  
 });
 
-test('MyNavbar page', () => {
+test('MyNavbar', () => {
  
 });
