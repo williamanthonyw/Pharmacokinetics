@@ -148,40 +148,82 @@ const mydata = [
     'x_label': "",
     'y_label': "",
     'data':
-      [ {variables: {
+      [ 
+      {
+        variables: {
         dose: 250,
         tau: 8,
         n: 7,
         F: 0.75,
         ka: 0.9,
         k: 0.07,
-        kdif: -0.83,
         Vd: 121.5,
-      },
-      variableLabels: {
-        dose: '',
-        tau: 8,
-        n: 7,
-        F: 0.75,
-        ka: 0.9,
-        k: 0.07,
-        kdif: -0.83,
-        Vd: 121.5,
-      },
-      data_types: {
-        C0: 'number',
-        k1: 'constant',
-        k2: 'constant',
-        C_thresh: 'number'
-      },
-      equation: (variables,t) => {
-        let C0 = variables.C0;
-        let k1 = variables.k1;
-        let k2 = variables.k2;
-        let C_thresh = variables.C_thresh;
-        if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
-        else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
-      }}, 
+        },
+        variableLabels: {
+          dose: 'dose',
+          tau: 'dosing interval',
+          n: 'number of doses',
+          F: 'fraction absorbed',
+          ka: 'absorption rate constant',
+          k: 'elimination rate constant',
+          Vd: 'volume of distribution'
+        },
+        data_types: {
+          dose: 'number',
+          tau: 'number',
+          n: 'number',
+          F: 'number',
+          ka: 'constant',
+          k: 'constant',
+          Vd: 'number'
+        },
+        equation: (variables,t) => {
+          let dose = variables.dose;
+          let tau = variables.tau;
+          let n = variables.n;
+          let F = variables.F;
+          let ka = variables.ka;
+          let k = variables.k;
+          let Vd = variables.Vd;
+          return "((F*dose*ka)/(Vd*kdif)) * ( (((1-exp(-n*ka*tau))/(1-exp(-ka*tau)))*exp(-ka*time))-(((1-exp(-n*k*tau))/(1-exp(-k*tau)))*exp(-k*time)) )"
+        }
+      }, 
+      {
+        variables: {
+          dose: 250,
+          tau: 8,
+          F: 0.75,
+          ka: 0.9,
+          k: 0.07,
+          Vd: 121.5,
+        },
+        variableLabels: {
+          dose: 'dose',
+          tau: 'dosing interval',
+          F: 'fraction absorbed',
+          ka: 'absorption rate constant',
+          k: 'elimination rate constant',
+          Vd: 'volume of distribution'
+        },
+        data_types: {
+          dose: 'number',
+          tau: 'number',
+          F: 'number',
+          ka: 'constant',
+          k: 'constant',
+          Vd: 'number'
+        },
+        equation: (variables,t) => {
+          let dose = variables.dose;
+          let tau = variables.tau;
+          let F = variables.F;
+          let ka = variables.ka;
+          let k = variables.k;
+          let Vd = variables.Vd;
+          return "((F*dose*ka)/(Vd*kdif)) * ( (((1-exp(-n*ka*tau))/(1-exp(-ka*tau)))*exp(-ka*time))-(((1-exp(-n*k*tau))/(1-exp(-k*tau)))*exp(-k*time)) )"
+        }
+
+      }
     
     ]
     
