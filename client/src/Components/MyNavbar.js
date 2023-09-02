@@ -8,7 +8,7 @@ import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
   const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
-  console.log(location)
+  
   // TODO - Modify links to get data from server instead of hard coding
   const [links, setLinks] = useState(mydata)
 
