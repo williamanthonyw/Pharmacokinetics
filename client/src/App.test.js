@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, queryByAttribute } from '@testing-library/react';
 import App from './App';
 import About from './Components/About';
 import Contact from './Components/Contact';
@@ -21,11 +21,23 @@ test('App renders without crashing', () => {
 });
 
 test('About page', () => {
- 
+  const page = render(
+    <MemoryRouter initialEntries={["","/about"]}>
+      <App />
+    </MemoryRouter>
+  );
+
+  expect(screen.getByTitle('about-paragraph')).toBeInTheDocument();
+
 });
 
 test('Contact page', () => {
- 
+  const page = render(
+    <MemoryRouter initialEntries={["","/contact"]}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByTitle('img')).toBeInTheDocument();
 });
 
 test('Equation Form page', () => {
@@ -45,5 +57,15 @@ test('HTML REnder page', () => {
 });
 
 test('MyNavbar', () => {
- 
+  const page = render(
+    <MemoryRouter initialEntries={["","/about"]}>
+      <App />
+    </MemoryRouter>
+  );
+
+  const getById = queryByAttribute.bind(null, 'id')
+  const navbar_1 = getById(page.container, 'basic-navbar-nav')
+
+  expect(navbar_1).toBeInTheDocument();
+
 });
