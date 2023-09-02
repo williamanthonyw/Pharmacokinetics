@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import * as math from 'mathjs';
+import {create, all} from 'mathjs';
 import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 
 // Register the 'linear' scale, 'PointElement', and 'LineElement'
 Chart.register(LinearScale, PointElement, LineElement);
 
 function GraphDisplay({ variables, equation }) {
-
+const math = create(all)
   const [chartData, setChartData] = useState(null);
 
 

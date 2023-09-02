@@ -60,6 +60,9 @@ const FormulaPage = () => {
           <p>Loading...</p>
         )}
       </div>
+      <div className='mt-5'>
+
+      </div>
       <HtmlRender html={data.bottom_paragraph}></HtmlRender>
 
       <div className='row'>

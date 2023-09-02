@@ -1,40 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
-// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-// import './MyNavbar.css'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import './MyNavbar.css'
 import { useState } from 'react';
 import logo from '../assets/images/USYD_LOGO_WHITE.png';
-
+import mydata from './data';
 const Homepage = () => {
-  const [links, setLinks] = useState([
-    {
-      'url': 'single_iv_dosing',
-      'formula_name': 'Single IV Dosing',
-      'id': 1
-    },
-    {
-      'url': 'oral_dosing_plasma_time_curve',
-      'formula_name': 'Oral Dosing Plasma-time Curve',
-      'id': 2
-    },
-    {
-      'url': 'intravenous_infusion_and_effect_of_clearance',
-      'formula_name': 'Intravenous Infusion and Effect of Clearance',
-      'id': 3,
-    },
-    {
-      'url': 'non_linear_parhamkinetics',
-      'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
-      'id': 4,
-    },
-    {
-      'url': 'multiple_oral_dosing',
-      'formula_name': 'Multiple Oral Dosing',
-      'id': 4,
-    },
-
-  ])
+  const [links, setLinks] = useState(mydata)
 
 
   const [nav_links, setNav_links] = useState("nav_links");
@@ -50,44 +23,39 @@ const Homepage = () => {
   return (
     <div>
       <header className="header">
-      <nav>
+        <Navbar bg="light" expand="lg" className='bg-blue'>
+          <div className='container whitesmoke'>
+            <Navbar.Brand as={Link} to="/pharmakinetics"><img src={logo} alt="Description of your image" /></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <Nav.Link as={Link} to="/pharmakinetics" style={{ color: 'whitesmoke' }}>Home</Nav.Link>
+                <Nav.Link as={Link} to="/about" style={{ color: 'whitesmoke' }}>About</Nav.Link>
+                <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Contact</Nav.Link>
+                {/* Add similar style attributes for other Nav.Link items */}
+                <Nav.Link as={Link} to="/contact" style={{ color: 'whitesmoke' }}>Flashcards</Nav.Link>
+                <NavDropdown title="Formula" id="basic-nav-dropdown">
+                  {links.map(link => (
+                    <NavDropdown.Item as={Link} to={`/formula/${link.url}`} key={link.id}>
+                      {link.formula_name}
+                    </NavDropdown.Item>
+                  ))}
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
+        </Navbar>
 
-            <a href="index.html"><img src={logo} alt = "USYD LOGO"/></a>
-            <div className={nav_links} id="navLinks">
-                <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
-                <ul>
-
-                    {/* <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li> */}
-                    <Link className="Link" to="/contact">HOME</Link>
-                    <Link className="Link" to="/about">ABOUT</Link>
-                    <Link className="Link" to="/contact">CONTACT</Link>
-                    <Link className="Link" to="/contact">FORMULA
-                      <div className="subFormula">
-                        <ul>
-                          <Link className="Link" to="/contact">Option1</Link>
-                          <Link className="Link" to="/about">Option2</Link>
-                          <Link className="Link" to="/contact">Option3</Link>
-                        </ul>
-                      </div>
-                    </Link>
-
-
-                </ul>
-            </div>
-            <i className="fa-solid fa-bars" onClick={showMenu}></i>
-
-        </nav>
-
-
-        <div className="text-box">
-          <h1>Pharmacokinetic Calculations</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-          </p>
-          <a href="" className = "learnNow">Learn more</a>
+        <div className='mycontainer'>
+          <div className="text-box">
+            <h1>Pharmacokinetic Calculations</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            </p>
+            <a href="" className="learnNow">Learn more</a>
 
 
+          </div>
         </div>
 
 
