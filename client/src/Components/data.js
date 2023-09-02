@@ -147,8 +147,47 @@ const mydata = [
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
     'y_label': "",
-    'data': []
-  },
+    'data':
+      [ {variables: {
+        dose: 250,
+        tau: 8,
+        n: 7,
+        F: 0.75,
+        ka: 0.9,
+        k: 0.07,
+        kdif: -0.83,
+        Vd: 121.5,
+      },
+      variableLabels: {
+        dose: '',
+        tau: 8,
+        n: 7,
+        F: 0.75,
+        ka: 0.9,
+        k: 0.07,
+        kdif: -0.83,
+        Vd: 121.5,
+      },
+      data_types: {
+        C0: 'number',
+        k1: 'constant',
+        k2: 'constant',
+        C_thresh: 'number'
+      },
+      equation: (variables,t) => {
+        let C0 = variables.C0;
+        let k1 = variables.k1;
+        let k2 = variables.k2;
+        let C_thresh = variables.C_thresh;
+        if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
+        else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
+      }}, 
+    
+    ]
+    
+    },
+
+
 ]
 
 export default mydata
