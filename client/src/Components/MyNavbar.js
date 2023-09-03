@@ -8,7 +8,7 @@ import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
   const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
-  
+
   // TODO - Modify links to get data from server instead of hard coding
   const [links, setLinks] = useState(mydata)
 
@@ -18,7 +18,7 @@ function MyNavbar() {
     return <></>
   }
   return (
-    // If route == default don't render 
+    // If route == default don't render
     <Navbar bg="light" expand="lg" className='bg-blue'>
       <div className='container'>
         <Navbar.Brand as={Link} to="/pharmakinetics">pk_calcs</Navbar.Brand>
