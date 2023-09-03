@@ -8,6 +8,8 @@
 
 **Prepared by:** Andrew Adisaputra
 
+**Edited by:** Yan Gunawan Teguh
+
 **Mode:** In person
 
 **Date:** 18 August, 2023
@@ -58,3 +60,4 @@
 1. Change from slider to a normal number input
 2. Submit week 4 project submission report
 3. Move meeting minutes to wiki
+4. Don't forget to implement the 3-click rule in designing the website
