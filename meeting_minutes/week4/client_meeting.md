@@ -62,3 +62,5 @@
 ## Reminders
 
 1. Complete the rest of the formula pages
+2. Don't need to create an admin page
+3. Don't need to create a flashcard feature
