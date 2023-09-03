@@ -1,12 +1,40 @@
-import React, { useState } from 'react';
-import { Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/USYD_LOGO_WHITE.png';
 import './Homepage.css';
-import './MyNavbar.css';
-import mydata from './data';
+// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+// import './MyNavbar.css'
+import { useState } from 'react';
+import logo from '../assets/images/USYD_LOGO_WHITE.png';
+
 const Homepage = () => {
-  const [links, setLinks] = useState(mydata)
+  const [links, setLinks] = useState([
+    {
+      'url': 'single_iv_dosing',
+      'formula_name': 'Single IV Dosing',
+      'id': 1
+    },
+    {
+      'url': 'oral_dosing_plasma_time_curve',
+      'formula_name': 'Oral Dosing Plasma-time Curve',
+      'id': 2
+    },
+    {
+      'url': 'intravenous_infusion_and_effect_of_clearance',
+      'formula_name': 'Intravenous Infusion and Effect of Clearance',
+      'id': 3,
+    },
+    {
+      'url': 'non_linear_parhamkinetics',
+      'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
+      'id': 4,
+    },
+    {
+      'url': 'multiple_oral_dosing',
+      'formula_name': 'Multiple Oral Dosing',
+      'id': 4,
+    },
+
+  ])
 
 
   const [nav_links, setNav_links] = useState("nav_links");
@@ -22,7 +50,6 @@ const Homepage = () => {
   return (
     <div>
       <header className="header">
-
       <nav>
 
             <a href="https://www.youtube.com/watch?v=EcFVTgRHJLM"><img src={logo} alt = "USYD LOGO"/></a>
@@ -38,11 +65,11 @@ const Homepage = () => {
                     <Link className="Link" to="/contact">FORMULA
                       <div className="subFormula">
                         <ul>
-                          <li><Link className="Link" to="/contact">Single IV Dosing<br></br></Link></li>
-                          <li><Link className="Link" to="/about">Oral Dosing Plasma-time Curve</Link></li>
-                          <li><Link className="Link" to="/contact">Intravenous Infusion and Effect of Clearance</Link></li>
-                          <li><Link className="Link" to="/contact">Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
-                          <li><Link className="Link" to="/contact">Multiple Oral Dosing</Link></li>
+                          <li><Link className="Link" to="/contact">1. Single IV Dosing<br></br></Link></li>
+                          <li><Link className="Link" to="/about">2. Oral Dosing Plasma-time Curve</Link></li>
+                          <li><Link className="Link" to="/contact">3. Intravenous Infusion and Effect of Clearance</Link></li>
+                          <li><Link className="Link" to="/contact">4. Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
+                          <li><Link className="Link" to="/contact">5. Multiple Oral Dosing</Link></li>
                         </ul>
                       </div>
                     </Link>
@@ -63,7 +90,6 @@ const Homepage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
           </p>
           <a href="" className = "learnNow">Learn more</a>
-
 
 
         </div>
