@@ -8,6 +8,8 @@
 
 **Prepared by:** Yan Gunawan Teguh
 
+**Edited by:** Yan Gunawan Teguh
+
 **Mode:** Online
 
 **Date:** 25 August, 2023
@@ -55,6 +57,7 @@
 
 1. Finished the home page and some formula pages
 2. All task submitted on time
+3. Client is very happy and satisfied with our current progress
 
 ## Reminders
 
