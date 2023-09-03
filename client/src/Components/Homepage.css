@@ -35,6 +35,7 @@ nav {
     align-items: center;
     transition: 1s;
     padding: 0px 6%;
+    /* padding-top: 10px; */
     z-index: 3;
     /* transition: 0.5s; */
 }
@@ -48,18 +49,20 @@ nav.black{
     text-align: right;
 }
 
-/* .nav_links ul {
+.nav_links ul {
     position: relative;
     display: flex;
-    justify-content:flex-end;
+    justify-content:flex-start;
     padding: 0 6%;
-} */
+}
 
 .nav_links ul .Link{
     list-style: none;
     display: inline-block;
     position: relative;
     padding: 8px 12px;
+    /* margin-right: 100px; */
+    margin-top: 20px;
     text-decoration: none;
     color: white;
 }
@@ -133,28 +136,45 @@ nav .fa-solid{
     display: none;
 }
 
+.nav_links ul {
+    list-style-type: none;
+}
+
 .nav_links ul .Link:hover .subFormula {
     display: block;
-    position: absolute;
+    position:absolute;
     background: rgb(65, 62, 62);
+    margin-left: -10px;
+    text-align: left;
+
+    /* border: 1px solid white; */
+}
+
+.nav_links ul .Link:hover .subFormula .Link{
+    /* background-color: #e9f389; */
+    width:max-content;
     margin-left: -15px;
+
 }
 
 .nav_links ul .Link:hover .subFormula ul {
     display: block;
-    margin: 10px;
+    margin-left: -25px;
+    /* margin-right: 100px; */
+    padding-right: 100px;
 }
 
-.nav_links ul .Link:hover .subFormula ul .Link {
+
+
+/* .nav_links ul .Link:hover .subFormula ul .Link {
     background: transparent;
     border-bottom: 1px solid white;
-    text-align: left;
     border-radius: 0;
-}
+} */
 
-.nav_links ul .Link:hover .subFormula ul .Link:last-child {
+/* .nav_links ul .Link:hover .subFormula ul .Link:last-child {
     border-bottom: none;
-}
+} */
 
 
 
@@ -233,6 +253,10 @@ nav .fa-solid{
         text-align: right;
     }
 
+    .nav_links2 ul{
+        list-style-type: none;
+    }
+
     .nav_links2 ul .Link{
         list-style: none;
         display: inline-block;
@@ -266,15 +290,18 @@ nav .fa-solid{
         display: block;
         position: absolute;
         background: rgb(65, 62, 62);
-        margin-left: -15px;
+        margin-left: -42px;
+        /* text-align: left; */
     }
 
     .nav_links2 ul .Link:hover .subFormula ul {
         display: block;
         margin: 10px;
+        margin-left: -30px;
+
     }
 
-    .nav_links2 ul .Link:hover .subFormula ul .Link {
+    /* .nav_links2 ul .Link:hover .subFormula ul .Link {
         background: transparent;
         border-bottom: 1px solid white;
         text-align: left;
@@ -283,7 +310,7 @@ nav .fa-solid{
 
     .nav_links2 ul .Link:hover .subFormula ul .Link:last-child {
         border-bottom: none;
-    }
+    } */
 
     .nav_links2 ul .Link{
         display: block;
@@ -311,13 +338,24 @@ nav .fa-solid{
     }
 
     .nav_links2 ul .Link:hover .subFormula {
-        background: #ed2021;
+        background: #e54726;
+        margin-left: -42px;
+        padding-right: 100px;
+        z-index: 3;
     }
 
     .nav_links2 ul .Link:hover .subFormula ul{
         padding:0;
         padding-left: 20px;
         padding-right: 10px;
+    }
+
+    .nav_links2 ul .Link:hover .subFormula .Link{
+        /* background-color: #e9f389; */
+        width:fit-content;
+        margin-left: 10px;
+
+
     }
 
 

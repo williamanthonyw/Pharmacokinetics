@@ -52,7 +52,7 @@ const Homepage = () => {
       <header className="header">
       <nav>
 
-            <a href="index.html"><img src={logo} alt = "USYD LOGO"/></a>
+            <a href="https://www.youtube.com/watch?v=EcFVTgRHJLM"><img src={logo} alt = "USYD LOGO"/></a>
             <div className={nav_links} id="navLinks">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>
@@ -65,12 +65,16 @@ const Homepage = () => {
                     <Link className="Link" to="/contact">FORMULA
                       <div className="subFormula">
                         <ul>
-                          <Link className="Link" to="/contact">Option1</Link>
-                          <Link className="Link" to="/about">Option2</Link>
-                          <Link className="Link" to="/contact">Option3</Link>
+                          <li><Link className="Link" to="/contact">Single IV Dosing<br></br></Link></li>
+                          <li><Link className="Link" to="/about">Oral Dosing Plasma-time Curve</Link></li>
+                          <li><Link className="Link" to="/contact">Intravenous Infusion and Effect of Clearance</Link></li>
+                          <li><Link className="Link" to="/contact">Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
+                          <li><Link className="Link" to="/contact">Multiple Oral Dosing</Link></li>
                         </ul>
                       </div>
                     </Link>
+
+
 
 
                 </ul>
