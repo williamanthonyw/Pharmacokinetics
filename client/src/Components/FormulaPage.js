@@ -18,8 +18,31 @@ const FormulaPage = () => {
       }
     }
   }, [location]);
-  return (
-    <div className="container">
+  if (!currentURL.includes('multiple_oral_dosing'))
+    return (
+      <div className="container">
+        <h1>{data.formula_name}</h1>
+
+        <div className='mt-5'>
+          <HtmlRender html={data.top_paragraph}></HtmlRender>
+        </div>
+
+        <div className='row'>
+          {data.data ? (
+            <>
+              <EquationForm data={data.data} setData={setData} />
+              <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+            </>
+          ) : (
+            // If data is null or undefined
+            <p>Loading...</p>
+          )}
+        </div>
+        <HtmlRender html={data.bottom_paragraph}></HtmlRender>
+      </div>
+    );
+  else
+    return (<div className="container">
       <h1>{data.formula_name}</h1>
 
       <div className='mt-5'>
@@ -27,19 +50,34 @@ const FormulaPage = () => {
       </div>
 
       <div className='row'>
-        {data.data ? (
+        {data.data && Array.isArray(data.data) && data.data[0] ? (
           <>
-            <EquationForm data={data.data} setData={setData} />
-            <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+            <EquationForm data={data.data[0]} setData={setData} />
+            <GraphDisplay variables={data.data[0].variables} equation={data.data[0].equation} />
           </>
         ) : (
           // If data is null or undefined
           <p>Loading...</p>
         )}
       </div>
+      <div className='mt-5'>
+
+      </div>
       <HtmlRender html={data.bottom_paragraph}></HtmlRender>
-    </div>
-  );
+
+      <div className='row'>
+        {data.data && Array.isArray(data.data) && data.data[1] ? (
+          <>
+            <EquationForm data={data.data[1]} setData={setData} />
+            <GraphDisplay variables={data.data[1].variables} equation={data.data[1].equation} />
+          </>
+        ) : (
+          // If data is null or undefined
+          <p>Loading...</p>
+        )}
+      </div>
+
+    </div>)
 };
 
 export default FormulaPage;

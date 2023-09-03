@@ -14,8 +14,6 @@ function EquationForm({ data, setData }) {
       },
     }));
   };
-  
-
   return (
     <form className="col-md-4">
       {Object.keys(data.variables).map((variableName) => (
