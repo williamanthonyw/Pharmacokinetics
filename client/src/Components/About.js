@@ -47,7 +47,7 @@ const About = () => {
         In addition to these equations provided, the website also includes interactive graphs that allow students to actively engage with pharmacokinetic equations in real time.
       </p>
       <p>
-        By providing a user-friendly website which includes educational content as well as interactive graphs, students are able to gain the knowledge and skills necessary to excel in the field of pharmacokinetics.
+        By providing a user friendly website which includes educational content as well as interactive graphs, students are able to gain the knowledge and skills necessary to excel in the field of pharmacokinetics.
       </p>
     </div>
   )
