@@ -47,11 +47,11 @@ const Contact = () => {
         <section className="team">
             <h4>The Website Development Team</h4>
             <img src={logo} alt="USYD LOGO" width="25%"/>
-            <p>If you have any questions or feedback for our development team, please use the form below:</p>
+            <p>If you have any questions or feedback for our development team, you can reach out to the School of Computer Science with the details below:</p>
             <ul>
-                <li>Email: (Form with text box to be implemented) </li>
-                <li>Phone: (Form with text box to be implemented)</li>
-                <li>Message: (Form with text box to be implemented)</li>
+                <li>Email: <a href="mailto:cs.reception@sydney.edu.au">cs.reception@sydney.edu.au</a></li>
+                <li>Phone: <a href="tel:+61 2 9351 2222">+61 2 9351 2222</a></li>
+                <li>Address: Building J12/1 Cleveland St, Camperdown NSW 2006</li>
             </ul>
         </section>
 
