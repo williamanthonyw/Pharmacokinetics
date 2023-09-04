@@ -4,6 +4,33 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* TEXT HOMEPAGE */
+
+.formula_home {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+.formula_home:hover {
+    border: 1px solid #ed2021;
+    background: #ed2021;
+}
+
+
+.anything h1{
+    color:red;
+}
+
+.anything h3 {
+    font-weight: bold;
+    color:#e54726;
+    text-decoration: underline;
+    text-align: left;
+}
+
+/* LIKE USUAL */
+
 .header {
     min-height: 100vh;
     width:100%;
@@ -389,18 +416,34 @@ h1{
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
-    padding: 10px;
+    padding: 5px;
+    /* margin-bottom: 10px; */
     text-align: left;
+    text-align: justify;
 
 }
 
 /* NearlyEnd */
 .nearlyEnd {
     width: 100%;
-    padding:10px;
+    padding:40px;
     /* background-image: linear-gradient(#143ebe, #143ebe); */
     background-image: linear-gradient(#e54726, #e54726);
     text-align: center;
+}
+
+.nearlyEnd p {
+    text-align: right;
+    margin-top: -20px;
+    margin-right: 100px;
+    font-weight: 600;
+    /* text-decoration:; */
+}
+
+.end {
+    text-decoration: none;
+    color:black;
+    text-decoration: underline;
 }
 
 *{
