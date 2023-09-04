@@ -7,6 +7,7 @@ import MyNavbar from './Components/MyNavbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Contact from './Components/Contact';
 import About from './Components/About';
+import Footer from './Components/Footer';
 function App() {
   return (<>
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/about' element={<About></About>}></Route>
       <Route path='/contact' element={<Contact></Contact>}></Route>
     </Routes>
+    <Footer></Footer>
   </>
 
 
