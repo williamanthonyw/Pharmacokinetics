@@ -22,9 +22,9 @@ const FormulaPage = () => {
     return (
       <div className="container">
         <h1>{data.formula_name}</h1>
-
+        <p>Page by Dr Slade Matthews, The University of Sydney, 2023</p>
         <div className='mt-5'>
-          <HtmlRender html={data.top_paragraph}></HtmlRender>
+          {data.top_paragraph}
         </div>
 
         <div className='row'>
@@ -38,13 +38,13 @@ const FormulaPage = () => {
             <p>Loading...</p>
           )}
         </div>
-        <HtmlRender html={data.bottom_paragraph}></HtmlRender>
+        {data.bottom_paragraph}
       </div>
     );
   else
     return (<div className="container">
       <h1>{data.formula_name}</h1>
-
+      <p>Page by Dr Slade Matthews, The University of Sydney, 2023</p>
       <div className='mt-5'>
         <HtmlRender html={data.top_paragraph}></HtmlRender>
       </div>
