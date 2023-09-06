@@ -68,7 +68,7 @@ const Homepage = () => {
                           <li><Link className="Link" to="/formula/single_iv_dosing">1. Single IV Dosing<br></br></Link></li>
                           <li><Link className="Link" to="/formula/oral_dosing_plasma_time_curve">2. Oral Dosing Plasma-time Curve</Link></li>
                           <li><Link className="Link" to="/formula/intravenous_infusion_and_effect_of_clearance">3. Intravenous Infusion and Effect of Clearance</Link></li>
-                          <li><Link className="Link" to="/formula/non_linear_pharmacokinetics">4. Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
+                          <li><Link className="Link" to="/formula/non_linear_Pharmacokinetics">4. Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
                           <li><Link className="Link" to="/formula/multiple_oral_dosing">5. Multiple Oral Dosing</Link></li>
                         </ul>
                       </div>
@@ -85,14 +85,14 @@ const Homepage = () => {
 
 
         <div className="text-box">
-          <h1>Pharmacokinetic Calculations</h1>
+          <h1>Pharmacokinetics Calculations</h1>
           <p>
-            Pharmacokinetic is what happen to medication after it enters the body. It can be remembered as ADME
+            Pharmacokinetics is what happen to medication after it enters the body. It can be remembered as ADME
             (Absorption, Distribution, Metabolism and Excretion). This website will help you to explore in more details about the formulas
             such as <Link to="/formula/single_iv_dosing" className = "formula_home">Single IV Dosing</Link>,
             <Link to="/formula/oral_dosing_plasma_time_curve" className = "formula_home"> Oral Dosing Plasma Time Curve</Link>,
             <Link to="/formula/intravenous_infusion_and_effect_of_clearance" className = "formula_home"> Intravenous Infusion and Effect of Clearance</Link>,
-            <Link to="/formula/non_linear_pharmacokinetics" className = "formula_home"> Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</Link>,
+            <Link to="/formula/non_linear_Pharmacokinetics" className = "formula_home"> Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</Link>,
             <Link to="/formula/multiple_oral_dosing" className = "formula_home"> Multiple Oral Dosing</Link>.
           </p>
           <Link to="/about" className = "learnNow">Learn more</Link>
@@ -105,7 +105,7 @@ const Homepage = () => {
       </header>
 
       <section className="anything">
-        <h1>Pharmacokinetic</h1>
+        <h1>Pharmacokinetics</h1>
         <h3>1. ADME:</h3>
         <p>+ A - Absorption - How medications are absorbed in the body. Location of administration:<br></br>
         <li>Injection known as "parenteral": Intravenous(IV) therapy, Intramuscular(IM), Subcutaneous(SQ)... </li>
@@ -121,12 +121,12 @@ const Homepage = () => {
           <li>Liver: it is responsible for the "1st pass phenomenon", which means the liver will metabolizes oral medication before going to the rest of the body. </li>
           <li>Lungs, kidneys and intestines also help with metabolism.</li>
         </p>
-        <p>+ E - Excretion - How the medications get out of the body and into the body.</p>
+        <p>+ E - Elimination / Excretion - How the medications get out of the body and into the body.</p>
 
-        <h3>2. The History of Pharmacokinetic:</h3>
+        <h3>2. The History of Pharmacokinetics:</h3>
         <p>- The origins of Pharmacokinetics is the study of the time course of drug absorption, distribution, metabolism, and excretion.
           It was developed from the fields of physiology, biochemistry, and physical chemistry in the early 20th century.
-          Leonor Michaelis, Victor Henri, and Maud Menten are 3 pioneers, who contributed to create Pharmacokinetic.
+          Leonor Michaelis, Victor Henri, and Maud Menten are 3 pioneers, who contributed to create Pharmacokinetics.
         </p>
 
         <p>
@@ -134,10 +134,10 @@ const Homepage = () => {
         </p>
 
         <p>+ Victor Henri was a French physical chemist who also studied enzyme kinetics and derived a similar equation independently in 1903. He also developed the concept of enzyme inhibition, which explains how some substances can slow down or stop an enzyme reaction.</p>
-        <p>+ Maud Menten continued to work on enzyme kinetics and pharmacokinetics after her collaboration with Michaelis. She developed methods for measuring blood levels of drugs and enzymes, and applied the Michaelis-Menten equation to pharmacokinetics. She showed how the rate of drug elimination depends on the concentration of the drug and the enzyme that metabolizes it.</p>
-        <p>-> These three pioneers laid the foundations for pharmacokinetics and influenced many other researchers who followed their footsteps. Their work has contributed to the advancement of clinical pharmacology and drug therapy, and has improved the health and well-being of millions of people around the world.</p>
+        <p>+ Maud Menten continued to work on enzyme kinetics and Pharmacokinetics after her collaboration with Michaelis. She developed methods for measuring blood levels of drugs and enzymes, and applied the Michaelis-Menten equation to Pharmacokinetics. She showed how the rate of drug elimination depends on the concentration of the drug and the enzyme that metabolizes it.</p>
+        <p>-> These three pioneers laid the foundations for Pharmacokinetics and influenced many other researchers who followed their footsteps. Their work has contributed to the advancement of clinical pharmacology and drug therapy, and has improved the health and well-being of millions of people around the world.</p>
 
-        <p><a href="https://journals.sagepub.com/doi/pdf/10.1177/106002807701101207#:~:text=THE%20ORIGINS%20OF%20PHARMACOKINETICS%20were,Menten%20equation%22%20for%20enzyme%20kinetics.">
+        <p><a href="https://journals.sagepub.com/doi/pdf/10.1177/106002807701101207#:~:text=THE%20ORIGINS%20OF%20PharmacokineticsS%20were,Menten%20equation%22%20for%20enzyme%20kinetics.">
         For more information about the History.
         </a></p>
       </section>
