@@ -59,7 +59,7 @@ const Homepage = () => {
 
                     {/* <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li> */}
-                    <Link className="Link" to="/contact">HOME</Link>
+                    <Link className="Link" to="/pharmacokinetics">HOME</Link>
                     <Link className="Link" to="/about">ABOUT</Link>
                     <Link className="Link" to="/contact">CONTACT</Link>
                     <Link className="Link" to="">FORMULA
@@ -136,7 +136,7 @@ const Homepage = () => {
         <p>+ Victor Henri was a French physical chemist who also studied enzyme kinetics and derived a similar equation independently in 1903. He also developed the concept of enzyme inhibition, which explains how some substances can slow down or stop an enzyme reaction.</p>
 
         <p>+ Maud Menten continued to work on enzyme kinetics and pharmacokinetics after her collaboration with Michaelis. She developed methods for measuring blood levels of drugs and enzymes, and applied the Michaelis-Menten equation to pharmacokinetics. She showed how the rate of drug elimination depends on the concentration of the drug and the enzyme that metabolizes it.</p>
-        <p>-> These three pioneers laid the foundations for pharmacokinetics and influenced many other researchers who followed their footsteps. Their work has contributed to the advancement of clinical pharmacology and drug therapy, and has improved the health and well-being of millions of people around the world.</p>
+        <p>&rarr; These three pioneers laid the foundations for pharmacokinetics and influenced many other researchers who followed their footsteps. Their work has contributed to the advancement of clinical pharmacology and drug therapy, and has improved the health and well-being of millions of people around the world.</p>
 
 
         <p><a href="https://journals.sagepub.com/doi/pdf/10.1177/106002807701101207#:~:text=THE%20ORIGINS%20OF%20PharmacokineticsS%20were,Menten%20equation%22%20for%20enzyme%20kinetics.">
