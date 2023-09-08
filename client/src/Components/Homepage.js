@@ -52,7 +52,7 @@ const Homepage = () => {
       <img src={background} alt = "USYD LOGO"/>
       <nav>
 
-            <a href="https://www.youtube.com/watch?v=EcFVTgRHJLM"><img src={logo} alt = "USYD LOGO"/></a>
+            <a href="#"><img src={logo} alt = "USYD LOGO"/></a>
             <div className={nav_links} id="navLinks">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>

@@ -63,10 +63,10 @@ function MyNavbar() {
 
                     {/* <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li> */}
-                    <Link className="Link" to="/contact">HOME</Link>
+                    <Link className="Link" to="/pharmacokinetics">HOME</Link>
                     <Link className="Link" to="/about">ABOUT</Link>
                     <Link className="Link" to="/contact">CONTACT</Link>
-                    <Link className="Link" to="">FORMULA
+                    <Link className="Link">FORMULA
                       <div className="subFormula">
                         <ul>
                           <li><Link className="Link" to="/formula/single_iv_dosing">1. Single IV Dosing<br></br></Link></li>
