@@ -6,7 +6,7 @@
 
 **Facilitator:** Matthew Slate
 
-**Prepared by:** Andrew Adisaputra
+**Prepared by:** Nashita Islam
 
 **Mode:** Zoom
 

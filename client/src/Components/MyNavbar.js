@@ -8,7 +8,7 @@ import logo from '../assets/images/USYD_LOGO_WHITE.png';
 import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
-  const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
+  const isIndexPage = location.pathname === '/pharmacokinetics' || location.pathname === '/pharmacokinetics/';
 
   // TODO - Modify links to get data from server instead of hard coding
 
@@ -31,6 +31,7 @@ function MyNavbar() {
 
   return (
     // If route == default don't render
+
     // <Navbar bg="light" expand="lg" className='bg-blue'>
     //   <div className='container'>
     //     <Navbar.Brand as={Link} to="/pharmakinetics">pk_calcs</Navbar.Brand>
@@ -106,6 +107,7 @@ function MyNavbar() {
 
       </header>
     </div>
+
   );
 
 

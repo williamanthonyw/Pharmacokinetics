@@ -59,7 +59,7 @@ const FormulaPage = () => {
       <h1>{data.formula_name}</h1>
       <p>Page by Dr Slade Matthews, The University of Sydney, 2023</p>
       <div className='mt-5'>
-        <HtmlRender html={data.top_paragraph}></HtmlRender>
+        {data.top_paragraph}
       </div>
 
       <div className='row'>
@@ -76,7 +76,7 @@ const FormulaPage = () => {
       <div className='mt-5'>
 
       </div>
-      <HtmlRender html={data.bottom_paragraph}></HtmlRender>
+      {data.bottom_paragraph}
 
       <div className='row'>
         {data.data && Array.isArray(data.data) && data.data[1] ? (
