@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Latex = () => {
+const Latex = ({latex_code}) => {
+    
     return (
         <>Latex</>
     )
