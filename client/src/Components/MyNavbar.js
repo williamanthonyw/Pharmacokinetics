@@ -1,45 +1,114 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import './MyNavbar.css'
+import './MyNavbar.css';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import logo from '../assets/images/USYD_LOGO_WHITE.png';
 import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
   const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
 
   // TODO - Modify links to get data from server instead of hard coding
-  const [links, setLinks] = useState(mydata)
 
+  // const [links, setLinks] = useState(mydata)
 
+  const [nav_links, setNav_links] = useState("nav_links");
+
+  const showMenu = () => {
+    setNav_links("nav_links2");
+  }
+
+  const hideMenu = () => {
+    setNav_links("nav_links");
+  }
 
   if (isIndexPage) {
     return <></>
   }
+
+
   return (
     // If route == default don't render
-    <Navbar bg="light" expand="lg" className='bg-blue'>
-      <div className='container'>
-        <Navbar.Brand as={Link} to="/pharmakinetics">pk_calcs</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/pharmakinetics">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            <NavDropdown title="Formula" id="basic-nav-dropdown">
-              {links.map(link => (
-                <NavDropdown.Item as={Link} to={`/formula/${link.url}`} key={link.id}>
-                  {link.formula_name}
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </div>
-    </Navbar>
+    // <Navbar bg="light" expand="lg" className='bg-blue'>
+    //   <div className='container'>
+    //     <Navbar.Brand as={Link} to="/pharmakinetics">pk_calcs</Navbar.Brand>
+    //     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    //     <Navbar.Collapse id="basic-navbar-nav">
+    //       <Nav className="ml-auto">
+    //         <Nav.Link as={Link} to="/pharmakinetics">Home</Nav.Link>
+    //         <Nav.Link as={Link} to="/about">About</Nav.Link>
+    //         <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+    //         <NavDropdown title="Formula" id="basic-nav-dropdown">
+    //           {links.map(link => (
+    //             <NavDropdown.Item as={Link} to={`/formula/${link.url}`} key={link.id}>
+    //               {link.formula_name}
+    //             </NavDropdown.Item>
+    //           ))}
+    //         </NavDropdown>
+    //       </Nav>
+    //     </Navbar.Collapse>
+    //   </div>
+    // </Navbar>
+    <div>
+      <header className="header2">
+      <nav className="navBar">
+
+            <a href="#"><img src={logo} alt = "USYD LOGO"/></a>
+            <div className={nav_links} id="navLinks">
+                <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
+                <ul>
+
+                    {/* <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li> */}
+                    <Link className="Link" to="/contact">HOME</Link>
+                    <Link className="Link" to="/about">ABOUT</Link>
+                    <Link className="Link" to="/contact">CONTACT</Link>
+                    <Link className="Link" to="">FORMULA
+                      <div className="subFormula">
+                        <ul>
+                          <li><Link className="Link" to="/formula/single_iv_dosing">1. Single IV Dosing<br></br></Link></li>
+                          <li><Link className="Link" to="/formula/oral_dosing_plasma_time_curve">2. Oral Dosing Plasma-time Curve</Link></li>
+                          <li><Link className="Link" to="/formula/intravenous_infusion_and_effect_of_clearance">3. Intravenous Infusion and Effect of Clearance</Link></li>
+                          <li><Link className="Link" to="/formula/non_linear_Pharmacokinetics">4. Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
+                          <li><Link className="Link" to="/formula/multiple_oral_dosing">5. Multiple Oral Dosing</Link></li>
+                        </ul>
+                      </div>
+                    </Link>
+
+
+
+
+                </ul>
+            </div>
+            <i className="fa-solid fa-bars" onClick={showMenu}></i>
+
+        </nav>
+
+
+        {/* <div className="text-box">
+          <h1>Pharmacokinetics Calculations</h1>
+          <p>
+            Pharmacokinetics is what happen to medication after it enters the body. It can be remembered as ADME
+            (Absorption, Distribution, Metabolism and Excretion). This website will help you to explore in more details about the formulas
+            such as <Link to="/formula/single_iv_dosing" className = "formula_home">Single IV Dosing</Link>,
+            <Link to="/formula/oral_dosing_plasma_time_curve" className = "formula_home"> Oral Dosing Plasma Time Curve</Link>,
+            <Link to="/formula/intravenous_infusion_and_effect_of_clearance" className = "formula_home"> Intravenous Infusion and Effect of Clearance</Link>,
+            <Link to="/formula/non_linear_Pharmacokinetics" className = "formula_home"> Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</Link>,
+            <Link to="/formula/multiple_oral_dosing" className = "formula_home"> Multiple Oral Dosing</Link>.
+          </p>
+          <Link to="/about" className = "learnNow">Learn more</Link>
+
+
+        </div> */}
+
+
+      </header>
+    </div>
   );
+
+
 }
 
 export default MyNavbar;
