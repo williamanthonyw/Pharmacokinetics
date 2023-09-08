@@ -133,6 +133,7 @@ const mydata = [
       <p>The elimination curve follows a combination of a linear curve and then an exponential functions.</p>
       <p>The linear portion of the cruve follows the familar <Latex latex_code='\begin{equation} Y = mx + b \end{equation}'></Latex></p>
       <p>The exponential elimination follows the formula: <Latex latex_code='\begin{equation} C = C_0 * e^{-kt} \end{equation}'></Latex></p>
+      <p>This curve is generated for illustrative purposed using a combination of a linear function which changes to an exponential once a certain plasma concentration is reached. In reality the change would be more subtle. In real cases, such as with phenytoin, the rate of metabolic elimination of a drug would be dependant on the enzyme rate kinetics of the enzyme(s) concerned. These are the Vmax (maximum rate of enzymatic metabolism of the molecule by the enzyme) and Km (concentration at which the enzymatic rate is half Vmax). This is the model proposed by Michaelis and Menten.</p>
     </div>,
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
