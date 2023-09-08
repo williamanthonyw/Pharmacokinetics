@@ -30,7 +30,6 @@ const Contact = () => {
                 <p>If you have any questions regarding equations or pharmacokinetics, you can reach out to Dr. Slade Matthews through the following contact methods:</p>
                 <ul>
                     <li>Email: <a href="mailto:slade.matthews@sydney.edu.au">slade.matthews@sydney.edu.au</a></li>
-                    <li>Phone: <a href="tel:+61 2 9351 6200">+61 2 9351 6200</a></li>
                     <li>Address: The University of Sydney, A15, Science Rd, Camperdown NSW 2050</li>
                 </ul>
             </section>
