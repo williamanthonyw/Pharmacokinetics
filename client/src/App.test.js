@@ -41,19 +41,19 @@ test('Contact page', () => {
 });
 
 test('Equation Form page', () => {
- 
+
 });
 
 test('Formula page', () => {
- 
+
 });
 
 test('Graph Display', () => {
- 
+
 });
 
 test('HTML REnder page', () => {
- 
+
 });
 
 test('MyNavbar', () => {
