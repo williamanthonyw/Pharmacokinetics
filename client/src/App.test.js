@@ -63,8 +63,8 @@ test('MyNavbar', () => {
     </MemoryRouter>
   );
 
-  const getById = queryByAttribute.bind(null, 'id')
-  const navbar_1 = getById(page.container, 'basic-navbar-nav')
+  const getById = queryByAttribute.bind(null, 'id');
+  const navbar_1 = getById(page.container, 'basic-navbar-nav');
 
   expect(navbar_1).toBeInTheDocument();
 
