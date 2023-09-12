@@ -41,7 +41,8 @@ const mydata = [
     'top_paragraph':
       <div>
         <p>After a while thinking deeply about the single IV plasma-time curve you will be ready to think about the more general but more complicated single oral dose plasma-time curve. This introduces another variable which is the absorption rate constant but it is still a relatively simple situation since we are not looking at multiple doses or considering other factors affecting drug disposition.</p>
-        <p>Follows the formula: <Latex lates_code='\begin{equation} C = \frac{F.Dose.k_a}{Vd(k_a-k_e)} *(e^{-k_et} - e^{-k_at}) \end{equation}'></Latex></p>
+        <p>Follows the formula: <Latex latex_code='C = \frac{F \cdot Dose \cdot k_a}{Vd \cdot (k_a - k_e)} \cdot (e^{-k_e \cdot t} - e^{-k_a \cdot t})'></Latex>
+</p>
         <p>In the cell below we require values for dose, Cl, Vd, F, and ka.</p>
         <p>This simple model does not account for salting effects, metabolism, etc.</p>
       </div>,
@@ -80,7 +81,7 @@ const mydata = [
     'top_paragraph':
       <div>
         <p>In these IV infusion cruves you can see the effect of different values of clearance on the steady state concentration of a drug. So drugs that have different clearance values that are dosed at the same mg/hour dose rate will settle at different steady state concentrations.</p>
-        <p>Concentration during infusion is given by: <Latex latex_code='\begin{equation} C = \frac{K_0}{Cl} * (1-e^{-k_et})\end{equation}'></Latex></p>
+        <p>Concentration during infusion is given by: <Latex latex_code='C = \frac{K_0}{Cl} * (1-e^{-k_et})'></Latex></p>
         <p>Where K_0 = infusion rate</p>
         <p>And K_e is the elimination rate constant</p>
       </div>,
