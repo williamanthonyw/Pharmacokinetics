@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './MyNavbar.css';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
@@ -54,55 +53,42 @@ function MyNavbar() {
     // </Navbar>
     <div>
       <header className="header2">
-      <nav className="navBar">
+        <nav className="navBar">
 
-            <a href="#"><img src={logo} alt = "USYD LOGO"/></a>
-            <div className={nav_links} id="navLinks">
-                <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
-                <ul>
+          <a href="#"><img src={logo} alt="USYD LOGO" /></a>
+          <div className={nav_links} id="navLinks">
+            <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
+            <ul>
 
-                    {/* <li><a href="">HOME</a></li>
+              {/* <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li> */}
-                    <Link className="Link" to="/pharmacokinetics">HOME</Link>
-                    <Link className="Link" to="/about">ABOUT</Link>
-                    <Link className="Link" to="/contact">CONTACT</Link>
-                    <Link className="Link">FORMULA
-                      <div className="subFormula">
-                        <ul>
-                          <li><Link className="Link" to="/formula/single_iv_dosing">1. Single IV Dosing<br></br></Link></li>
-                          <li><Link className="Link" to="/formula/oral_dosing_plasma_time_curve">2. Oral Dosing Plasma-time Curve</Link></li>
-                          <li><Link className="Link" to="/formula/intravenous_infusion_and_effect_of_clearance">3. Intravenous Infusion and Effect of Clearance</Link></li>
-                          <li><Link className="Link" to="/formula/non_linear_Pharmacokinetics">4. Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination</Link></li>
-                          <li><Link className="Link" to="/formula/multiple_oral_dosing">5. Multiple Oral Dosing</Link></li>
-                        </ul>
-                      </div>
-                    </Link>
+              <Link className="Link" to="/pharmacokinetics">HOME</Link>
+              <Link className="Link" to="/about">ABOUT</Link>
+              <Link className="Link" to="/contact">CONTACT</Link>
+              <Link className="Link">FORMULA
+                <div className="subFormula">
+                  <ul>
+                    {mydata.map((item) => (
+                      <li key={item.id}>
+                        <Link className="Link" to={`/formula/${item.url}`}>
+                          {item.id}. {item.formula_name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+              </Link>
 
 
 
 
-                </ul>
-            </div>
-            <i className="fa-solid fa-bars" onClick={showMenu}></i>
+            </ul>
+          </div>
+          <i className="fa-solid fa-bars" onClick={showMenu}></i>
 
         </nav>
 
-
-        {/* <div className="text-box">
-          <h1>Pharmacokinetics Calculations</h1>
-          <p>
-            Pharmacokinetics is what happen to medication after it enters the body. It can be remembered as ADME
-            (Absorption, Distribution, Metabolism and Excretion). This website will help you to explore in more details about the formulas
-            such as <Link to="/formula/single_iv_dosing" className = "formula_home">Single IV Dosing</Link>,
-            <Link to="/formula/oral_dosing_plasma_time_curve" className = "formula_home"> Oral Dosing Plasma Time Curve</Link>,
-            <Link to="/formula/intravenous_infusion_and_effect_of_clearance" className = "formula_home"> Intravenous Infusion and Effect of Clearance</Link>,
-            <Link to="/formula/non_linear_Pharmacokinetics" className = "formula_home"> Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</Link>,
-            <Link to="/formula/multiple_oral_dosing" className = "formula_home"> Multiple Oral Dosing</Link>.
-          </p>
-          <Link to="/about" className = "learnNow">Learn more</Link>
-
-
-        </div> */}
 
 
       </header>
