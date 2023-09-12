@@ -41,10 +41,10 @@ const math = create(all)
         borderColor: 'rgba(75, 192, 192, 1)',
       });
 
-    } 
+    }
     if (typeof equation === 'function') {
       const yValues = tValues.map((time) => evaluateEquation(equation(variables, time), time));
-      
+
       datasets.push({
         label: 'Plasma Concentration (mg/L)',
         data: yValues,
@@ -109,6 +109,7 @@ const math = create(all)
 
   return (
     <div className='col-8'>
+
       <h2>Plasma Concentration Over Time</h2>
       {chartData && <Line data={chartData} options={chartOptions} />}
     </div>

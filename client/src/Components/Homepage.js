@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
-// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-// import './MyNavbar.css'
 import { useState } from 'react';
 import logo from '../assets/images/USYD_LOGO_WHITE.png';
+import background from '../assets/images/Untitled-1\ copy.jpg';
 
 const Homepage = () => {
   const [links, setLinks] = useState([
@@ -50,9 +49,10 @@ const Homepage = () => {
   return (
     <div>
       <header className="header">
+      <img src={background} alt = "USYD LOGO"/>
       <nav>
 
-            <a href="https://www.youtube.com/watch?v=EcFVTgRHJLM"><img src={logo} alt = "USYD LOGO"/></a>
+            <a href="#"><img src={logo} alt = "USYD LOGO"/></a>
             <div className={nav_links} id="navLinks">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>
@@ -96,6 +96,7 @@ const Homepage = () => {
             <Link to="/formula/multiple_oral_dosing" className = "formula_home"> Multiple Oral Dosing</Link>.
           </p>
           <Link to="/about" className = "learnNow">Learn more</Link>
+
           {/* <a href="" className = "learnNow">Learn more</a> */}
 
 

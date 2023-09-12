@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import EquationForm from './EquationForm';
 import GraphDisplay from './GraphDisplay';
 import HtmlRender from './HtmlRender';
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import mydata from './data';
 const FormulaPage = () => {
   const location = useLocation();
@@ -21,6 +20,11 @@ const FormulaPage = () => {
   if (!currentURL.includes('multiple_oral_dosing'))
     return (
       <div className="container">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
         <h1>{data.formula_name}</h1>
         <p>Page by Dr Slade Matthews, The University of Sydney, 2023</p>
         <div className='mt-5'>
@@ -42,7 +46,16 @@ const FormulaPage = () => {
       </div>
     );
   else
-    return (<div className="container">
+    return (
+
+
+    <div className="container">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
       <h1>{data.formula_name}</h1>
       <p>Page by Dr Slade Matthews, The University of Sydney, 2023</p>
       <div className='mt-5'>

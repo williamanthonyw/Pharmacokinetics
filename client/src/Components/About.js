@@ -3,6 +3,10 @@ import React from 'react'
 const About = () => {
   return (
     <div className='container'>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <h1>About</h1>
       <p title='about-paragraph'>Welcome to our website. This website was designed for students of Dr. Slade Matthews at the University of Sydney's School of Pharmacy, This website serves as an resource for students looking to be pharmacists and/or pharmaceutical scientists, offering an experience in understanding the complex world of pharmacokinetics.</p>
       <h2>What is this website?</h2>

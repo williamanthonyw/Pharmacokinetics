@@ -7,10 +7,10 @@ const mydata = [
     'top_paragraph':
       <div className="">
         <p>The simplest model is of first order elimination following a single IV dose since we only have to consider the elimination process and we start with all the drug in the blood. There are many assumptions in all PK models and it is good to keep that in mind. You may ask "How is it possible that a given drug is guaranteed to behave in this way?" and you'd be right! There are many variables to consider. Gut metabolism, proportion of the molecule in salt form, hepatic extraction ratio. But for now, start with the single IV dose and you will begin to understand the most critical relationships between PK parameters used in drug design and clinical descision making.</p>
-        <p>Follows the formula: <Latex latex_code='\begin{equation} C = C_0 * e^{-kt} \end{equation}'></Latex></p>
+        <p>Follows the formula: <Latex latex_code="C = C_0 * e^{-kt}"></Latex></p>
         <p>In the code below you can change the drug parameters dose, Cl, and Vd.</p>
-        <p>The initial drug plasma concentration for an IV dose is given by: <Latex latex_code="\begin{equation} C_0 = \frac{dose}{Vd} \end{equation}"></Latex></p>
-        <p>The formula for the constant "k" is given by: <Latex latex_code='\begin{equation} k = \frac{Cl}{Vd} \end{equation}'></Latex></p>
+        <p>The initial drug plasma concentration for an IV dose is given by: <Latex latex_code="C_0 = \frac{dose}{V_d}"></Latex></p>
+        <p>The formula for the constant "k" is given by: <Latex latex_code='k = \frac{Cl}{V_d}'></Latex></p>
       </div>,
     'bottom_paragraph': "",
     'x_label': "",
@@ -112,15 +112,16 @@ const mydata = [
     'url': 'non_linear_pharmacokinetics',
     'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
     'id': 4,
-    'top_paragraph':
-      <div>
-        <p>This last curve shows what happens when the elimination pathway is saturated initially and then, when to plasma concentration sinks low enough, the elimination returns to first order and starts to slow down. Notice that the curve is linear and then exponential at the end. So the elimination rate is constant at the begining, irrespective of plasma concentration. Then, in the last part of the curve, the elimination rate is proportional to plasma concentration. For simplicity we start with the drug at some concentration at time=0 but if we were considering an oral dose the situation would be far more complicated!</p>
-        <p>The graph produced by the code below shows a simple linear elimination rate giving a straight line as the amount of drug in plasma is reduced at a contant rate. Once the concentration of drug in the plasma falls below a threshold value (i.e. the elimination pathways are no longer saturated) the elimination rate starts to slow down and the rate is then proportional to plasma concentration of the drug from then on.</p>
-        <p>This situation could arise with drugs such as alcohol where at most 10 grams can be eliminated per hour (Vmax). The Km for alcohol is around 0.01 % (g/100mL) so we are halfway to Vmax at this concentration. Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
-        <p>The elimination curve follows a combination of a linear curve and then an exponential functions.</p>
-        <p>The linear portion of the cruve follows the familar <Latex latex_code='\begin{equation} Y = mx + b \end{equation}'></Latex></p>
-        <p>The exponential elimination follows the formula: <Latex latex_code='\begin{equation} C = C_0 * e^{-kt} \end{equation}'></Latex></p>
-      </div>,
+    'top_paragraph': 
+    <div>
+      <p>This last curve shows what happens when the elimination pathway is saturated initially and then, when to plasma concentration sinks low enough, the elimination returns to first order and starts to slow down. Notice that the curve is linear and then exponential at the end. So the elimination rate is constant at the begining, irrespective of plasma concentration. Then, in the last part of the curve, the elimination rate is proportional to plasma concentration. For simplicity we start with the drug at some concentration at time=0 but if we were considering an oral dose the situation would be far more complicated!</p>
+      <p>The graph produced by the code below shows a simple linear elimination rate giving a straight line as the amount of drug in plasma is reduced at a contant rate. Once the concentration of drug in the plasma falls below a threshold value (i.e. the elimination pathways are no longer saturated) the elimination rate starts to slow down and the rate is then proportional to plasma concentration of the drug from then on.</p> 
+      <p>This situation could arise with drugs such as alcohol where at most 10 grams can be eliminated per hour (Vmax). The Km for alcohol is around 0.01 % (g/100mL) so we are halfway to Vmax at this concentration. Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
+      <p>The elimination curve follows a combination of a linear curve and then an exponential functions.</p>
+      <p>The linear portion of the cruve follows the familar <Latex latex_code='\begin{equation} Y = mx + b \end{equation}'></Latex></p>
+      <p>The exponential elimination follows the formula: <Latex latex_code='\begin{equation} C = C_0 * e^{-kt} \end{equation}'></Latex></p>
+      <p>This curve is generated for illustrative purposed using a combination of a linear function which changes to an exponential once a certain plasma concentration is reached. In reality the change would be more subtle. In real cases, such as with phenytoin, the rate of metabolic elimination of a drug would be dependant on the enzyme rate kinetics of the enzyme(s) concerned. These are the Vmax (maximum rate of enzymatic metabolism of the molecule by the enzyme) and Km (concentration at which the enzymatic rate is half Vmax). This is the model proposed by Michaelis and Menten.</p>
+    </div>,
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
     'y_label': "",

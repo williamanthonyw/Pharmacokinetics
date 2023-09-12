@@ -1,10 +1,16 @@
-import React from 'react'
+import { render } from '@testing-library/react';
+import React, { useEffect, useRef } from 'react'
+import katex from 'katex';
 
 const Latex = ({latex_code}) => {
-    
-    return (
-        <>Latex</>
-    )
+    const nodeRef = useRef();
+
+    useEffect(() => {
+        katex.render(latex_code, nodeRef.current);
+    }, [latex_code]);
+
+    return <div ref={nodeRef}/>
 }
 
-export default Latex
+
+export default Latex;
