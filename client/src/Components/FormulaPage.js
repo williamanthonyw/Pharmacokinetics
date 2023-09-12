@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import EquationForm from './EquationForm';
 import GraphDisplay from './GraphDisplay';
-import HtmlRender from './HtmlRender';
 import mydata from './data';
 const FormulaPage = () => {
   const location = useLocation();

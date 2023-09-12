@@ -33,18 +33,16 @@ const About = () => {
           This equation explains the relationship between drug infusion, clearance rates, and drug concentration. This equation shows how continuous drug administration influences concentration dynamics.
         </p>
       </ul>
-
-      <ul>
-        <li>Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</li>
-        <p>
-          Certain drugs follow non-linear pharmacokinetics, characterized by a combination of zero and first-order elimination kinetics. Understanding this is important to learn how some medications behave in the body.
-        </p>
-      </ul>
-
       <ul>
         <li>Multiple Oral Dosing</li>
         <p>
           The difficulties of administering drugs via multiple oral doses are shown in the equation, considering factors like drug accumulation, steady-state concentrations, and dosage regimens. This knowledge is essential for designing effective drug therapy plans.
+        </p>
+      </ul>
+      <ul>
+        <li>Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</li>
+        <p>
+          Certain drugs follow non-linear pharmacokinetics, characterized by a combination of zero and first-order elimination kinetics. Understanding this is important to learn how some medications behave in the body.
         </p>
       </ul>
       <p>

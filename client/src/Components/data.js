@@ -225,8 +225,8 @@ const mydata = [
       },
       variableLabels: {
         C0: 'initial concentration',
-        k1: 'linear decay constant',
-        k2: 'exponential decay constant',
+        k1: 'linear decay constant (above threshold)',
+        k2: 'exponential decay constant (below threshold)',
         C_thresh: 'concentration threshold'
       },
       data_types: {

@@ -6,35 +6,6 @@ import logo from '../assets/images/USYD_LOGO_WHITE.png';
 import background from '../assets/images/Untitled-1\ copy.jpg';
 import mydata from './data'
 const Homepage = () => {
-  const [links, setLinks] = useState([
-    {
-      'url': 'single_iv_dosing',
-      'formula_name': 'Single IV Dosing',
-      'id': 1
-    },
-    {
-      'url': 'oral_dosing_plasma_time_curve',
-      'formula_name': 'Oral Dosing Plasma-time Curve',
-      'id': 2
-    },
-    {
-      'url': 'intravenous_infusion_and_effect_of_clearance',
-      'formula_name': 'Intravenous Infusion and Effect of Clearance',
-      'id': 3,
-    },
-    {
-      'url': 'non_linear_parhamkinetics',
-      'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
-      'id': 4,
-    },
-    {
-      'url': 'multiple_oral_dosing',
-      'formula_name': 'Multiple Oral Dosing',
-      'id': 4,
-    },
-
-  ])
-
 
   const [nav_links, setNav_links] = useState("nav_links");
 
@@ -98,7 +69,6 @@ const Homepage = () => {
           </p>
           <Link to="/about" className="learnNow">Learn more</Link>
 
-          {/* <a href="" className = "learnNow">Learn more</a> */}
 
 
         </div>
