@@ -10,7 +10,6 @@ function GraphDisplay({ variables, equation }) {
 const math = create(all)
   const [chartData, setChartData] = useState(null);
 
-
   useEffect(() => {
     const evaluateEquation = (eq, t) => {
       try {
@@ -26,7 +25,8 @@ const math = create(all)
       }
     };
 
-    const tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
+    const tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
+
 
     let datasets = [];
 
@@ -44,7 +44,6 @@ const math = create(all)
     }
     if (typeof equation === 'function') {
       const yValues = tValues.map((time) => evaluateEquation(equation(variables, time), time));
-
       datasets.push({
         label: 'Plasma Concentration (mg/L)',
         data: yValues,
@@ -52,24 +51,6 @@ const math = create(all)
         borderColor: 'rgba(75, 192, 192, 1)',
       });
 
-    }
-    else if (Array.isArray(equation)) {
-      // Loop through each equation in the array
-      console.log("hello")
-      equation.forEach((eq) => {
-        console.log(eq)
-        const yValues = tValues.map((time) => evaluateEquation(eq.expression, time));
-
-        //Color the variables with its coresponding color
-        const randomColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
-
-        datasets.push({
-          label: eq.label,
-          data: yValues,
-          fill: false,
-          borderColor: randomColor,
-        });
-      });
     }
 
     setChartData({
