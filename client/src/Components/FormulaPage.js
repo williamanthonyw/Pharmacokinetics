@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import EquationForm from './EquationForm';
 import GraphDisplay from './GraphDisplay';
 import mydata from './data';
+
 const FormulaPage = () => {
   const location = useLocation();
   const currentURL = location.pathname;
