@@ -15,12 +15,7 @@ const m_values = n_values.map(n => n + 1);
 
 const fs = require('fs');
 
-// ... [rest of your parameters and computation functions]
 
-// Compute your y values as before
-// ... [rest of your code]
-
-// Output the values to a CSV file
 let csvContent = 'time,n_array,m_array\n';
 for(let i = 0; i < time.length; i++) {
     csvContent += `${time[i]},${n_values[i]},${m_values[i]}\n`;
