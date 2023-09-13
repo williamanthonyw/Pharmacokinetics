@@ -121,7 +121,7 @@ const mydata = [
         {
           variables: {
             dose: 250,
-            tau: 8,
+            tau: 24,
             F: 0.75,
             ka: 0.9,
             k: 0.07,

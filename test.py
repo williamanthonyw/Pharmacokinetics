@@ -31,6 +31,8 @@ plt.ylabel('Plasma Concentration (mg/L)')
 plt.title('Plasma Concentration for multiple oral doses')
 plt.grid(True)
 plt.show()
+for t in time[0:50]:
+    print(f"t: {t}, t/tau: {t/tau}, floor(t/tau): {np.floor(t/tau)}")
 with open('python_output.csv', 'w', newline='') as csvfile:
     fieldnames = ['time', 'n_array', 'm_array']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

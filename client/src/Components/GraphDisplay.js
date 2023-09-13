@@ -24,9 +24,11 @@ const math = create(all)
         return NaN;
       }
     };
-
+    // If multiple oral dosing
     const tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
 
+    //else
+    // const tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
 
     let datasets = [];
 
