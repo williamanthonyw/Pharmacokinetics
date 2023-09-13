@@ -17,6 +17,7 @@ const FormulaPage = () => {
       }
     }
   }, [location]);
+  console.log("URL value:", data.url);
   return (
     <div className="container">
       <br></br>
@@ -34,7 +35,7 @@ const FormulaPage = () => {
         {data.data ? (
           <>
             <EquationForm data={data.data} setData={setData} />
-            <GraphDisplay variables={data.data.variables} equation={data.data.equation} />
+            <GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing = {data.data && data.url && data.url.includes("multiple")} />
           </>
         ) : (
           // If data is null or undefined

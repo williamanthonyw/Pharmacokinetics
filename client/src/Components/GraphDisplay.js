@@ -6,7 +6,8 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 // Register the 'linear' scale, 'PointElement', and 'LineElement'
 Chart.register(LinearScale, PointElement, LineElement);
 
-function GraphDisplay({ variables, equation }) {
+function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
+console.log(isMulipleOralDosing)
 const math = create(all)
   const [chartData, setChartData] = useState(null);
 
@@ -24,11 +25,14 @@ const math = create(all)
         return NaN;
       }
     };
-    // If multiple oral dosing
-    const tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
+    let tValues = [];
 
-    //else
-    // const tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
+    if (isMulipleOralDosing){
+       tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
+    }
+    else{
+       tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
+    }
 
     let datasets = [];
 
