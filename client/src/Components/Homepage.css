@@ -225,6 +225,9 @@ nav .fa-solid{
 
 
 @media(max-width:700px){
+    .header{
+        background-image: url('../assets/images/Untitled-1\ copy.jpg');
+    }
     .text-box h1{
         font-size: 20px;
     }

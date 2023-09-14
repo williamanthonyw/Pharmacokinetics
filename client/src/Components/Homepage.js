@@ -20,7 +20,7 @@ const Homepage = () => {
   return (
     <div>
       <header className="header">
-        <img src={background} alt="USYD LOGO" />
+        <img src={background} alt="image of Home for website" />
         <nav>
 
           <a href="#"><img src={logo} alt="USYD LOGO" /></a>
