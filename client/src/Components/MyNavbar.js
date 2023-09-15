@@ -7,12 +7,8 @@ import logo from '../assets/images/USYD_LOGO_WHITE.png';
 import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
-<<<<<<< HEAD
   const isIndexPage = location.pathname === '/pharmacokinetics' || location.pathname === '/pharmacokinetics/';
 
-=======
-  const isIndexPage = location.pathname === '/pharmakinetics' || location.pathname === '/pharmakinetics/';
->>>>>>> 319ed52 (testing)
   // TODO - Modify links to get data from server instead of hard coding
 
   // const [links, setLinks] = useState(mydata)
