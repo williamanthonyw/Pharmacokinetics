@@ -154,10 +154,10 @@ const mydata = [
     'url': 'non_linear_pharmacokinetics',
     'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
     'id': 5,
-    'top_paragraph': 
+    'top_paragraph':
     <div>
       <p>This last curve shows what happens when the elimination pathway is saturated initially and then, when to plasma concentration sinks low enough, the elimination returns to first order and starts to slow down. Notice that the curve is linear and then exponential at the end. So the elimination rate is constant at the begining, irrespective of plasma concentration. Then, in the last part of the curve, the elimination rate is proportional to plasma concentration. For simplicity we start with the drug at some concentration at time=0 but if we were considering an oral dose the situation would be far more complicated!</p>
-      <p>The graph produced by the code below shows a simple linear elimination rate giving a straight line as the amount of drug in plasma is reduced at a contant rate. Once the concentration of drug in the plasma falls below a threshold value (i.e. the elimination pathways are no longer saturated) the elimination rate starts to slow down and the rate is then proportional to plasma concentration of the drug from then on.</p> 
+      <p>The graph produced by the code below shows a simple linear elimination rate giving a straight line as the amount of drug in plasma is reduced at a contant rate. Once the concentration of drug in the plasma falls below a threshold value (i.e. the elimination pathways are no longer saturated) the elimination rate starts to slow down and the rate is then proportional to plasma concentration of the drug from then on.</p>
       <p>This situation could arise with drugs such as alcohol where at most 10 grams can be eliminated per hour (Vmax). The Km for alcohol is around 0.01 % (g/100mL) so we are halfway to Vmax at this concentration. Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
       <p>The elimination curve follows a combination of a linear curve and then an exponential functions.</p>
       <p>The linear portion of the cruve follows the familar <Latex latex_code='Y = mx + b'></Latex></p>

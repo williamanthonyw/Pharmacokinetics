@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import lecturerphoto from "../assets/images/drmatthews.jpeg"
 import logo from "../assets/images/usyd_logo.png"
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='container'>
             <br></br>

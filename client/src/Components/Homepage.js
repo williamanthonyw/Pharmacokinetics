@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 import { useState } from 'react';
@@ -16,6 +16,10 @@ const Homepage = () => {
   const hideMenu = () => {
     setNav_links("nav_links");
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

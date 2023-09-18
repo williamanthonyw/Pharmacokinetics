@@ -5,11 +5,10 @@
     width: 50%; /* Adjust this value to control the width of the graph */
     padding: 20px; /* Add spacing around the graph for better presentation */
   }
-  
+
   .equation-form-container {
     display: inline-block;
     vertical-align: top;
     width: 50%;
     padding: 20px;
   }
-  

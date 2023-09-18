@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.headerFormula {
+    min-height: 100vh;
+    width:100%;
+    background-size: cover;
+    background-color: #f4f5f6;
+    position: relative;
+    /* margin-left: -150px; */
+    margin-top: 65px;
+    padding-top: 10px;
+}
+
+.intro {
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    text-align: justify;
+}
+
+.intro h1{
+    color:#e54726;
+    text-align: left;
+}
+
+.FormulaP{
+    font-weight:600;
+    border-bottom: 2px solid black;
+}
+
+
+
+
+
