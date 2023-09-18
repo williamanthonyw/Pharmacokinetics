@@ -91,20 +91,26 @@ const mydata = [
     'data': {
       variables: {
         K0: 10,
-        Cl: 40,
+        Cl1: 40,
+        Cl2: 60,
+        Cl3: 80,
         Vd: 200,
       },
       variableLabels: {
         K0: 'Infusion rate (mg/h)',
-        Cl: 'Clearance (L/h)',
+        Cl1: 'Clearance 1 (blue) (L/h)',
+        Cl2: 'Clearance 2 (green) (L/h)',
+        Cl3: 'Clearance 3 (red) (L/h)',
         Vd: 'Volume of distribution (L)',
       },
       data_types: {
         K0: 'number',
-        Cl: 'number',
+        Cl1: 'number',
+        Cl2: 'number',
+        Cl3: 'number',
         Vd: 'number',
       },
-      equation: "K0/Cl * (1-exp(-(Cl/Vd)*t))",
+      equation: ["K0/Cl1 * (1-exp(-(Cl1/Vd)*t))","K0/Cl2 * (1-exp(-(Cl2/Vd)*t))", "K0/Cl3 * (1-exp(-(Cl3/Vd)*t))"],
 
 
     },

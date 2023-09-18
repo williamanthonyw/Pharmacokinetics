@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import {create, all} from 'mathjs';
+import { create, all, random } from 'mathjs';
 import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 
 // Register the 'linear' scale, 'PointElement', and 'LineElement'
 Chart.register(LinearScale, PointElement, LineElement);
 
 function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
-console.log(isMulipleOralDosing)
-const math = create(all)
+  console.log(isMulipleOralDosing)
+  const math = create(all)
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
@@ -27,11 +27,11 @@ const math = create(all)
     };
     let tValues = [];
 
-    if (isMulipleOralDosing){
-       tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
+    if (isMulipleOralDosing) {
+      tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
     }
-    else{
-       tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
+    else {
+      tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
     }
 
     let datasets = [];
@@ -58,7 +58,31 @@ const math = create(all)
       });
 
     }
+    if (Array.isArray(equation)) {
+      // Loop through each equation in the array
+      console.log("hello")
+      equation.forEach((eq, index)=> {
+        console.log(eq)
+        const yValues = tValues.map((time) => evaluateEquation(eq, time));
+        let randomColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
+        if (index == 0){
+          randomColor =  `rgba(0,0,255)`
+        }
+        if (index == 1) {
+          randomColor = `rgba(0,255,0)`;
+        }
+        if (index == 2){
+          randomColor = `rgba(255,0,0)`;
+        }
 
+        datasets.push({
+          label: eq.label,
+          data: yValues,
+          fill: false,
+          borderColor: randomColor,
+        });
+      });
+    }
     setChartData({
       labels: tValues,
       datasets: datasets,
