@@ -9,7 +9,7 @@
     min-height: 100vh;
     width:100%;
     background-size: cover;
-    background-color: #f4f5f6;
+    background-color: white;
     position: relative;
     /* margin-left: -150px; */
     margin-top: 65px;
@@ -33,7 +33,24 @@
     border-bottom: 2px solid black;
 }
 
+.wave-bg {
+    position: relative;
+    background: transparent;
+}
 
-
-
-
+.wave-bg svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.wave-bg .intro {
+    position: relative;
+    z-index: 2;
+}
+.bottom{
+    bottom: 0;
+}
+.top{
+    top: 0;
+}

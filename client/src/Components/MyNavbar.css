@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.container {
+    width: 89%;
+}
+
 /* TEXT HOMEPAGE */
 
 .formula_home {
