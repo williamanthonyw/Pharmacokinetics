@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function EquationForm({ data, setData }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [error, setError] = useState("")
   const handleChange = (e) => {
     const { name, value } = e.target;
