@@ -6,6 +6,7 @@ function EquationForm({ data, setData, mode }) {
   }, []);
   const [error, setError] = useState("")
   const handleChange = (e) => {
+    if (mode == 'Performance') return
     const { name, value } = e.target;
     if (parseFloat(e.target.value) <= 0) {
       setError(`error: ${name} cannot be less than or equal to 0!`);
@@ -63,7 +64,7 @@ function EquationForm({ data, setData, mode }) {
             className="form-control"
             id={variableName}
             name={variableName}
-            value={data.variables[variableName]}
+            defaultValue={data.variables[variableName]}
             onChange={handleChange}
             min="0"
             required
