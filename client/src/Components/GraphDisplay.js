@@ -43,7 +43,7 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
         label: 'Plasma Concentration (mg/L)',
         data: yValues,
         fill: false,
-        borderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: '#e54726',
       });
 
     }
@@ -53,13 +53,13 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
         label: 'Plasma Concentration (mg/L)',
         data: yValues,
         fill: false,
-        borderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: '#e54726',
       });
 
     }
     if (Array.isArray(equation)) {
       // Loop through each equation in the array
-      console.log("hello")
+      
       equation.forEach((eq, index)=> {
         console.log(eq)
         const yValues = tValues.map((time) => evaluateEquation(eq, time));

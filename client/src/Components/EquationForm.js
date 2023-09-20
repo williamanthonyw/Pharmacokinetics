@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function EquationForm({ data, setData }) {
+function EquationForm({ data, setData, mode}) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,7 +21,7 @@ function EquationForm({ data, setData }) {
       }));
       return
     }
-    else{
+    else {
       setError("")
     }
     setData((prevData) => ({
@@ -37,7 +37,7 @@ function EquationForm({ data, setData }) {
   };
   return (
 
-    <form className="col-2">
+    <form className="col-3">
       {error}
       {Object.keys(data.variables).map((variableName) => (
         <div key={variableName} className="mb-3">
@@ -51,11 +51,14 @@ function EquationForm({ data, setData }) {
             name={variableName}
             value={data.variables[variableName]}
             onChange={handleChange}
-            min = "0"
+            min="0"
             required
           />
         </div>
       ))}
+      <div>
+        {mode == "Performance" ? <div className='btn btn-primary d-inline-block' >Calculate</div> : <></>}
+      </div>
     </form>
   );
 }

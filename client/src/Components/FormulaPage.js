@@ -4,24 +4,23 @@ import EquationForm from './EquationForm';
 import GraphDisplay from './GraphDisplay';
 import mydata from './data';
 import './Formula.css';
-import { Link } from 'react-router-dom';
-import logo from '../assets/images/USYD_LOGO_WHITE.png';
-import background from '../assets/images/Untitled-1\ copy.jpg';
 
 const FormulaPage = () => {
   const location = useLocation();
   const currentURL = location.pathname;
   const [allData, setAllData] = useState(mydata);
   const [data, setData] = useState({});
-
-
+  const [mode, setMode] = useState("Dynamic")
+  let toggle_mode = () => {
+    setMode(mode == "Dynamic" ? "Performance" : "Dynamic")
+  }
   useEffect(() => {
     for (let i = 0; i < allData.length; i++) {
       if (currentURL.includes(allData[i].url)) {
         setData(allData[i]);
       }
     }
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, [location]);
 
   useEffect(() => {
@@ -40,12 +39,17 @@ const FormulaPage = () => {
           </div>
         </section>
       </header>
-      <div className='container mt-5 mb-5'>
+      <div className='container mt-5 mb-5 border'>
         <div className='row'>
           {data.data ? (
             <>
-              <EquationForm data={data.data} setData={setData} />
+              <div className='mb-2 mt-2'>
+                <h1>Interactive Data Visualization</h1>
+                <div className='btn btn-primary d-inline-block' onClick={toggle_mode}>Mode : {mode}</div>
+              </div>
+              <EquationForm data={data.data} setData={setData} mode = {mode}/>
               <GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing={data.data && data.url && data.url.includes("multiple")} />
+
             </>
           ) : (
             // If data is null or undefined
