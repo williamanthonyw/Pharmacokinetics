@@ -6,7 +6,6 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 Chart.register(LinearScale, PointElement, LineElement);
 
 function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
-  console.log(isMulipleOralDosing)
   const math = create(all)
   const [chartData, setChartData] = useState(null);
 

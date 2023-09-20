@@ -1,14 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
-function EquationForm({ data, setData, mode}) {
+function EquationForm({ data, setData, mode }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const [error, setError] = useState("")
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (!/^-?\d*\.?\d*$/.test(e.target.value) || parseFloat(e.target.value) < 0) {
-      setError(`error: invalid input on ${name}`);
+    if (parseFloat(e.target.value) <= 0) {
+      setError(`error: ${name} cannot be less than or equal to 0!`);
+      setData((prevData) => ({
+        ...prevData,
+        data: {
+          ...prevData.data,
+          variables: {
+            ...prevData.data.variables,
+            [name]: "",
+          },
+        },
+      }));
+      return
+    }
+    else if (isNaN(e.target.value)) {
+      setError(`error: ${name} is not a number!`);
       setData((prevData) => ({
         ...prevData,
         data: {
