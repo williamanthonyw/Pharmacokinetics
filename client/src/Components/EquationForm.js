@@ -37,7 +37,7 @@ function EquationForm({ data, setData }) {
   };
   return (
 
-    <form className="col-md-4">
+    <form className="col-2">
       {error}
       {Object.keys(data.variables).map((variableName) => (
         <div key={variableName} className="mb-3">

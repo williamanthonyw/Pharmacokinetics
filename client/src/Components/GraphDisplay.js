@@ -3,7 +3,6 @@ import { Line } from 'react-chartjs-2';
 import { create, all, random } from 'mathjs';
 import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 
-// Register the 'linear' scale, 'PointElement', and 'LineElement'
 Chart.register(LinearScale, PointElement, LineElement);
 
 function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
@@ -119,7 +118,7 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
   };
 
   return (
-    <div className='col-8'>
+    <div className='col-9'>
 
       <h2>Plasma Concentration Over Time</h2>
       {chartData && <Line data={chartData} options={chartOptions} />}
