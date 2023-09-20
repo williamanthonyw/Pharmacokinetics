@@ -1,10 +1,49 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 function EquationForm({ data, setData, mode }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    updateData()
+
+    return () => {
+
+    }
+  }, [mode])
   const [error, setError] = useState("")
+  const formRef = useRef(null);
+  function updateData() {
+    if (!formRef.current) return;
+    const inputs = formRef.current.querySelectorAll('input[type="number"]');
+    let updatedVariables = { ...data.variables };
+
+    for (let i = 0; i < inputs.length; i++) {
+      const { name, value } = inputs[i];
+
+      if (parseFloat(value) <= 0) {
+        setError(`error: ${name} cannot be less than or equal to 0!`);
+        break; 
+      } else if (isNaN(value)) {
+        setError(`error: ${name} is not a number!`);
+        break;
+      } else {
+        setError("")
+        updatedVariables[name] = value;
+      }
+    }
+    if (error !="")return
+    setData((prevData) => ({
+      ...prevData,
+      data: {
+        ...prevData.data,
+        variables: updatedVariables,
+      },
+    }));
+  }
+
+  //handle changes for dynamic mode
   const handleChange = (e) => {
     if (mode == 'Performance') return
     const { name, value } = e.target;
@@ -50,9 +89,12 @@ function EquationForm({ data, setData, mode }) {
       },
     }));
   };
+
+
+
   return (
 
-    <form className="col-3">
+    <form className="col-3" ref={formRef}>
       {error}
       {Object.keys(data.variables).map((variableName) => (
         <div key={variableName} className="mb-3">
@@ -72,7 +114,7 @@ function EquationForm({ data, setData, mode }) {
         </div>
       ))}
       <div>
-        {mode == "Performance" ? <div className='btn btn-primary d-inline-block' >Calculate</div> : <></>}
+        {mode == "Performance" ? <div className='btn btn-primary d-inline-block' onClick={() => updateData()} >Calculate</div> : <></>}
       </div>
     </form>
   );

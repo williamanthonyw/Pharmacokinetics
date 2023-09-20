@@ -427,11 +427,10 @@ h1{
 .nearlyEnd {
     width: 100%;
     background-image: linear-gradient(#e54726, #e54726);
-    
+    color: aliceblue;
 }
 
 .nearlyEnd p {
-    text-align: right;
     font-weight: 600;
 }
 
