@@ -38,6 +38,7 @@ const Contact = () => {
                 <ul>
                     <li>Email: <a href="mailto:slade.matthews@sydney.edu.au">slade.matthews@sydney.edu.au</a></li>
                     <li>Address: The University of Sydney, A15, Science Rd, Camperdown NSW 2050</li>
+                    <li>Github: <a href="https://github.com/sladem-tox?tab=repositories">https://github.com/sladem-tox</a></li>
                 </ul>
             </section>
 
