@@ -26,7 +26,7 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
     let tValues = [];
 
     if (isMulipleOralDosing) {
-      tValues = Array.from({ length: 1000 }, (_, i) => i * 0.168);
+      tValues = Array.from({ length: (variables.duration/0.24) }, (_, i) => i * 0.24);
     }
     else {
       tValues = Array.from({ length: 100 }, (_, i) => i * 0.24);
