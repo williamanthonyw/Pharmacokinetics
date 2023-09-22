@@ -434,6 +434,10 @@ h1{
     font-weight: 600;
 }
 
+.nearlyEnd h5 {
+    font-weight: bold;
+}
+
 .end {
     text-decoration: none;
     color:black;
