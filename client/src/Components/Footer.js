@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import githublogo from '../assets/images/github_icon.png'
 import logo from '../assets/images/USYD_LOGO_WHITE.png';
 const Footer = () => {
   return (
-    <section className="nearlyEnd footer">
+    <footer className="nearlyEnd pt-4 pb-4 bg-dark">
       <div className='container'>
         <div className="row">
 
@@ -46,10 +45,10 @@ const Footer = () => {
         <div className="text-center mb-0 pb-0">
           <img src={logo} alt="USYD Logo" width="150" />
           <p>In collaboration with USYD</p>
-          <p>Copyright © 2023 PK_Calcs. All Rights Reserved.</p>
+          <p className='mb-0'>Copyright © 2023 PK_Calcs. All Rights Reserved.</p>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 
