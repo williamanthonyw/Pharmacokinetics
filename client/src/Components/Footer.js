@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 className="text-uppercase">About the Author</h5>
-            <Link to = "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/slade-matthews.html#collapseprofileprojects"className='text-dark'>Dr. Slade Matthews</Link>
+            <Link to = "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/slade-matthews.html#collapseprofileprojects"className='text-dark'>More About Dr. Slade Matthews</Link>
 
           </div>
 
