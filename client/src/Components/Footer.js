@@ -11,9 +11,10 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 className="text-uppercase">Quick Links</h5>
             <ul className="list-unstyled mb-0">
-              <li><Link className='text-dark'>Home</Link></li>
-              <li><Link className='text-dark'>About</Link></li>
-              <li><Link className='text-dark'>Contact</Link></li>
+              <li><Link className='text-dark' to="/pharmacokinetics">Home</Link></li>
+              <li><Link className='text-dark' to= "/about">About</Link></li>
+              <li><Link className='text-dark' to="/contact">Contact</Link></li>
+
               <li><Link to = "https://github.com/sladem-tox" className='text-dark'> Dr. Slade Matthews's Github</Link></li>
 
             </ul>
