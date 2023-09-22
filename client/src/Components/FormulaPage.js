@@ -39,7 +39,7 @@ const FormulaPage = () => {
           </div>
         </section>
       </header>
-      <div className='bg-dark pt-5 pb-5'>
+      <div className='pt-5 pb-5'>
         <div className='container'>
           
             
