@@ -29,49 +29,86 @@ function MyNavbar() {
 
 
   return (
-    <div>
-      <header className="header2">
-        <nav className="navBar">
+    <>
+      <div className=''>
+        <header className="header2">
+          <nav className="navBar transparent">
 
-          <a href="#"><img src={logo} alt="USYD LOGO" /></a>
-          <div className={nav_links} id="navLinks">
-            <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
-            <ul>
+            <a href="#"><img src={logo} alt="USYD LOGO" /></a>
+            <div className={nav_links} id="navLinks">
+              <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
+              <ul>
 
-              {/* <li><a href="">HOME</a></li>
+                {/* <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li> */}
-              <Link className="Link" to="/pharmacokinetics">HOME</Link>
-              <Link className="Link" to="/about">ABOUT</Link>
-              <Link className="Link" to="/contact">CONTACT</Link>
-              <Link className="Link">FORMULA
-                <div className="subFormula">
-                  <ul>
-                    {mydata.map((item) => (
-                      <li key={item.id}>
-                        <Link className="Link" to={`/formula/${item.url}`}>
-                          {item.id}. {item.formula_name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                <Link className="Link" to="/pharmacokinetics">HOME</Link>
+                <Link className="Link" to="/about">ABOUT</Link>
+                <Link className="Link" to="/contact">CONTACT</Link>
+                <Link className="Link">FORMULA
+                  <div className="subFormula">
+                    <ul>
+                      {mydata.map((item) => (
+                        <li key={item.id}>
+                          <Link className="Link" to={`/formula/${item.url}`}>
+                            {item.id}. {item.formula_name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
 
-                </div>
-              </Link>
-
-
-
-
-            </ul>
-          </div>
-          <i className="fa-solid fa-bars" onClick={showMenu}></i>
-
-        </nav>
+                  </div>
+                </Link>
 
 
 
-      </header>
-    </div>
 
+              </ul>
+            </div>
+            <i className="fa-solid fa-bars" onClick={showMenu}></i>
+
+          </nav>
+
+          <nav className="navBar">
+
+            <a href="#"><img src={logo} alt="USYD LOGO" /></a>
+            <div className={nav_links} id="navLinks">
+              <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
+              <ul>
+
+                {/* <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li> */}
+                <Link className="Link" to="/pharmacokinetics">HOME</Link>
+                <Link className="Link" to="/about">ABOUT</Link>
+                <Link className="Link" to="/contact">CONTACT</Link>
+                <Link className="Link">FORMULA
+                  <div className="subFormula">
+                    <ul>
+                      {mydata.map((item) => (
+                        <li key={item.id}>
+                          <Link className="Link" to={`/formula/${item.url}`}>
+                            {item.id}. {item.formula_name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+
+                  </div>
+                </Link>
+
+
+
+
+              </ul>
+            </div>
+            <i className="fa-solid fa-bars" onClick={showMenu}></i>
+
+          </nav>
+
+
+        </header>
+      </div>
+      
+    </>
   );
 
 

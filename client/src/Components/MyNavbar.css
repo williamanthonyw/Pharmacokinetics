@@ -114,3 +114,7 @@ nav.black{
 .nav_links ul .Link:hover::after{
     width: 100%;
 }
+
+html, body{
+    margin: 0px;
+}
