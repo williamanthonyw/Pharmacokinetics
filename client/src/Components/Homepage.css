@@ -477,3 +477,7 @@ a img{
 .footer{
     margin-top: auto; 
 }
+html, body{
+    margin: 0px!important;
+    padding: 0px!important;
+}
