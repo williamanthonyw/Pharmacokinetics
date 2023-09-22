@@ -14,7 +14,7 @@ const Footer = () => {
               <li><Link className='text-dark'>Home</Link></li>
               <li><Link className='text-dark'>About</Link></li>
               <li><Link className='text-dark'>Contact</Link></li>
-              <li><Link className='text-dark'> Dr. Slade Matthews's github</Link></li>
+              <li><Link to = "https://github.com/sladem-tox" className='text-dark'> Dr. Slade Matthews's Github</Link></li>
             </ul>
           </div>
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
