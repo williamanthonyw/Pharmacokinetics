@@ -62,7 +62,7 @@ const FormulaPage = () => {
           
         </div>
       </div>
-      {data.bottom_paragraph}
+      
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Latex = ({latex_code}) => {
         katex.render(latex_code, nodeRef.current);
     }, [latex_code]);
 
-    return <div ref={nodeRef}/>
+    return <div className='btn btn-primary 'ref={nodeRef}/>
 }
 
 

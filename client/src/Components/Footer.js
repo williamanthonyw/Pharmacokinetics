@@ -4,11 +4,11 @@ import githublogo from '../assets/images/github_icon.png'
 import logo from '../assets/images/USYD_LOGO_WHITE.png';
 const Footer = () => {
   return (
-    <section className="nearlyEnd pt-5 pb-5 m-0">
+    <section className="nearlyEnd footer">
       <div className='container'>
         <div className="row">
 
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="col-lg-3 col-md-6">
             <h5 className="text-uppercase">Quick Links</h5>
             <ul className="list-unstyled mb-0">
               <li><Link className='text-dark'>Home</Link></li>
