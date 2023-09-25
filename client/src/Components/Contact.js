@@ -26,7 +26,7 @@ const Contact = () => {
 
             <section className="lecturer">
                 <h4>Dr.Slade Matthews</h4>
-                <img src={lecturerphoto} alt="photo" />
+                <img src={lecturerphoto} alt="photo"/>
 
                 <p>
                     Senior Lecturer
@@ -53,7 +53,7 @@ const Contact = () => {
 
             <section className="team">
                 <h4>The Website Development Team</h4>
-                <img src={logo} alt="USYD LOGO" width="25%" />
+                <img src={logo} alt="USYD LOGO" width="20%"/>
                 <p>If you have any questions or feedback for our development team, you can reach out to the School of Computer Science with the details below:</p>
                 <ul>
                     <li>Email: <a href="mailto:cs.reception@sydney.edu.au">cs.reception@sydney.edu.au</a></li>
