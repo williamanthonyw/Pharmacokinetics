@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 className="text-uppercase">Contact & Support</h5>
             <ul className="list-unstyled mb-0">
-              <li><a href="cs.reception@sydney.edu.au" class="text-white">Email Address</a></li>
+              <li><a href="mailto:cs.reception@sydney.edu.au" class="text-white">Email Address</a></li>
               <li><a href="tel:+61 2 9351 2222" class="text-white">Phone</a></li>
 
             </ul>

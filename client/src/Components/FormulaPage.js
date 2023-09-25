@@ -41,8 +41,6 @@ const FormulaPage = () => {
       </header>
       <div className='pt-5 pb-5'>
         <div className='container'>
-          
-            
               {data.data ? (
                 <div className='bg-light p-2'>
                   <div className='row'>
