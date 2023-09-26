@@ -11,13 +11,9 @@
     background-size: cover;
     background-color: white;
     position: relative;
-    /* margin-left: -150px; */
-    margin-top: 65px;
-    padding-top: 10px;
 }
 
 .intro {
-    width: 80%;
     text-align: left;
     margin: auto;
     text-align: justify;

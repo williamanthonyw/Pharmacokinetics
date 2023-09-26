@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Contact from './Components/Contact';
 import About from './Components/About';
 import Footer from './Components/Footer';
+import Disclaimer from './Components/Disclaimer';
 function App() {
   return (<>
 
@@ -18,6 +19,7 @@ function App() {
       <Route path='/formula/:formulaName' element={<FormulaPage></FormulaPage>}></Route>
       <Route path='/about' element={<About></About>}></Route>
       <Route path='/contact' element={<Contact></Contact>}></Route>
+      <Route path='/disclaimer' element={<Disclaimer></Disclaimer>}></Route>
     </Routes>
     <Footer></Footer>
   </>

@@ -25,7 +25,7 @@ const Homepage = () => {
     <div>
       <header className="header">
         <img src={background} alt="image of Home for website" />
-        <nav>
+        <nav className='nav'>
 
           <a href="#"><img src={logo} alt="USYD LOGO" /></a>
           <div className={nav_links} id="navLinks">
