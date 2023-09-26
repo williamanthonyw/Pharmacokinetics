@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="list-unstyled mb-0">
               <li><Link className='text-white'>Privacy Policy</Link></li>
               <li><Link className='text-white'>Terms Of Use</Link></li>
-              <li><Link className='text-white'>Disclaimer</Link></li>
+              <li><Link className='text-white' to={'/disclaimer'}>Disclaimer</Link></li>
             </ul>
           </div>
 

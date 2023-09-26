@@ -5,7 +5,7 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className='container'>
+    <div className='container pt-3 pb-3'>
       
       <h1 style={{ color: '#e54726' }}>About</h1>
       <p title='about-paragraph'>Welcome to our website. This website was designed for students of Dr. Slade Matthews at the University of Sydney's School of Pharmacy, This website serves as an resource for students looking to be pharmacists and/or pharmaceutical scientists, offering an experience in understanding the complex world of pharmacokinetics.</p>
