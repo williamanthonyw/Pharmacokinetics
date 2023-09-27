@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import lecturerphoto from "../assets/images/drmatthews.jpeg"
 import logo from "../assets/images/usyd_logo.png"
 const Contact = () => {
@@ -54,6 +55,8 @@ const Contact = () => {
                     <li>Email: <a href="mailto:cs.reception@sydney.edu.au">cs.reception@sydney.edu.au</a></li>
                     <li>Phone: <a href="tel:+61 2 9351 2222">+61 2 9351 2222</a></li>
                     <li>Address: Building J12/1 Cleveland St, Camperdown NSW 2006</li>
+                    <br></br>
+                    <Link to={'/constants'}>Constant page</Link>
                 </ul>
             </section>
 
