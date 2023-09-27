@@ -55,6 +55,7 @@ function MyNavbar() {
 
                   </div>
                 </Link>
+                <Link className="Link" to="/constants">CONSTANTS</Link>
 
 
 
@@ -71,7 +72,6 @@ function MyNavbar() {
               <div className={nav_links} id="navLinks">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>
-
 
                   <Link className="Link" to="/pharmacokinetics">HOME</Link>
                   <Link className="Link" to="/about">ABOUT</Link>

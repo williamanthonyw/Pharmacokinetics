@@ -55,8 +55,6 @@ const Contact = () => {
                     <li>Email: <a href="mailto:cs.reception@sydney.edu.au">cs.reception@sydney.edu.au</a></li>
                     <li>Phone: <a href="tel:+61 2 9351 2222">+61 2 9351 2222</a></li>
                     <li>Address: Building J12/1 Cleveland St, Camperdown NSW 2006</li>
-                    <br></br>
-                    <Link to={'/constants'}>Constant page</Link>
                 </ul>
             </section>
 
