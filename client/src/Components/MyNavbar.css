@@ -122,4 +122,6 @@ html, body{
     align-items: center;
     padding: 0px 5%;
     background: rgb(65, 62, 62);
+    z-index: 3;
+    position:relative;
 }
