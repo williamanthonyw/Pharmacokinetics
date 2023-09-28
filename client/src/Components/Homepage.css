@@ -43,6 +43,7 @@
 
 a img{
     width:170px;
+
 }
 
 nav {
@@ -62,9 +63,7 @@ nav {
     align-items: center;
     transition: 1s;
     padding: 0px 6%;
-    /* padding-top: 10px; */
     z-index: 3;
-    /* transition: 0.5s; */
 }
 
 nav.black{
@@ -330,17 +329,6 @@ nav .fa-solid{
 
     }
 
-    /* .nav_links2 ul .Link:hover .subFormula ul .Link {
-        background: transparent;
-        border-bottom: 1px solid white;
-        text-align: left;
-        border-radius: 0;
-    }
-
-    .nav_links2 ul .Link:hover .subFormula ul .Link:last-child {
-        border-bottom: none;
-    } */
-
     .nav_links2 ul .Link{
         display: block;
     }
@@ -380,7 +368,6 @@ nav .fa-solid{
     }
 
     .nav_links2 ul .Link:hover .subFormula .Link{
-        /* background-color: #e9f389; */
         width:fit-content;
         margin-left: 10px;
 
@@ -428,6 +415,8 @@ h1{
     width: 100%;
     background-image: linear-gradient(#e54726, #e54726);
     color: aliceblue;
+    /* padding-top: 25px;
+    padding-bottom: 10px; */
 }
 
 .nearlyEnd p {
@@ -448,7 +437,7 @@ h1{
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     min-height: 100vh;
     width:100%;
     width: 100%;
@@ -475,7 +464,7 @@ a img{
 
 
 .footer{
-    margin-top: auto; 
+    margin-top: auto;
 }
 html, body{
     margin: 0px!important;
