@@ -8,9 +8,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    width: 89%;
-}
 
 /* TEXT HOMEPAGE */
 
@@ -37,7 +34,6 @@
     text-align: left;
 }
 
-/* LIKE USUAL */
 
 
 
@@ -60,14 +56,15 @@ a img{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    transition: 1s;
     padding: 0px 6%;
     /* padding-top: 10px; */
-    /* z-index: 3; */
+    z-index: 3;
     /* transition: 0.5s; */
-    background: rgb(65, 62, 62);
 }
 
+.navBar_2{
+    display: block;
+}
 nav.black{
     background: rgb(65, 62, 62);
 }
@@ -113,4 +110,17 @@ nav.black{
 
 .nav_links ul .Link:hover::after{
     width: 100%;
+}
+
+html, body{
+    margin: 0px;
+}
+
+.navBar_2{
+    width:100%;     
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6%;
+    background: rgb(65, 62, 62);
 }
