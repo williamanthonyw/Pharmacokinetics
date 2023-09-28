@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 import { useState } from 'react';
-import logo from '../assets/images/USYD_LOGO_WHITE.png';
+import logo from '../assets/images/try2.png';
 import background from '../assets/images/Untitled-1\ copy.jpg';
 import mydata from './data'
 const Homepage = () => {

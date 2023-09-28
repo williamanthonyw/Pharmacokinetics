@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './MyNavbar.css';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import logo from '../assets/images/USYD_LOGO_WHITE.png';
+import logo from '../assets/images/try2.png';
 import mydata from './data';
 function MyNavbar() {
   const location = useLocation();
@@ -30,9 +30,9 @@ function MyNavbar() {
 
   return (
     <>
-      <div className=''>
+      <div className='wrapp'>
         <header className="header2">
-          <nav className="navBar">
+          {/* <nav className="navBar">
 
             <a href="#"><img src={logo} alt="USYD LOGO" /></a>
             <div className={nav_links} id="navLinks">
@@ -64,7 +64,7 @@ function MyNavbar() {
             </div>
             <i className="fa-solid fa-bars" onClick={showMenu}></i>
 
-          </nav>
+          </nav> */}
           <div className='wrapper'>
             <nav className="navBar_2">
 
@@ -90,10 +90,6 @@ function MyNavbar() {
 
                     </div>
                   </Link>
-
-
-
-
                 </ul>
               </div>
               <i className="fa-solid fa-bars" onClick={showMenu}></i>

@@ -46,9 +46,7 @@ a img{
 
 }
 
- .nav {
-    
-
+.nav {
     position: fixed;
     width:100%;
     top:0;
@@ -57,7 +55,7 @@ a img{
     justify-content: space-between;
     align-items: center;
     transition: 1s;
-    padding: 0px 6%;
+    padding: 0px 5%;
     z-index: 3;
 }
 
