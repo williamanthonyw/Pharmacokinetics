@@ -36,6 +36,7 @@ const Homepage = () => {
               <Link className="Link" to="/pharmacokinetics">HOME</Link>
               <Link className="Link" to="/about">ABOUT</Link>
               <Link className="Link" to="/contact">CONTACT</Link>
+              <Link className="Link" to="/constants">CONSTANTS</Link>
               <Link className="Link" to="">FORMULA
                 <div className="subFormula">
                   <ul>
