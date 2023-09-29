@@ -6,13 +6,14 @@ const About = () => {
   }, []);
   return (
     <div className='container pt-3 pb-3'>
-      
+
       <h1 style={{ color: '#e54726' }}>About</h1>
       <p title='about-paragraph'>Welcome to our website. This website was designed for students of Dr. Slade Matthews at the University of Sydney's School of Pharmacy, This website serves as an resource for students looking to be pharmacists and/or pharmaceutical scientists, offering an experience in understanding the complex world of pharmacokinetics.</p>
       <h2>What is this website?</h2>
       <p>
         Our primary goal is to empower and equip students with a comprehensive understanding of pharmacokinetics, particularly focusing on five fundamental pharmacokinetic equations which are a crucial aspect of pharmacology:
       </p>
+
       <ul>
         <li>Single IV Dosing</li>
         <p>

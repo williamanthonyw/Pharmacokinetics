@@ -81,7 +81,7 @@ const Homepage = () => {
 
       </header>
 
-      <section className="anything">
+      <section className="anything container">
         <h1>Pharmacokinetics</h1>
         <h3>1. ADME:</h3>
         <p>+ A - Absorption - How medications are absorbed in the body. Location of administration:<br></br>
