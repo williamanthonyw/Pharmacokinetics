@@ -38,8 +38,8 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 className="text-uppercase">Legal</h5>
             <ul className="list-unstyled mb-0">
-              <li><Link className='text-white'>Privacy Policy</Link></li>
-              <li><Link className='text-white'>Terms Of Use</Link></li>
+              <li><Link to = "https://www.sydney.edu.au/privacy-statement.html" className='text-white'>Privacy Policy</Link></li>
+              <li><Link to = "https://postgradonline.sydney.edu.au/legal/terms-of-service/"className='text-white'>Terms Of Use</Link></li>
               <li><Link className='text-white' to={'/disclaimer'}>Disclaimer</Link></li>
             </ul>
           </div>
