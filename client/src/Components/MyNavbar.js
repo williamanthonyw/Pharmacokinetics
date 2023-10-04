@@ -32,39 +32,43 @@ function MyNavbar() {
     <>
       <div className='wrapp'>
         <header className="header2">
-          {/* <nav className="navBar">
+          <div className='navbar_background'>
+            <nav className="navBar container">
+              <div className=''>
 
-            <a href="#"><img src={logo} alt="USYD LOGO" /></a>
-            <div className={nav_links} id="navLinks">
-              <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
-              <ul>
-                <Link className="Link" to="/pharmacokinetics">HOME</Link>
-                <Link className="Link" to="/about">ABOUT</Link>
-                <Link className="Link" to="/contact">CONTACT</Link>
-                <Link className="Link">FORMULA
-                  <div className="subFormula">
-                    <ul>
-                      {mydata.map((item) => (
-                        <li key={item.id}>
-                          <Link className="Link" to={`/formula/${item.url}`}>
-                            {item.id}. {item.formula_name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+              </div>
+              <a href="#"><img src={logo} alt="USYD LOGO" /></a>
+              <div className={nav_links} id="navLinks">
+                <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
+                <ul>
+                  <Link className="Link" to="/pharmacokinetics">HOME</Link>
+                  <Link className="Link" to="/about">ABOUT</Link>
+                  <Link className="Link" to="/contact">CONTACT</Link>
+                  <Link className="Link">FORMULA
+                    <div className="subFormula">
+                      <ul>
+                        {mydata.map((item) => (
+                          <li key={item.id}>
+                            <Link className="Link" to={`/formula/${item.url}`}>
+                              {item.id}. {item.formula_name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
 
-                  </div>
-                </Link>
-                <Link className="Link" to="/constants">CONSTANTS</Link>
+                    </div>
+                  </Link>
+                  <Link className="Link" to="/constants">CONSTANTS</Link>
 
 
 
 
-              </ul>
-            </div>
-            <i className="fa-solid fa-bars" onClick={showMenu}></i>
+                </ul>
+              </div>
+              <i className="fa-solid fa-bars" onClick={showMenu}></i>
 
-          </nav> */}
+            </nav>
+          </div>
           <div className='wrapper'>
             <nav className="navBar_2">
 
