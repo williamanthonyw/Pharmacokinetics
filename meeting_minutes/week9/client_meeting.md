@@ -45,7 +45,7 @@
 
 ## Notes from Client
 1. Add possibly more examples for disclaimer
-2. Make error message stand out (bold)
+2. Make error message stand out (red, bold)
 3. Input should be positive real numbers (not irrational), limit decimal places to (milligrams to micrograms -> 4 decimal places)
 4. Prefer design 1 of formula page (no black block)
 5. Reference Formula contains equations that are relevant for the formula
@@ -53,7 +53,7 @@
 7. http://repo.upertis.ac.id/1828/1/Instant%20Clinical%20Pharmacology.pdf (pages 92-93)
 8. Delete last paragraph of non-linear graph and replace with the one on client's github page
 9. Graph 5 is highest priority
-10. Add note for the dynamic/performance mode
+10. Add note for the dynamic/performance mode (Multiple oral dosing: "To minimise lag during input of parameters use performance mode")
 
 ## Reminders
 
