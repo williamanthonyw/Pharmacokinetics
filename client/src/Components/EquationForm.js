@@ -95,7 +95,7 @@ function EquationForm({ data, setData, mode }) {
   return (
 
     <form className="col-3" ref={formRef}>
-      {error}
+      <h6 className='text-danger font-weight-bold mt-2 error_message'>{error}</h6>
       {Object.keys(data.variables).map((variableName) => (
         <div key={variableName} className="mb-3">
           <label htmlFor={variableName} className="form-label">
