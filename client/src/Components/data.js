@@ -122,10 +122,20 @@ const mydata = [
     'url': 'multiple_oral_dosing',
     'formula_name': 'Multiple Oral Dosing',
     'id': 4,
-    'top_paragraph': <>
-      <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
+    'top_paragraph':
+      <>
+
+        <p>The plasma concentration at any time following multiple dosing can be determined with the following formula * :</p>
+        <p><Latex latex_code="C_p = \frac{F \cdot \text{Dose} \cdot k_a}{Vd(k-k_a)} \times \Big[ \Big( \frac{1-e^{-nk_a \tau}}{1-e^{-k_a \tau}} \Big) \cdot e^{-k_at} - \Big( \frac{1-e^{-nk \tau}}{1-e^{-k \tau}} \Big) \cdot e^{-kt} \Big]"></Latex></p>
+        <p>Where n = number of doses, τ = dose interval, F = fraction absorbed, Vd is volume of distribution, t = time after administration of n doses, ka is the absorption rate constant, k is the elimination rate constant</p>
+        <p>In the cell below we require values for dose, Cl, Vd, F, and ka. This simple model does not account for salting effects, metabolism, etc.</p>
+        
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
+        
+      </>,
+    'bottom_paragraph': <>
+
     </>,
-    'bottom_paragraph': <></>,
     'x_label': "",
     'y_label': "",
     'data':
