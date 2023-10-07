@@ -15,6 +15,7 @@
 .formula_home:hover {
     border: 1px solid #ed2021;
     background: #ed2021;
+    /* transform: translateY(-10px); */
 }
 
 
@@ -91,7 +92,7 @@ nav.black{
     color:white;
     text-decoration: none;
     font-size: 15px;
-}
+}  
 
 .nav_links ul .Link::after{
     content:'';
@@ -105,6 +106,7 @@ nav.black{
 
 .nav_links ul .Link:hover::after{
     width: 100%;
+    /* transform: translateY(-10px); */
 }
 
 .text-box {
@@ -143,6 +145,7 @@ nav.black{
 .learnNow:hover {
     border: 1px solid #ed2021;
     background: #ed2021;
+    transform: translateY(-10px);
 
 }
 
