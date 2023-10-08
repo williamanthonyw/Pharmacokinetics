@@ -24,7 +24,7 @@ function EquationForm({ data, setData, mode }) {
 
       if (parseFloat(value) <= 0) {
         setError(`error: ${name} cannot be less than or equal to 0!`);
-        break; 
+        break;
       } else if (isNaN(value)) {
         setError(`error: ${name} is not a number!`);
         break;
@@ -114,7 +114,7 @@ function EquationForm({ data, setData, mode }) {
         </div>
       ))}
       <div>
-        {mode == "Performance" ? <div className='btn btn-primary d-inline-block' onClick={() => updateData()} >Calculate</div> : <></>}
+        {mode == "Performance" ? <div className='btn btn-primary d-inline-block animation' onClick={() => updateData()} >Calculate</div> : <></>}
       </div>
     </form>
   );

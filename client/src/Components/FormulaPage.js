@@ -51,7 +51,7 @@ const FormulaPage = () => {
                         <li>Dynamic represents for changing over time.</li>
                         <li>Performance represents changes will be occured after pressing calculate button.</li>
                       </ul>
-                      <div className='btn btn-primary d-inline-block' onClick={toggle_mode}>Mode : {mode}</div>
+                      <div className='btn btn-primary d-inline-block animation' onClick={toggle_mode}>Mode : {mode}</div>
                     </div>
                     <EquationForm data={data.data} setData={setData} mode={mode} />
                     <GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing={data.data && data.url && data.url.includes("multiple")} />
