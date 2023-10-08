@@ -54,3 +54,8 @@
 .bg-dark{
     background-color: rgb(65,62,62)!;
 }
+
+.importWord {
+    font-weight: bold;
+    text-decoration: underline;
+}

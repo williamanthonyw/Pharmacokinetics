@@ -56,11 +56,11 @@ const FormulaPage = () => {
                 // If data is null or undefined
                 <p>Loading...</p>
               )}
-            
-          
+
+
         </div>
       </div>
-      
+
     </div>
   );
 };
