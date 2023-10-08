@@ -46,6 +46,11 @@ const FormulaPage = () => {
                   <div className='row'>
                     <div className=''>
                       <h1>Interactive Data Visualization</h1>
+                      <p>Please press the mode button below to <span className="importWord">change mode</span>:</p>
+                      <ul>
+                        <li>Dynamic represents for changing over time.</li>
+                        <li>Performance represents changes will be occured after pressing calculate button.</li>
+                      </ul>
                       <div className='btn btn-primary d-inline-block' onClick={toggle_mode}>Mode : {mode}</div>
                     </div>
                     <EquationForm data={data.data} setData={setData} mode={mode} />
