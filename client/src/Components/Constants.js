@@ -1,5 +1,6 @@
 import React from 'react'
 import Latex from "./Latex";
+import triangle from '../assets/images/Pharmacokinetic_Triangle.png';
 
 const Constants = () => {
     return (
@@ -23,6 +24,8 @@ const Constants = () => {
             <p><b>Dose adjustment in renal failure:</b> <Latex latex_code="\frac{dose\:rate_{patient}}{*dose\:rate_{normal}} = \frac{CrCl_{patient}}{Crcl_{normal}}"></Latex></p>
             <br></br>
             <p><b>Dose adjustment in renal failure when fu &lt; I:</b> <Latex latex_code="\frac{dose\:rate_{patient}}{*dose\:rate_{normal}} = (I\:-\:fu)\:+\:fu\:\times\:\frac{(CrCl_{patient})}{(CrCl_{normal})}"></Latex></p>
+            <br></br>
+            <img src={triangle} alt="Pharmacokinetic Triangle" height={500} width={500}/>
         </div>
     )
 }
