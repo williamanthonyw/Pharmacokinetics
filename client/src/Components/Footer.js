@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="text-center mb-0 pb-0">
           <img src={logo} alt="USYD Logo" width="150" />
           <p>In Collaboration with the University of Sydney</p>
-          <p className='mb-0'>Copyright © 2023 PK_Calcs. All Rights Reserved.</p>
+          <p className='mb-0'>Copyright © {new Date().getFullYear()} PK_Calcs. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
