@@ -86,7 +86,7 @@ const mydata = [
         <p>Concentration during infusion is given by: <Latex latex_code='C = \frac{K_0}{Cl} * (1-e^{-k_et})'></Latex></p>
         <p>Where K_0 = infusion rate</p>
         <p>And K_e is the elimination rate constant</p>
-        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/Infusion_curves.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
       </div>,
     'bottom_paragraph': "",
     'x_label': "",
@@ -130,7 +130,7 @@ const mydata = [
         <p>Where n = number of doses, τ = dose interval, F = fraction absorbed, Vd is volume of distribution, t = time after administration of n doses, ka is the absorption rate constant, k is the elimination rate constant</p>
         <p>In the cell below we require values for dose, Cl, Vd, F, and ka. This simple model does not account for salting effects, metabolism, etc.</p>
 
-        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/MultipleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
 
       </>,
     'bottom_paragraph': <>
@@ -197,6 +197,8 @@ const mydata = [
         <p>Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
         <p>*Holford, N., Clinical Pharmacokinetics of Ethanol. Clinical Pharmacokinetics, 1987. 13: p. 273-292.</p>
         <p>In the cell below we require values for C0, Vm, and Km.</p>
+        
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/ZeroOrderElimination.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
       </div>,
     // 'bottom_paragraph': "<p>HTML ELEMENT</p>",
     // 'x_label': "",
