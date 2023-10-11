@@ -57,7 +57,7 @@ const mydata = [
         Cl: 20,
         Vd: 200,
         F: 0.8,
-        ka: 0.009 * 60,
+        ka: 0.54,
       },
       variableLabels: {
         dose: 'Dose (mg):',
