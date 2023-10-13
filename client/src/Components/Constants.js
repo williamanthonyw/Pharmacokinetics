@@ -1,34 +1,14 @@
-
-import React, {useEffect} from 'react'
-import Latex from './Latex'
-import mydata from './data'
+import React from 'react'
+import Latex from "./Latex";
 import triangle from '../assets/images/Pharmacokinetic_Triangle.png';
 
-
-const ReferenceFormula = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
+const Constants = () => {
     return (
         <div className='container pt-3 pb-3'>
-            <h1 style={{ color: '#e54726' }}>Reference Formula</h1>
-
-
-            {mydata.map((item, index) => (
-                <h3>
-                    {item.formula_name}:
-
-                    <p><Latex latex_code={item.data.latex_eq}></Latex></p>
-                </h3>
-            ))},
-
-            <br></br>
-
             <h1 style={{ color: '#e54726' }}>Constants: Important Equations in Pharmacology</h1>
             <br></br>
             <p><b>Volume of distribution (Vd): <Latex latex_code="A_b = V_d * C_p"></Latex> or </b><Latex latex_code="V_d = \frac{A_b}{C_p}"></Latex></p>
-            <br></br>
+            <br></br>  
             <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Latex latex_code="Loading\:dose = V_d * C_p \tiny(desired)"></Latex></p>
             <br></br>
             <p><b>Clearance (Cl): <Latex latex_code="RE = Cl * C_p"></Latex> or </b><Latex latex_code="Cl = \frac{RE}{C_p}"></Latex></p>
@@ -48,6 +28,6 @@ const ReferenceFormula = () => {
             <img src={triangle} alt="Pharmacokinetic Triangle" height={500} width={500}/>
         </div>
     )
-};
+}
 
-export default ReferenceFormula
+export default Constants
