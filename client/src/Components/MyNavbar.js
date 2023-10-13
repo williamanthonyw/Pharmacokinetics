@@ -44,7 +44,7 @@ function MyNavbar() {
                   <Link className="Link" to="/pharmacokinetics">HOME</Link>
                   <Link className="Link" to="/about">ABOUT</Link>
                   <Link className="Link" to="/contact">CONTACT</Link>
-                  <Link className="Link" to="/constants">CONSTANTS</Link>
+                  <Link className="Link" to="/ReferenceFormula">CONSTANTS</Link>
                   <Link className="Link">FORMULA
                     <div className="subFormula">
                       <ul>

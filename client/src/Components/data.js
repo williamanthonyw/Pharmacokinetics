@@ -33,6 +33,7 @@ const mydata = [
         Vd: 'number',
       },
       equation: "dose / Vd * exp(-Cl / Vd * t)",
+      latex_eq: "k = \\frac{Cl}{V_d}"
     },
   },
   {
@@ -74,6 +75,7 @@ const mydata = [
         ka: 'constant',
       },
       equation: "((F * dose * ka) / (Vd * (ka - (Cl/Vd)))) * (exp(-(Cl/Vd) * t) - exp(-ka * t))",
+      latex_eq: 'C = \\frac{F \\cdot Dose \\cdot k_a}{Vd \\cdot (k_a - k_e)} \\cdot (e^{-k_e \cdot t} - e^{-k_a \\cdot t})'
     },
   },
   {
@@ -114,7 +116,7 @@ const mydata = [
         Vd: 'number',
       },
       equation: ["K0/Cl1 * (1-exp(-(Cl1/Vd)*t))", "K0/Cl2 * (1-exp(-(Cl2/Vd)*t))", "K0/Cl3 * (1-exp(-(Cl3/Vd)*t))"],
-
+      latex_eq: 'C = \\frac{K_0}{Cl} * (1-e^{-k_et})'
 
     },
   },
@@ -171,6 +173,7 @@ const mydata = [
             ((1 - exp(-1 * (floor(t/tau) + 1) * ka * tau)) / (1 - exp(-ka * tau)) * exp(-ka * (t - floor(t/tau) * tau))) -
             ((1 - exp(-1 * (floor(t/tau) + 1) * k * tau)) / (1 - exp(-k * tau)) * exp(-k * (t - floor(t/tau) * tau)))
         )`,
+      latex_eq: "C_p = \\frac{F \\cdot \\text{Dose} \\cdot k_a}{Vd(k-k_a)} \\times \\Big[ \\Big( \\frac{1-e^{-nk_a \\tau}}{1-e^{-k_a \\tau}} \\Big) \\cdot e^{-k_at} - \\Big( \\frac{1-e^{-nk \\tau}}{1-e^{-k \\tau}} \\Big) \\cdot e^{-kt} \\Big]"
     }
 
   },
@@ -209,6 +212,7 @@ const mydata = [
         Km: 'constant',
       },
       equation: "ode(Vm * C0 / (Km + C0), C0, t)",
+      latex_eq: 'dC/dt = \\frac{Vm \\cdot Cp}{Km + Cp}'
     }
   }
 

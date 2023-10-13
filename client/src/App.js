@@ -9,7 +9,7 @@ import Contact from './Components/Contact';
 import About from './Components/About';
 import Footer from './Components/Footer';
 import Disclaimer from './Components/Disclaimer';
-import Constants from './Components/Constants';
+import ReferenceFormula from './Components/ReferenceFormula';
 function App() {
   return (<>
 
@@ -21,7 +21,7 @@ function App() {
       <Route path='/about' element={<About></About>}></Route>
       <Route path='/contact' element={<Contact></Contact>}></Route>
       <Route path='/disclaimer' element={<Disclaimer></Disclaimer>}></Route>
-      <Route path='/constants' element={<Constants></Constants>}></Route>
+      <Route path='/ReferenceFormula' element={<ReferenceFormula></ReferenceFormula>}></Route>
     </Routes>
     <Footer></Footer>
   </>
