@@ -49,8 +49,8 @@ const FormulaPage = () => {
                       <h1>Interactive Data Visualization</h1>
                       <p>Please press the mode button below to <span className="importWord">change mode</span>:</p>
                       <ul>
-                        <li>Dynamic represents for changing over time.</li>
-                        <li>Performance represents changes will be occured after pressing calculate button.</li>
+                        <li>Dynamic: See graph changes in real time.</li>
+                        <li>Performance: Preferred mode when entering larger numbers to prevent lag.</li>
                       </ul>
                       <div className='btn btn-primary d-inline-block animation' onClick={toggle_mode}>Mode : {mode}</div>
                     </div>
