@@ -78,6 +78,23 @@ function EquationForm({ data, setData, mode }) {
     else {
       setError("")
     }
+    if (value.includes('.')) {
+      const [whole, fraction] = value.split('.');
+      if (fraction.length > 4) {
+          // Limit to 4 decimal places
+          setData((prevData) => ({
+            ...prevData,
+            data: {
+              ...prevData.data,
+              variables: {
+                ...prevData.data.variables,
+                [name]: `${whole}.${fraction.slice(0, 4)}`,
+              },
+            },
+          }));
+          return;
+      }
+  }
     setData((prevData) => ({
       ...prevData,
       data: {
@@ -106,6 +123,7 @@ function EquationForm({ data, setData, mode }) {
             className="form-control"
             id={variableName}
             name={variableName}
+            value = {data.variables[variableName]}
             defaultValue={data.variables[variableName]}
             onChange={handleChange}
             min="0"

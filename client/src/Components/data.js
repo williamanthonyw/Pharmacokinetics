@@ -57,7 +57,7 @@ const mydata = [
         Cl: 20,
         Vd: 200,
         F: 0.8,
-        ka: 0.009 * 60,
+        ka: 0.54,
       },
       variableLabels: {
         dose: 'Dose (mg):',
@@ -86,7 +86,7 @@ const mydata = [
         <p>Concentration during infusion is given by: <Latex latex_code='C = \frac{K_0}{Cl} * (1-e^{-k_et})'></Latex></p>
         <p>Where K_0 = infusion rate</p>
         <p>And K_e is the elimination rate constant</p>
-        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/Infusion_curves.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
       </div>,
     'bottom_paragraph': "",
     'x_label': "",
@@ -130,7 +130,7 @@ const mydata = [
         <p>Where n = number of doses, τ = dose interval, F = fraction absorbed, Vd is volume of distribution, t = time after administration of n doses, ka is the absorption rate constant, k is the elimination rate constant</p>
         <p>In the cell below we require values for dose, Cl, Vd, F, and ka. This simple model does not account for salting effects, metabolism, etc.</p>
 
-        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/MultipleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
 
       </>,
     'bottom_paragraph': <>
@@ -176,20 +176,9 @@ const mydata = [
   },
   {
     'url': 'non_linear_pharmacokinetics',
-    // 'formula_name': 'Non-linear Pharmacokinetics - Initial Zero Order followed by First Order Elimination',
     'formula_name': 'Non-linear Pharmacokinetics - Zero Order Elimination plasma-time curve.',
     'id': 5,
     'top_paragraph':
-      // <div>
-      //   <p>This last curve shows what happens when the elimination pathway is saturated initially and then, when to plasma concentration sinks low enough, the elimination returns to first order and starts to slow down. Notice that the curve is linear and then exponential at the end. So the elimination rate is constant at the begining, irrespective of plasma concentration. Then, in the last part of the curve, the elimination rate is proportional to plasma concentration. For simplicity we start with the drug at some concentration at time=0 but if we were considering an oral dose the situation would be far more complicated!</p>
-      //   <p>The graph produced by the code below shows a simple linear elimination rate giving a straight line as the amount of drug in plasma is reduced at a contant rate. Once the concentration of drug in the plasma falls below a threshold value (i.e. the elimination pathways are no longer saturated) the elimination rate starts to slow down and the rate is then proportional to plasma concentration of the drug from then on.</p>
-      //   <p>This situation could arise with drugs such as alcohol where at most 10 grams can be eliminated per hour (Vmax). The Km for alcohol is around 0.01 % (g/100mL) so we are halfway to Vmax at this concentration. Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
-      //   <p>The elimination curve follows a combination of a linear curve and then an exponential functions.</p>
-      //   <p>The linear portion of the cruve follows the familar <Latex latex_code='Y = mx + b'></Latex></p>
-      //   <p>The exponential elimination follows the formula: <Latex latex_code='C = C_0 * e^{-kt}'></Latex></p>
-      //   <p>This curve is generated for illustrative purposed using a combination of a linear function which changes to an exponential once a certain plasma concentration is reached. In reality the change would be more subtle. In real cases, such as with phenytoin, the rate of metabolic elimination of a drug would be dependant on the enzyme rate kinetics of the enzyme(s) concerned. These are the Vmax (maximum rate of enzymatic metabolism of the molecule by the enzyme) and Km (concentration at which the enzymatic rate is half Vmax). This is the model proposed by Michaelis and Menten.</p>
-      //   <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/SingleOralDose.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
-      // </div>,
       <div>
         <p>Elimination can be described using an ordinary differential equation (ODE): <Latex latex_code='dC/dt = \frac{Vm \cdot Cp}{Km + Cp}'></Latex></p>
         <p>This behaviour is called Michaelis-Menten kinetics which was originally used to describe enzyme kinetics. The rate of enzymatic degradation of a substrate by an enzyme has some maximum, Vmax which along with Km (concentration at which rate = 1/2 Vmax) can be used to describe the dynamics of the enzyme reaction. Since enzymes and transporters important to drug disposition can be saturated the same formula can be useful in pharmacokinetics.</p>
@@ -197,37 +186,9 @@ const mydata = [
         <p>Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
         <p>*Holford, N., Clinical Pharmacokinetics of Ethanol. Clinical Pharmacokinetics, 1987. 13: p. 273-292.</p>
         <p>In the cell below we require values for C0, Vm, and Km.</p>
+        
+        <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/ZeroOrderElimination.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
       </div>,
-    // 'bottom_paragraph': "<p>HTML ELEMENT</p>",
-    // 'x_label': "",
-    // 'y_label': "",
-    // 'data': {
-    //   variables: {
-    //     C0: 10.0,
-    //     k1: 1.0,
-    //     k2: 0.5,
-    //     C_thresh: 2.0,
-    //   },
-    //   variableLabels: {
-    //     C0: 'initial concentration',
-    //     k1: 'linear decay constant (above threshold)',
-    //     k2: 'exponential decay constant (below threshold)',
-    //     C_thresh: 'concentration threshold'
-    //   },
-    //   data_types: {
-    //     C0: 'number',
-    //     k1: 'constant',
-    //     k2: 'constant',
-    //     C_thresh: 'number'
-    //   },
-    //   equation: (variables, t) => {
-    //     let C0 = variables.C0;
-    //     let k1 = variables.k1;
-    //     let k2 = variables.k2;
-    //     let C_thresh = variables.C_thresh;
-    //     if (C0 - k1 * t > C_thresh) return "C0 - k1*t";
-    //     else return "C_thresh *  exp(-k2*(t - ((C0 - C_thresh) / k1)))";
-    //   }
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
     'x_label': "",
     'y_label': "",
