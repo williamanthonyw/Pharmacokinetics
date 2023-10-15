@@ -49,10 +49,23 @@ a img{
     background: rgb(65, 62, 62);
     z-index: 3;
     height: fit-content;
+
 }
 .navBar {
     display:block;
 }
+
+.nav {
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    transition: 1s;
+    padding: 0px 5%;
+    z-index: 3;
+}
+
 .navBar > a, .navBar > div, .navBar > i {
     display: inline-block;
 }
@@ -83,7 +96,6 @@ nav.black{
     display: inline-block;
     position: relative;
     padding: 8px 12px;
-    /* margin-right: 100px; */
     margin-top: 20px;
     text-decoration: none;
     color: white;
@@ -129,7 +141,14 @@ nav .fa-solid{
     display: none;
 }
 
-@media(max-width:700px){
+.header2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+@media(max-width:820px){
     .header{
         background-image: url('../assets/images/Untitled-1\ copy.jpg');
     }
@@ -157,21 +176,15 @@ nav .fa-solid{
         background:yellow;
     }
 
-
     nav .fa-solid {
-        display: inline-flex;
-        position:relative;
+        display: inline-block;
         color: white;
         font-size: 22px;
         margin:10px;
         cursor: pointer;
-        /* align-items: baseline; */
+        float:right;
+        padding:10px;
     }
-
-    /* .fa-solid {
-        display: flex;
-        justify-content: flex-end;
-    } */
 
     .nav_links ul{
         padding: 30px;
