@@ -179,7 +179,7 @@ const mydata = [
   },
   {
     'url': 'non_linear_pharmacokinetics',
-    'formula_name': 'Non-linear Pharmacokinetics - Zero Order Elimination plasma-time curve.',
+    'formula_name': 'Non-linear Pharmacokinetics - Zero Order Elimination plasma-time curve',
     'id': 5,
     'top_paragraph':
       <div>

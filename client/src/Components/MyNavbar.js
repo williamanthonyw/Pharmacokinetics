@@ -30,7 +30,7 @@ function MyNavbar() {
 
   return (
     <>
-      <div className='wrapp'>
+      <div className='wrapper'>
         <header className="header2">
           <div className='navbar_background'>
             <nav className="navBar container">
