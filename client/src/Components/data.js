@@ -211,7 +211,7 @@ const mydata = [
         Vm: 'constant',
         Km: 'constant',
       },
-      equation: "ode(Vm * C0 / (Km + C0), C0, t)",
+      equation: "",
       latex_eq: 'dC/dt = \\frac{Vm \\cdot Cp}{Km + Cp}'
     }
   }

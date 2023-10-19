@@ -14,7 +14,6 @@ function App() {
   return (<>
 
     <MyNavbar></MyNavbar>
-    
     <Routes>
       <Route path='/pharmacokinetics' element={<Homepage></Homepage>}></Route>
       <Route path='/formula/:formulaName' element={<FormulaPage></FormulaPage>}></Route>
