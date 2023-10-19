@@ -1,5 +1,6 @@
 import React from 'react'
 import  {useState, useEffect } from 'react'
+import Latex from './Latex'
 import './GraphInformation.css'
 const GraphInformation = (data) => {
     
@@ -28,8 +29,8 @@ const GraphInformation = (data) => {
             <div className=' p-3 card bg-dark text-light'>
                 <h2>Graph Informations</h2>
                 <ol>
-                    <li>AUC = dose/Cl = {auc}</li>
-                    <li>halflife = 0.693 * (Vd/Cl) = {halfLife}</li>
+                    <li className='mb-3'>AUC = <Latex latex_code="dose/Cl"></Latex> = {auc}</li>
+                    <li>halflife = <Latex latex_code = "0.693 * (Vd/Cl)"></Latex> = {halfLife}</li>
                 </ol>  
             </div>
         </div>
