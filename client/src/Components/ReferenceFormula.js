@@ -61,7 +61,7 @@ const ReferenceFormula = () => {
             <p><b>Fractional oral availability (F):</b> <Latex latex_code="F = \frac{AUC_{po}}{AUC_{iv}}"></Latex></p>
             <br></br>
 
-            <p><b>Creatinine clearance (CrCl):</b> <Latex latex_code="CrCl\:(mL/s) = \frac{(140-age)\:*\:weight[kg]}{50000\:*\:[creatinine](*\:0.85\:for\:women)}"></Latex></p>
+            <p><b>Creatinine clearance (CrCl):</b> <Latex latex_code="CrCl\:(mL/min) = \frac{(140-age)\:*\:weight[kg]}{0.814\:*\:serum\:creatinine\:[\mu M]}"></Latex> for adult females, multiply the result of the formula by 0.85</p>
             <br></br>
 
             <p><b>Dose adjustment in renal failure:</b> <Latex latex_code="\frac{dose\:rate_{patient}}{*dose\:rate_{normal}} = \frac{CrCl_{patient}}{Crcl_{normal}}"></Latex></p>
@@ -73,7 +73,7 @@ const ReferenceFormula = () => {
             <img src={triangle} alt="Pharmacokinetic Triangle" height={500} width={500}/>
             <br></br>
 
-            <p>Image refernce: E. J. Begg, Instant Clinical Pharmacology.  (Blackwell Pub., Malden, Mass:, ed. 2nd, 2008).</p>
+            <p>Image reference: E. J. Begg, Instant Clinical Pharmacology.  (Blackwell Pub., Malden, Mass:, ed. 2nd, 2008).</p>
         </div>
     )
 };
