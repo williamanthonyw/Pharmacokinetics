@@ -72,6 +72,11 @@ a img{
 #NavLinks{
     display: inline;
 }
+
+#NavLinks2{
+    display: inline;
+}
+
 .navBar_2{
     display: block;
 }
@@ -294,7 +299,7 @@ nav .fa-solid{
     }
 
     .nav_links2 ul .Link:hover .subFormula .Link{
-        width:fit-content;
+        width: fit-content;
         margin-left: 10px;
     }
 }

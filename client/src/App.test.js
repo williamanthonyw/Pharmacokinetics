@@ -7,6 +7,7 @@ import FormulaPage from './Components/FormulaPage';
 import GraphDisplay from './Components/GraphDisplay';
 import MyNavbar from './Components/MyNavbar';
 import mydata from './Components/data';
+import Homepage from './Components/Homepage';
 import { MemoryRouter } from 'react-router-dom';
 
 
@@ -63,9 +64,15 @@ test('HTML REnder page', () => {
 });
 
 test('MyNavbar', () => {
+  const page = render(
+    <MemoryRouter initialEntries={["","/about"]}>
+      <App />
+    </MemoryRouter>
+  );
+
 
   const getById = queryByAttribute.bind(null, 'id');
-  const navbar_1 = getById(page.container, 'basic-navbar-nav');
+  const navbar_1 = getById(page.container, 'navLinks2');
 
   expect(navbar_1).toBeInTheDocument();
 
