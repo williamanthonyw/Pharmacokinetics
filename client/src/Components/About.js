@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,6 +19,7 @@ const About = () => {
         <p>
           This equation explains the dynamics of drugs administered through intravenous injection and provides insights on factors such as drug concentration and time. This will allow students to understand how drugs enter and exit our bloodstream.
         </p>
+        <Link to='/formula/single_iv_dosing'><button onclick="document.location='formula/single_iv_dosing'">Go to Equation</button></Link>
       </ul>
 
       <ul>
