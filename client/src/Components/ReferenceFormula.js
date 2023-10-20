@@ -71,6 +71,9 @@ const ReferenceFormula = () => {
             <br></br>
 
             <img src={triangle} alt="Pharmacokinetic Triangle" height={500} width={500}/>
+            <br></br>
+
+            <p>Image refernce: E. J. Begg, Instant Clinical Pharmacology.  (Blackwell Pub., Malden, Mass:, ed. 2nd, 2008).</p>
         </div>
     )
 };
