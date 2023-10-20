@@ -43,7 +43,7 @@ const mydata = [
     'top_paragraph':
       <div>
         <p>After a while thinking deeply about the single IV plasma-time curve you will be ready to think about the more general but more complicated single oral dose plasma-time curve. This introduces another variable which is the absorption rate constant but it is still a relatively simple situation since we are not looking at multiple doses or considering other factors affecting drug disposition.</p>
-        <p>Follows the formula: <Latex latex_code='C = \frac{F \cdot Dose \cdot k_a}{Vd \cdot (k_a - k_e)} \cdot (e^{-k_e \cdot t} - e^{-k_a \cdot t})'></Latex>
+        <p>Follows the formula: <Latex latex_code='C = \frac{F \cdot Dose \cdot k_a}{V_d \cdot (k_a - k_e)} \cdot (e^{-k_e \cdot t} - e^{-k_a \cdot t})'></Latex>
         </p>
         <p>In the cell below we require values for dose, Cl, Vd, F, and ka.</p>
         <p>This simple model does not account for salting effects, metabolism, etc.</p>
@@ -75,7 +75,7 @@ const mydata = [
         ka: 'constant',
       },
       equation: "((F * dose * ka) / (Vd * (ka - (Cl/Vd)))) * (exp(-(Cl/Vd) * t) - exp(-ka * t))",
-      latex_eq: 'C = \\frac{F \\cdot Dose \\cdot k_a}{Vd \\cdot (k_a - k_e)} \\cdot (e^{-k_e \cdot t} - e^{-k_a \\cdot t})'
+      latex_eq: 'C = \\frac{F \\cdot Dose \\cdot k_a}{V_d \\cdot (k_a - k_e)} \\cdot (e^{-k_e \\cdot t} - e^{-k_a \\cdot t})'
     },
   },
   {
@@ -173,7 +173,7 @@ const mydata = [
             ((1 - exp(-1 * (floor(t/tau) + 1) * ka * tau)) / (1 - exp(-ka * tau)) * exp(-ka * (t - floor(t/tau) * tau))) -
             ((1 - exp(-1 * (floor(t/tau) + 1) * k * tau)) / (1 - exp(-k * tau)) * exp(-k * (t - floor(t/tau) * tau)))
         )`,
-      latex_eq: "C_p = \\frac{F \\cdot \\text{Dose} \\cdot k_a}{Vd(k-k_a)} \\times \\Big[ \\Big( \\frac{1-e^{-nk_a \\tau}}{1-e^{-k_a \\tau}} \\Big) \\cdot e^{-k_at} - \\Big( \\frac{1-e^{-nk \\tau}}{1-e^{-k \\tau}} \\Big) \\cdot e^{-kt} \\Big]"
+      latex_eq: "C_p = \\frac{F \\cdot \\text{Dose} \\cdot k_a}{V_d(k-k_a)} \\times \\Big[ \\Big( \\frac{1-e^{-nk_a \\tau}}{1-e^{-k_a \\tau}} \\Big) \\cdot e^{-k_at} - \\Big( \\frac{1-e^{-nk \\tau}}{1-e^{-k \\tau}} \\Big) \\cdot e^{-kt} \\Big]"
     }
 
   },
