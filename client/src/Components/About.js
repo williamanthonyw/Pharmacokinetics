@@ -27,6 +27,7 @@ const About = () => {
         <p>
           This equation highlights the complexities of oral drug administration, illustrating the concentration of drugs in the bloodstream and its evolvution over time.
         </p>
+        <Link to='/formula/oral_dosing_plasma_time_curve'><button onclick="document.location='formula/single_iv_dosing'">Go to Equation</button></Link>
       </ul>
 
       <ul>
@@ -34,18 +35,23 @@ const About = () => {
         <p>
           This equation explains the relationship between drug infusion, clearance rates, and drug concentration. This equation shows how continuous drug administration influences concentration dynamics.
         </p>
+        <Link to='/formula/intravenous_infusion_and_effect_of_clearance'><button onclick="document.location='formula/single_iv_dosing'">Go to Equation</button></Link>
       </ul>
       <ul>
         <li>Multiple Oral Dosing</li>
         <p>
           The difficulties of administering drugs via multiple oral doses are shown in the equation, considering factors like drug accumulation, steady-state concentrations, and dosage regimens. This knowledge is essential for designing effective drug therapy plans.
         </p>
+        <Link to='/formula/multiple_oral_dosing'><button onclick="document.location='formula/single_iv_dosing'">Go to Equation</button></Link>
+
       </ul>
       <ul>
         <li>Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</li>
         <p>
           Certain drugs follow non-linear pharmacokinetics, characterized by a combination of zero and first-order elimination kinetics. Understanding this is important to learn how some medications behave in the body.
         </p>
+        <Link to='/formula/non_linear_pharmacokinetics'><button onclick="document.location='formula/single_iv_dosing'">Go to Equation</button></Link>
+
       </ul>
       <p>
         In addition to these equations provided, the website also includes interactive graphs that will allow students to actively engage with pharmacokinetics equations in real time.
