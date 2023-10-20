@@ -189,7 +189,7 @@ const mydata = [
         <p>Some other drugs such as phenytoin also display saturated elimination kinetics (see Chapter 9: Non-linear Pharmacokinetics in Pharmacokinetics Made Easy by Donald Burkett).</p>
         <p>*Holford, N., Clinical Pharmacokinetics of Ethanol. Clinical Pharmacokinetics, 1987. 13: p. 273-292.</p>
         <p>In the cell below we require values for C0, Vm, and Km.</p>
-        
+
         <h2 id="-1"><a href="https://colab.research.google.com/github/sladem-tox/PK_calcs/blob/main/ZeroOrderElimination.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></h2>
       </div>,
     'bottom_paragraph': "<p>HTML ELEMENT</p>",
@@ -212,7 +212,7 @@ const mydata = [
         Km: 'constant',
       },
       equation: "",
-      latex_eq: 'dC/dt = \\frac{Vm \\cdot Cp}{Km + Cp}'
+      latex_eq: 'dC/dt = \\frac{Vm \\cdot Cp}{K_{m} + Cp}'
     }
   }
 
