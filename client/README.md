@@ -1,7 +1,7 @@
 # PK_Curves
 
 ## Description
-A short description about the project
+This website was designed for students of Dr. Slade Matthews at the University of Sydney's School of Pharmacy, This website serves as an resource for students looking to be pharmacists and/or pharmaceutical scientists, offering an experience in understanding the complex world of pharmacokinetics.
 
 ## Features
 
