@@ -27,10 +27,10 @@ const GraphInformation = (data) => {
     return (
         <div className='mt-3 '>
             <div className=' p-3 card bg-dark text-light'>
-                <h2>Graph Informations</h2>
+                <h2>Graph Information</h2>
                 <ol>
                     <li className='mb-3'>AUC = <Latex latex_code="dose/Cl"></Latex> = {auc}</li>
-                    <li>halflife = <Latex latex_code = "0.693 * (Vd/Cl)"></Latex> = {halfLife}</li>
+                    <li>halflife = <Latex latex_code = "0.693 * (V_d/Cl)"></Latex> = {halfLife}</li>
                 </ol>  
             </div>
         </div>
