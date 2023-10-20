@@ -5,19 +5,19 @@ import Contact from './Components/Contact';
 import EquationForm from './Components/EquationForm';
 import FormulaPage from './Components/FormulaPage';
 import GraphDisplay from './Components/GraphDisplay';
-import HtmlRender from './Components/HtmlRender';
 import MyNavbar from './Components/MyNavbar';
+import mydata from './Components/data';
 import { MemoryRouter } from 'react-router-dom';
 
 
 test('App renders without crashing', () => {
   render(
-    <MemoryRouter initialEntries={["","/pharmakinetics"]}>
+    <MemoryRouter initialEntries={["","/pharmacokinetics"]}>
       <App />
     </MemoryRouter>
   );
 
-  expect(screen.getByText("Pharmacokinetic Calculations")).toBeInTheDocument();
+  expect(screen.getByText("Pharmacokinetics Calculations")).toBeInTheDocument();
 });
 
 test('About page', () => {
@@ -37,7 +37,13 @@ test('Contact page', () => {
       <App />
     </MemoryRouter>
   );
-  expect(screen.getByTitle('img')).toBeInTheDocument();
+  expect(screen.getByTitle('slade-photo')).toBeInTheDocument();
+});
+
+test('Data', () => {
+  const data = mydata;
+
+  expect(mydata.length).toEqual(5)
 });
 
 test('Equation Form page', () => {
@@ -57,11 +63,6 @@ test('HTML REnder page', () => {
 });
 
 test('MyNavbar', () => {
-  const page = render(
-    <MemoryRouter initialEntries={["","/about"]}>
-      <App />
-    </MemoryRouter>
-  );
 
   const getById = queryByAttribute.bind(null, 'id');
   const navbar_1 = getById(page.container, 'basic-navbar-nav');

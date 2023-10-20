@@ -22,7 +22,7 @@ const Contact = () => {
 
             <section className="lecturer">
                 <h4>Dr.Slade Matthews</h4>
-                <img src={lecturerphoto} alt="photo"/>
+                <img src={lecturerphoto} title='slade-photo' alt="photo"/>
 
                 <p>
                     Senior Lecturer
