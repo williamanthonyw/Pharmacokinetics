@@ -124,7 +124,7 @@ function EquationForm({testNoFormRef, data, setData, mode }) {
             className="form-control"
             id={variableName}
             name={variableName}
-            value = {data.variables[variableName]}
+            // value = {data.variables[variableName]}
             defaultValue={data.variables[variableName]}
             onChange={handleChange}
             min="0"
