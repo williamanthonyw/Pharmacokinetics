@@ -21,7 +21,7 @@ function odeint(func, y0, t, Vm, km) {
 
     return y;
 }
-C0 = [500];
+C0 = [50];
 Vm = 230;
 km = 80;
 
