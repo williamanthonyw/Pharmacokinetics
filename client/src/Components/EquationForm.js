@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-function EquationForm({ data, setData, mode }) {
+function EquationForm({testNoFormRef, data, setData, mode }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,9 +14,10 @@ function EquationForm({ data, setData, mode }) {
   }, [mode])
   const [error, setError] = useState("")
   const formRef = useRef(null);
+  if (testNoFormRef) return null;
   function updateData() {
     if (!formRef.current) return;
-    const inputs = formRef.current.querySelectorAll('input[type="number"]');
+    const inputs = formRef.current.querySelectorAll('input');
     let updatedVariables = { ...data.variables };
 
     for (let i = 0; i < inputs.length; i++) {
@@ -47,8 +48,8 @@ function EquationForm({ data, setData, mode }) {
   const handleChange = (e) => {
     if (mode == 'Performance') return
     const { name, value } = e.target;
-    if (parseFloat(e.target.value) <= 0) {
-      setError(`error: ${name} cannot be less than or equal to 0!`);
+    if (isNaN(e.target.value)) {
+      setError(`error: ${name} is not a number!`);
       setData((prevData) => ({
         ...prevData,
         data: {
@@ -61,8 +62,8 @@ function EquationForm({ data, setData, mode }) {
       }));
       return
     }
-    else if (isNaN(e.target.value)) {
-      setError(`error: ${name} is not a number!`);
+    else if (parseFloat(e.target.value) <= 0) {
+      setError(`error: ${name} cannot be less than or equal to 0!`);
       setData((prevData) => ({
         ...prevData,
         data: {
@@ -111,7 +112,7 @@ function EquationForm({ data, setData, mode }) {
 
   return (
 
-    <form className="col-3" ref={formRef}>
+    <form className="col-3" ref={formRef} data-testid="equation-form">
       <h6 className='text-danger font-weight-bold mt-2 error_message'>{error}</h6>
       {Object.keys(data.variables).map((variableName) => (
         <div key={variableName} className="mb-3">
@@ -119,7 +120,7 @@ function EquationForm({ data, setData, mode }) {
             {data.variableLabels[variableName]}
           </label>
           <input
-            type="number"
+            
             className="form-control"
             id={variableName}
             name={variableName}
