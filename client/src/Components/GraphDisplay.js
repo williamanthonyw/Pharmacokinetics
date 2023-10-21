@@ -5,7 +5,7 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 
 Chart.register(LinearScale, PointElement, LineElement);
 
-function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
+function GraphDisplay({ variables, equation, isMulipleOralDosing, is_testing}) {
   const math = create(all)
   const [chartData, setChartData] = useState(null);
 
@@ -120,7 +120,7 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing }) {
     <div className='col-9'>
 
       <h2>Plasma Concentration Over Time</h2>
-      {chartData && <Line data={chartData} options={chartOptions} />}
+      { !is_testing && chartData && <Line data={chartData} options={chartOptions} />}
     </div>
   );
 }

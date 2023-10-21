@@ -5,7 +5,7 @@ import GraphDisplay from './GraphDisplay';
 import mydata from './data';
 import './Formula.css';
 import GraphInformation from './GraphInformation';
-const FormulaPage = () => {
+const FormulaPage = ({is_testing}) => {
   const location = useLocation();
   const currentURL = location.pathname;
   const [allData, setAllData] = useState(mydata);
@@ -55,7 +55,7 @@ const FormulaPage = () => {
                   <div className='btn btn-primary d-inline-block animation' onClick={toggle_mode}>Mode : {mode}</div>
                 </div>
                 <EquationForm data={data.data} setData={setData} mode={mode} />
-                <GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing={data.data && data.url && data.url.includes("multiple")} />
+                 {(!is_testing) ?<GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing={data.data && data.url && data.url.includes("multiple")} /> : <></>}
               </div>
             </div>
           ) : (
