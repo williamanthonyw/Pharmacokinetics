@@ -8,7 +8,7 @@ const Latex = ({ latex_code }) => {
         katex.render(latex_code, nodeRef.current);
     }, [latex_code]);
 
-    return <div className='btn btn-primary ' ref={nodeRef} title={"Click to copy formula\nVd = Volume of distribution\nK = red"} />
+    return <div className='btn btn-primary ' ref={nodeRef} />
 }
 
 

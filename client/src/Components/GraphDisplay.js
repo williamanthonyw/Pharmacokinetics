@@ -5,13 +5,13 @@ import { Chart, LinearScale, PointElement, LineElement } from 'chart.js';
 
 Chart.register(LinearScale, PointElement, LineElement);
 
-function GraphDisplay({ variables, equation, isMulipleOralDosing, is_testing }) {
+function GraphDisplay({ variables, equation, isMulipleOralDosing, is_testing, test_non_linear }) {
   const math = create(all)
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
     //if location is /formula/non_linear_pharmacokinetics
-    if (window.location.pathname == '/formula/non_linear_pharmacokinetics') {
+    if (window.location.pathname == '/formula/non_linear_pharmacokinetics' || test_non_linear) {
       function odeint(func, y0, t, Vm, km) {
         // func is a function that takes two arguments: y and t
         // y0 is the initial state of the system
@@ -36,9 +36,6 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing, is_testing }) 
       let C0 = [parseFloat(variables.C0)];
       let Vm = parseFloat(variables.Vm);
       let km = parseFloat(variables.Km);
-      console.log(variables.C0)
-      console.log(variables.Vm)
-      console.log(variables.km)
 
       function decay_model(C, t, Vm, km) {
         let dCdt = -Vm * C[0] / (km + C[0]);
