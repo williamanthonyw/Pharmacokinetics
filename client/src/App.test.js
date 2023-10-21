@@ -8,6 +8,7 @@ import GraphDisplay from './Components/GraphDisplay';
 import MyNavbar from './Components/MyNavbar';
 import mydata from './Components/data';
 import Homepage from './Components/Homepage';
+import Constants from './Components/Constants';
 import { MemoryRouter } from 'react-router-dom';
 
 
@@ -75,5 +76,4 @@ test('MyNavbar', () => {
   const navbar_1 = getById(page.container, 'navLinks2');
 
   expect(navbar_1).toBeInTheDocument();
-
 });
