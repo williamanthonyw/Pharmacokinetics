@@ -10,6 +10,7 @@ import mydata from './Components/data';
 import Homepage from './Components/Homepage';
 import Constants from './Components/Constants';
 import { MemoryRouter } from 'react-router-dom';
+import { useState } from 'react';
 
 
 test('App renders without crashing', () => {
@@ -43,9 +44,18 @@ test('Contact page', () => {
 });
 
 test('Data', () => {
+
+
   const data = mydata;
 
-  expect(mydata.length).toEqual(5)
+  expect(data.length).toEqual(5);
+
+  for (let i=0; i<data.length; i++){
+    const len = Object.keys(data[i]).length;
+
+    expect(len).toEqual(8);
+  };
+  
 });
 
 test('Equation Form page', () => {
