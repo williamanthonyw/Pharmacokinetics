@@ -42,7 +42,7 @@ function GraphDisplay({ variables, equation, isMulipleOralDosing, is_testing }) 
 
       function decay_model(C, t, Vm, km) {
         let dCdt = -Vm * C[0] / (km + C[0]);
-        return [dCdt]; // return an array instead of a single value
+        return [dCdt];
       }
 
       let t = []

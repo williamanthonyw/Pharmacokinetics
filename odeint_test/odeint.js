@@ -36,4 +36,4 @@ for (let i = 0; i < 100; i++) {
 }
 
 let C = odeint(decay_model, C0, t, Vm, km);
-console.log(C);
+console.log(C[50]);

@@ -27,8 +27,8 @@ const GraphInformation = (data) => {
     return (
         <div className='mt-3 '>
             <div className=' p-3 card bg-dark text-light'>
-                <h2>Graph Information</h2>
-                <ol>
+                <h2 className='mb-2'>Curve Parameters</h2>
+                <ol className='mt-3'>
                     <li className='mb-3'>AUC = <Latex latex_code="dose/Cl"></Latex> = {auc}</li>
                     <li>halflife = <Latex latex_code = "0.693 * (V_d/Cl)"></Latex> = {halfLife}</li>
                 </ol>  

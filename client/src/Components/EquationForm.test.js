@@ -36,19 +36,6 @@ describe('EquationForm', () => {
         <EquationForm testNoFormRef = {true}data={mockData} setData={mockSetData} mode={mockMode} />);
         expect(screen.queryByTestId('equation-form')).toBeNull();
     });
-
-
-    // test('renders the GraphDisplay component', () => {
-    //     render(<FormulaPage />);
-    //     const graphDisplayElement = screen.getByTestId('graph-display');
-    //     expect(graphDisplayElement).toBeInTheDocument();
-    // });
-
-    // test('renders the GraphInformation component', () => {
-    //     render(<FormulaPage />);
-    //     const graphInformationElement = screen.getByTestId('graph-information');
-    //     expect(graphInformationElement).toBeInTheDocument();
-    // });
 });
 test('handleChange sets error message when value is less than or equal to 0', () => {
     const mockSetData = jest.fn();

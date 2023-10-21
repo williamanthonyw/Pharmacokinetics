@@ -18,4 +18,4 @@ t = np.linspace(0, 10, 100)  # Adjust the time range as needed
 # Solve the ordinary differential equation (ODE) using scipy.
 # The ODE does not have a simple solution and must be integrated to find y values at time t.
 C = odeint(decay_model, C0, t, args=(Vm, km))
-print(C)
+print(C[50])
