@@ -1,4 +1,0 @@
-
-
-Equation is in the format y(t) = 
-
