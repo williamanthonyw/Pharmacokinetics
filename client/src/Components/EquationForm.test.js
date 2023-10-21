@@ -7,9 +7,8 @@ import mydata from './data';
 import { fireEvent } from '@testing-library/react';
 import { queryByAttribute} from '@testing-library/dom';
 import { getByLabelText } from '@testing-library/react';
-describe('FormulaPage', () => {
-    let setError;
-    let checkValueError;
+describe('EquationForm', () => {
+ 
     
     test('renders the EquationForm component', () => {
         const mockSetData = jest.fn();
