@@ -55,7 +55,7 @@ const FormulaPage = ({is_testing}) => {
                   <div className='btn btn-primary d-inline-block animation' onClick={toggle_mode}>Mode : {mode}</div>
                 </div>
                 <EquationForm data={data.data} setData={setData} mode={mode} />
-                 {(!is_testing) ?<GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing={data.data && data.url && data.url.includes("multiple")} /> : <></>}
+                {(!is_testing) ?<GraphDisplay variables={data.data.variables} equation={data.data.equation} isMulipleOralDosing={data.data && data.url && data.url.includes("multiple")} /> : <></>}
               </div>
             </div>
           ) : (

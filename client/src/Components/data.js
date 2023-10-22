@@ -102,11 +102,11 @@ const mydata = [
         Vd: 200,
       },
       variableLabels: {
-        K0: 'Infusion rate (mg/h)',
-        Cl1: 'Clearance 1 (blue) (L/h)',
-        Cl2: 'Clearance 2 (green) (L/h)',
-        Cl3: 'Clearance 3 (red) (L/h)',
-        Vd: 'Volume of distribution (L)',
+        K0: 'Infusion rate (mg/h):',
+        Cl1: 'Clearance 1 (blue) (L/h):',
+        Cl2: 'Clearance 2 (green) (L/h):',
+        Cl3: 'Clearance 3 (red) (L/h):',
+        Vd: 'Volume of distribution (L):',
       },
       data_types: {
         K0: 'number',
@@ -152,13 +152,13 @@ const mydata = [
         duration: 180,
       },
       variableLabels: {
-        dose: 'dose (mg)',
-        tau: 'tau',
-        F: 'F',
-        ka: 'Ka',
-        k: 'k',
-        Vd: 'Vd',
-        duration: "Duration (hours)"
+        dose: 'dose (mg):',
+        tau: 'dosing interval (hour):',
+        F: 'Bioavailability:',
+        ka: 'Absorption rate constant:',
+        k: 'Elimination rate contant (hour^1):',
+        Vd: 'Volume Distribution (L):',
+        duration: "Duration (hours):"
       },
       data_types: {
         dose: 'number',
@@ -202,9 +202,9 @@ const mydata = [
         Km: 80,
       },
       variableLabels: {
-        C0: 'Initial concentration (mg/L)',
-        Vm: 'Maximum rate of decay (mg/L/h)',
-        Km: 'C value at which decay is half Vm (mg/L)',
+        C0: 'Initial concentration (mg/L):',
+        Vm: 'Maximum rate of decay (mg/L/h):',
+        Km: 'C value at which decay is half Vm (mg/L):',
       },
       data_types: {
         C0: 'number',
