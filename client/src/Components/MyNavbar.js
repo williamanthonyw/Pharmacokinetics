@@ -37,7 +37,7 @@ function MyNavbar() {
               <div className=''>
 
               </div>
-              <a href="#"><img src={logo} alt="USYD LOGO" /></a>
+              <a href="/pharmacokinetics"><img src={logo} alt="USYD LOGO" /></a>
               <div className={nav_links} id="navLinks2">
                 <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
                 <ul>

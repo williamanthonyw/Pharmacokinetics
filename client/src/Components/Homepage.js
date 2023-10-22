@@ -27,7 +27,7 @@ const Homepage = () => {
         <img src={background} alt="image of Home for website" />
         <nav className='nav'>
 
-          <a href="#"><img src={logo} alt="USYD LOGO" /></a>
+          <a href="/pharmacokinetics"><img src={logo} alt="USYD LOGO" /></a>
           <div className={nav_links} id="navLinks">
             <i className="fa-solid fa-xmark" onClick={hideMenu}></i>
             <ul>
