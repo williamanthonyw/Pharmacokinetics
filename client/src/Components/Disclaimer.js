@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Disclaimer = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className='container pt-3 pb-3'>
             <h1 style={{ color: '#e54726' }}>Disclaimer</h1>
