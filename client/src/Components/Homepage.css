@@ -474,3 +474,10 @@ html, body{
     height: max-content!important;
     max-height: max-content!important;
 }
+
+/* About page bold title */
+.boldTitle {
+    font-weight: bold;
+    /* font-size: 20px; */
+    /* text-decoration: underline; */
+}

@@ -16,7 +16,7 @@ const About = () => {
       </p>
 
       <ul>
-        <li>Single IV Dosing</li>
+        <li className="boldTitle">Single IV Dosing</li>
         <p>
           This equation explains the dynamics of drugs administered through intravenous injection and provides insights on factors such as drug concentration and time. This will allow students to understand how drugs enter and exit our bloodstream.
         </p>
@@ -24,7 +24,7 @@ const About = () => {
       </ul>
 
       <ul>
-        <li>Oral Dosing Plasma Time Curve</li>
+        <li className="boldTitle">Oral Dosing Plasma Time Curve</li>
         <p>
           This equation highlights the complexities of oral drug administration, illustrating the concentration of drugs in the bloodstream and its evolvution over time.
         </p>
@@ -32,14 +32,14 @@ const About = () => {
       </ul>
 
       <ul>
-        <li>Intravenous Infusion and Effect of Clearance</li>
+        <li className="boldTitle">Intravenous Infusion and Effect of Clearance</li>
         <p>
           This equation explains the relationship between drug infusion, clearance rates, and drug concentration. This equation shows how continuous drug administration influences concentration dynamics.
         </p>
         <Link to='/formula/intravenous_infusion_and_effect_of_clearance'>Go to Equation</Link>
       </ul>
       <ul>
-        <li>Multiple Oral Dosing</li>
+        <li className="boldTitle">Multiple Oral Dosing</li>
         <p>
           The difficulties of administering drugs via multiple oral doses are shown in the equation, considering factors like drug accumulation, steady-state concentrations, and dosage regimens. This knowledge is essential for designing effective drug therapy plans.
         </p>
@@ -47,7 +47,7 @@ const About = () => {
 
       </ul>
       <ul>
-        <li>Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</li>
+        <li className="boldTitle">Non-linear Pharmacokinetics - Initial Zero Order Followed by First Order Elimination</li>
         <p>
           Certain drugs follow non-linear pharmacokinetics, characterized by a combination of zero and first-order elimination kinetics. Understanding this is important to learn how some medications behave in the body.
         </p>
