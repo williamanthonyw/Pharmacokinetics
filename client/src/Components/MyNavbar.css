@@ -66,6 +66,10 @@ a img{
     z-index: 3;
 }
 
+.Link {
+    white-space: nowrap;
+}
+
 .navBar > a, .navBar > div, .navBar > i {
     display: inline-block;
 }
@@ -159,6 +163,10 @@ nav .fa-solid{
     }
     .text-box h1{
         font-size: 20px;
+    }
+
+    .Link {
+        white-space: wrap;
     }
 
     .nav_links ul .Link{

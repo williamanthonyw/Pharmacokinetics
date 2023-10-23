@@ -87,6 +87,10 @@ nav.black{
     color: white;
 }
 
+.Link {
+    white-space: nowrap;
+}
+
 .nav_links ul .Link a {
     color:white;
     text-decoration: none;
@@ -247,6 +251,9 @@ nav .fa-solid{
         background:yellow;
     }
 
+    .Link {
+        white-space: wrap;
+    }
 
     nav .fa-solid {
         display: block;
