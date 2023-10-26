@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FormulaPage from './Components/FormulaPage';
 import Homepage from './Components/Homepage';
 import MyNavbar from './Components/MyNavbar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Contact from './Components/Contact';
 import About from './Components/About';
 import Footer from './Components/Footer';
