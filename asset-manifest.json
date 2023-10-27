@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/PKCALCS/static/css/main.a6feb952.css",
-    "main.js": "/PKCALCS/static/js/main.20b7cb28.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/PKCALCS/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/Pharmacokinetic_Triangle.png": "/PKCALCS/static/media/Pharmacokinetic_Triangle.7e58b7c96c25620198eb.png",
-    "static/media/Untitled-1 copy.jpg": "/PKCALCS/static/media/Untitled-1 copy.6b2033a64efc431d74cf.jpg",
-    "static/media/usyd_logo.png": "/PKCALCS/static/media/usyd_logo.eb26fd6ca72c74f67e82.png",
-    "static/media/drmatthews.jpeg": "/PKCALCS/static/media/drmatthews.349c2fac8aa287b79d51.jpeg",
-    "static/media/try2.png": "/PKCALCS/static/media/try2.67e8a118a52eef600fb5.png",
-    "static/media/USYD_LOGO_WHITE.png": "/PKCALCS/static/media/USYD_LOGO_WHITE.2c9e9441b20a549a6c15.png",
-    "index.html": "/PKCALCS/index.html",
-    "main.a6feb952.css.map": "/PKCALCS/static/css/main.a6feb952.css.map",
-    "main.20b7cb28.js.map": "/PKCALCS/static/js/main.20b7cb28.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/PKCALCS/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/pharmacokinetics/static/css/main.b1e31a0b.css",
+    "main.js": "/pharmacokinetics/static/js/main.ef6d6bb1.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/pharmacokinetics/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/Pharmacokinetic_Triangle.png": "/pharmacokinetics/static/media/Pharmacokinetic_Triangle.7e58b7c96c25620198eb.png",
+    "static/media/Untitled-1 copy.jpg": "/pharmacokinetics/static/media/Untitled-1 copy.6b2033a64efc431d74cf.jpg",
+    "static/media/usyd_logo.png": "/pharmacokinetics/static/media/usyd_logo.eb26fd6ca72c74f67e82.png",
+    "static/media/drmatthews.jpeg": "/pharmacokinetics/static/media/drmatthews.349c2fac8aa287b79d51.jpeg",
+    "static/media/try2.png": "/pharmacokinetics/static/media/try2.67e8a118a52eef600fb5.png",
+    "static/media/USYD_LOGO_WHITE.png": "/pharmacokinetics/static/media/USYD_LOGO_WHITE.2c9e9441b20a549a6c15.png",
+    "index.html": "/pharmacokinetics/index.html",
+    "main.b1e31a0b.css.map": "/pharmacokinetics/static/css/main.b1e31a0b.css.map",
+    "main.ef6d6bb1.js.map": "/pharmacokinetics/static/js/main.ef6d6bb1.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/pharmacokinetics/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6feb952.css",
-    "static/js/main.20b7cb28.js"
+    "static/css/main.b1e31a0b.css",
+    "static/js/main.ef6d6bb1.js"
   ]
 }
